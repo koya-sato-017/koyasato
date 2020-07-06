@@ -256,7 +256,7 @@
 
   <p id="copyright"><small>Copyright(c) Nomura Research Institute, Ltd. All rights reserved.</small></p>
 
-  <div class="pageTop"><a href="＃pageHead"></a></div>
+  <div class="pageTop"><a href="#pageHead" aria-label="トップに戻る"><i class="icon" aria-hidden="true"></i></a></div>
 
 </footer>
 
