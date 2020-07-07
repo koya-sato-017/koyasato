@@ -31,7 +31,7 @@
       <li>株主•投資家情報(IR)</li>
       <li>採用情報</li>
     </ul>
-    <ul>
+    <ul class="globalMenu">
       <li><img src="https://www.nri.com/-/media/Corporate/jp/Images/common/header/glass.svg" alt="検索"></li>
       <li><img src="https://www.nri.com/-/media/Corporate/jp/Images/common/header/earth.svg" alt="言語切り替え"></li>
       <li>
@@ -46,128 +46,130 @@
   <p class="topicPath">NRI トップ &gt; 企業情報 &gt; NRIの強み：NRIのデジタルビジネス戦略</p>
 </header>
 
-<div id="pageMain">
-  <div class="articleTitle">
-    <p>NRIの強み</p>
-    <h1>NRIのデジタルビジネス戦略</h1>
-  </div>
-
-  <div class="snsShare">
-    <p>Share</p>
-    <ul>
-      <li><a href="https://www.facebook.com/share.php?u=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-facebook.svg" alt="Facebook" width="" height=""></a></li>
-      <li><a href="https://twitter.com/share?text=NRI%e3%81%ae%e5%bc%b7%e3%81%bf%ef%bc%9a%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%83%a2%e3%83%87%e3%83%ab%e3%81%ae%e7%89%b9%e5%be%b4+%7c+%e4%bc%81%e6%a5%ad%e6%83%85%e5%a0%b1+%7c+%e9%87%8e%e6%9d%91%e7%b7%8f%e5%90%88%e7%a0%94%e7%a9%b6%e6%89%80(NRI)&url=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-twitter.svg" alt="Twitter" width="28" height="28"></a></li>
-      <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-linkedin.svg" alt="LinkedIn"></a></li>
-    </ul>
-  </div>
-
-  <div class="articleText">
-    <h2>NRIのデジタルビジネス戦略</h2>
-    <p>NRI では、企業の DX に向けた取り組みについて、既存ビジネスの業務プロセス変革に寄与する DX を「DX1.0」、デジタルで新しいビジネスモデルそのものを生み出す DX を「DX2.0」と定義しています。</p>
-    <p>DX を実現するためには、業務プロセス変革やビジネスモデル創造、そして、それらを実現する IT を同時並行で、共に議論しながら、かつ、スピーディーに実装できる戦略パートナーが必要です。NRI は、コンサルティングと IT ソリューションの人材と機能を併せ持ち、お客さまと併走し、お客さまと仮説検証を繰り返しながらビジネスを創出する「コンソリューション」の提供を強みとして、DX の実現を推進します。</p>
-  </div>
-
-  <div class="figure">
-    <img src="https://www.nri.com/-/media/Corporate/jp/Images/company/whats/story06/story06_img_01.jpg?la=ja-JP&hash=505D40BD561BF25D6D1185858533744FBBE46273" alt="デジタルビジネス戦略概略">
-  </div>
-
-  <div class="linkPdf">
-    <a href="https://www.nri.com/-/media/Corporate/jp/Files/PDF/company/whats/story6/NRI_journal_DX2019.pdf?la=ja-JP&hash=50460F6AF0296BF442B7091D0133176B8B1ACE0E">デジタルが拓く近未来（NRIのDX）<br>（4.06 MB）</a>
-  </div>
-
-  <div class="linkPage">
-    <a class="linkLeft" href="https://www.nri.com/jp/company/whats/story03">&lt; ビジネスモデルの特徴</a>
-    <a class="linkRight" href="https://www.nri.com/jp/company/whats/story04">人材が支えるNRI &gt;</a>
-  </div>
-
-  <div class="linkNav">
-    <h2>NRIの強み</h2>
-    <ul>
-      <li><a href="https://www.nri.com/jp/company/whats/history">NRIのあゆみと持続的な成長</a></li>
-      <li><a href="https://www.nri.com/jp/company/whats/story01">問題発見から問題解決まで</a></li>
-      <li><a href="https://www.nri.com/jp/company/whats/story02">強固な顧客基盤</a></li>
-      <li><a href="https://www.nri.com/jp/company/whats/story03">ビジネスモデルの特徴</a></li>
-      <li><a href="https://www.nri.com/jp/company/whats/story04">人材が支えるNRI</a></li>
-      <li><a href="https://www.nri.com/jp/company/whats/story05">業界トップクラスの収益力</a></li>
-    </ul>
-  </div>
-
-  <div class="snsShare">
-    <p>Share</p>
-    <ul>
-      <li><a href="https://www.facebook.com/share.php?u=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-facebook.svg" alt="Facebook"></a></li>
-      <li><a href="https://twitter.com/share?text=NRI%e3%81%ae%e5%bc%b7%e3%81%bf%ef%bc%9a%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%83%a2%e3%83%87%e3%83%ab%e3%81%ae%e7%89%b9%e5%be%b4+%7c+%e4%bc%81%e6%a5%ad%e6%83%85%e5%a0%b1+%7c+%e9%87%8e%e6%9d%91%e7%b7%8f%e5%90%88%e7%a0%94%e7%a9%b6%e6%89%80(NRI)&url=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-twitter.svg" alt="Twitter" width="28" height="28"></a></li>
-      <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-linkedin.svg" alt="LinkedIn"></a></li>
-    </ul>
-  </div>
-
-  <div class="localNav">
-    <h1>企業情報</h1>
-        <ul>
-            <li>
-                <p>経営方針</p>
-                <ul>
-                    <li><a href="https://www.nri.com/jp/company/message">社長メッセージ</a></li>
-                    <li><a href="https://www.nri.com/jp/company/c_philosophy">企業理念</a></li>
-                    <li><a href="https://www.nri.com/jp/company/vision">経営ビジョン</a></li>
-                    <li><a href="https://www.nri.com/jp/company/quality">品質向上・リスク管理</a></li>
-                    <li><a href="https://www.nri.com/jp/company/p_training">人材の育成</a></li>
-                    <li><a href="https://www.nri.com/jp/company/internal">内部統制</a></li>
-                    <li><a href="https://www.nri.com/jp/company/company_code">NRIグループ企業行動原則</a></li>
-                    <li><a href="https://www.nri.com/jp/company/business_code">NRIグループビジネス行動基準</a></li>
-                    <li><a href="https://www.nri.com/jp/company/governance">コーポレート・ガバナンス</a></li>
-                    <li><a href="https://www.nri.com/jp/company/risk">事業等のリスク</a></li>
-                    <li><a href="https://www.nri.com/jp/company/partner">NRIグループの調達方針</a></li>
-                </ul>
-            </li>
-            <li>
-                <p>企業案内</p>
-                <ul>
-                    <li><a href="https://www.nri.com/jp/company/info">会社概要</a></li>
-                    <li><a href="https://www.nri.com/jp/company/history">沿革</a></li>
-                    <li><a href="https://www.nri.com/jp/company/org">組織図</a></li>
-                    <li><a href="https://www.nri.com/jp/company/profile">役員構成</a></li>
-                    <li><a href="https://www.nri.com/jp/company/50th_history">未来創発の軌跡</a></li>
-                </ul>
-            </li>
-            <li>
+<main>
+    <article>
+        <div id="pageMain">
+            <div class="articleTitle">
                 <p>NRIの強み</p>
-                <ul>
-                    <li><a href="https://www.nri.com/jp/company/whats/history">NRIのあゆみと持続的な成長</a></li>
-                    <li><a href="https://www.nri.com/jp/company/whats/story01">問題発見から問題解決まで</a></li>
-                    <li><a href="https://www.nri.com/jp/company/whats/story02">強固な顧客基盤</a></li>
-                    <li><a href="https://www.nri.com/jp/company/whats/story03">ビジネスモデルの特徴</a></li>
-                    <li><a href="https://www.nri.com/jp/company/whats/story06">NRIのデジタルビジネス戦略</a></li>
-                    <li><a href="https://www.nri.com/jp/company/whats/story04">人材が支えるNRI</a></li>
-                    <li><a href="https://www.nri.com/jp/company/whats/story05">業界トップクラスの収益力</a></li>
-                </ul>
-            </li>
-            <li>
-                <p>NRIグループ国内一覧</p>
-                <ul>
-                    <li><a href="https://www.nri.com/jp/company/map#fxb-main">メインオフィス</a></li>
-                    <li><a href="https://www.nri.com/jp/company/map#fxb-jp">グループカンパニー</a></li>
-                    <li><a href="https://www.nri.com/jp/company/map#fxb-aff">その他の関連会社・団体</a></li>
-                </ul>
-            </li>
-            <li>
-                <p>事業内容</p>
-                <ul>
-                    <li><a href="https://www.nri.com/jp/service/mcs">コンサルティング</a></li>
-                    <li><a href="https://www.nri.com/jp/service/fis">金融ITソリューション</a></li>
-                    <li><a href="https://www.nri.com/jp/service/iis">産業ITソリューション</a></li>
-                    <li><a href="https://www.nri.com/jp/service/ips">IT基盤サービス</a></li>
-                </ul>
-            </li>
-        </ul>
+                <h1>NRIのデジタルビジネス戦略</h1>
+            </div>
 
-  </div>
+            <div class="snsShare">
+                <p>Share</p>
+                <ul>
+                <li><a href="https://www.facebook.com/share.php?u=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-facebook.svg" alt="Facebook" width="" height=""></a></li>
+                <li><a href="https://twitter.com/share?text=NRI%e3%81%ae%e5%bc%b7%e3%81%bf%ef%bc%9a%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%83%a2%e3%83%87%e3%83%ab%e3%81%ae%e7%89%b9%e5%be%b4+%7c+%e4%bc%81%e6%a5%ad%e6%83%85%e5%a0%b1+%7c+%e9%87%8e%e6%9d%91%e7%b7%8f%e5%90%88%e7%a0%94%e7%a9%b6%e6%89%80(NRI)&url=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-twitter.svg" alt="Twitter" width="28" height="28"></a></li>
+                <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-linkedin.svg" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
 
-  <div class="pageBack">
-    <a href="https://www.nri.com/jp/company">前のページに戻る</a>
-  </div>
+            <div class="articleText">
+                <h2>NRIのデジタルビジネス戦略</h2>
+                <p>NRI では、企業の DX に向けた取り組みについて、既存ビジネスの業務プロセス変革に寄与する DX を「DX1.0」、デジタルで新しいビジネスモデルそのものを生み出す DX を「DX2.0」と定義しています。</p>
+                <p>DX を実現するためには、業務プロセス変革やビジネスモデル創造、そして、それらを実現する IT を同時並行で、共に議論しながら、かつ、スピーディーに実装できる戦略パートナーが必要です。NRI は、コンサルティングと IT ソリューションの人材と機能を併せ持ち、お客さまと併走し、お客さまと仮説検証を繰り返しながらビジネスを創出する「コンソリューション」の提供を強みとして、DX の実現を推進します。</p>
+            </div>
 
-</div>
+            <div class="figure">
+                <img src="https://www.nri.com/-/media/Corporate/jp/Images/company/whats/story06/story06_img_01.jpg?la=ja-JP&hash=505D40BD561BF25D6D1185858533744FBBE46273" alt="デジタルビジネス戦略概略">
+            </div>
+
+            <div class="linkPdf">
+                <a href="https://www.nri.com/-/media/Corporate/jp/Files/PDF/company/whats/story6/NRI_journal_DX2019.pdf?la=ja-JP&hash=50460F6AF0296BF442B7091D0133176B8B1ACE0E">デジタルが拓く近未来（NRIのDX）<br>（4.06 MB）</a>
+            </div>
+
+            <div class="linkPage">
+                <a class="linkLeft" href="https://www.nri.com/jp/company/whats/story03">&lt; ビジネスモデルの特徴</a>
+                <a class="linkRight" href="https://www.nri.com/jp/company/whats/story04">人材が支えるNRI &gt;</a>
+            </div>
+
+            <div class="linkNav">
+                <h2>NRIの強み</h2>
+                <ul>
+                <li><a href="https://www.nri.com/jp/company/whats/history">NRIのあゆみと持続的な成長</a></li>
+                <li><a href="https://www.nri.com/jp/company/whats/story01">問題発見から問題解決まで</a></li>
+                <li><a href="https://www.nri.com/jp/company/whats/story02">強固な顧客基盤</a></li>
+                <li><a href="https://www.nri.com/jp/company/whats/story03">ビジネスモデルの特徴</a></li>
+                <li><a href="https://www.nri.com/jp/company/whats/story04">人材が支えるNRI</a></li>
+                <li><a href="https://www.nri.com/jp/company/whats/story05">業界トップクラスの収益力</a></li>
+                </ul>
+            </div>
+
+            <div class="snsShare">
+                <p>Share</p>
+                <ul>
+                <li><a href="https://www.facebook.com/share.php?u=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-facebook.svg" alt="Facebook"></a></li>
+                <li><a href="https://twitter.com/share?text=NRI%e3%81%ae%e5%bc%b7%e3%81%bf%ef%bc%9a%e3%83%93%e3%82%b8%e3%83%8d%e3%82%b9%e3%83%a2%e3%83%87%e3%83%ab%e3%81%ae%e7%89%b9%e5%be%b4+%7c+%e4%bc%81%e6%a5%ad%e6%83%85%e5%a0%b1+%7c+%e9%87%8e%e6%9d%91%e7%b7%8f%e5%90%88%e7%a0%94%e7%a9%b6%e6%89%80(NRI)&url=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-twitter.svg" alt="Twitter" width="28" height="28"></a></li>
+                <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.nri.com%2fjp%2fcompany%2fwhats%2fstory06"><img src="https://www.nri.com/static/common/images/icon-linkedin.svg" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+
+            <div class="localNav">
+                <h1>企業情報</h1>
+                    <ul>
+                        <li>
+                            <p>経営方針</p>
+                            <ul>
+                                <li><a href="https://www.nri.com/jp/company/message">社長メッセージ</a></li>
+                                <li><a href="https://www.nri.com/jp/company/c_philosophy">企業理念</a></li>
+                                <li><a href="https://www.nri.com/jp/company/vision">経営ビジョン</a></li>
+                                <li><a href="https://www.nri.com/jp/company/quality">品質向上・リスク管理</a></li>
+                                <li><a href="https://www.nri.com/jp/company/p_training">人材の育成</a></li>
+                                <li><a href="https://www.nri.com/jp/company/internal">内部統制</a></li>
+                                <li><a href="https://www.nri.com/jp/company/company_code">NRIグループ企業行動原則</a></li>
+                                <li><a href="https://www.nri.com/jp/company/business_code">NRIグループビジネス行動基準</a></li>
+                                <li><a href="https://www.nri.com/jp/company/governance">コーポレート・ガバナンス</a></li>
+                                <li><a href="https://www.nri.com/jp/company/risk">事業等のリスク</a></li>
+                                <li><a href="https://www.nri.com/jp/company/partner">NRIグループの調達方針</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>企業案内</p>
+                            <ul>
+                                <li><a href="https://www.nri.com/jp/company/info">会社概要</a></li>
+                                <li><a href="https://www.nri.com/jp/company/history">沿革</a></li>
+                                <li><a href="https://www.nri.com/jp/company/org">組織図</a></li>
+                                <li><a href="https://www.nri.com/jp/company/profile">役員構成</a></li>
+                                <li><a href="https://www.nri.com/jp/company/50th_history">未来創発の軌跡</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>NRIの強み</p>
+                            <ul>
+                                <li><a href="https://www.nri.com/jp/company/whats/history">NRIのあゆみと持続的な成長</a></li>
+                                <li><a href="https://www.nri.com/jp/company/whats/story01">問題発見から問題解決まで</a></li>
+                                <li><a href="https://www.nri.com/jp/company/whats/story02">強固な顧客基盤</a></li>
+                                <li><a href="https://www.nri.com/jp/company/whats/story03">ビジネスモデルの特徴</a></li>
+                                <li><a href="https://www.nri.com/jp/company/whats/story06">NRIのデジタルビジネス戦略</a></li>
+                                <li><a href="https://www.nri.com/jp/company/whats/story04">人材が支えるNRI</a></li>
+                                <li><a href="https://www.nri.com/jp/company/whats/story05">業界トップクラスの収益力</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>NRIグループ国内一覧</p>
+                            <ul>
+                                <li><a href="https://www.nri.com/jp/company/map#fxb-main">メインオフィス</a></li>
+                                <li><a href="https://www.nri.com/jp/company/map#fxb-jp">グループカンパニー</a></li>
+                                <li><a href="https://www.nri.com/jp/company/map#fxb-aff">その他の関連会社・団体</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>事業内容</p>
+                            <ul>
+                                <li><a href="https://www.nri.com/jp/service/mcs">コンサルティング</a></li>
+                                <li><a href="https://www.nri.com/jp/service/fis">金融ITソリューション</a></li>
+                                <li><a href="https://www.nri.com/jp/service/iis">産業ITソリューション</a></li>
+                                <li><a href="https://www.nri.com/jp/service/ips">IT基盤サービス</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+            </div>
+
+            <div class="pageBack">
+                <a href="https://www.nri.com/jp/company">前のページに戻る</a>
+            </div>
+        </div>
+    </article>
+</main>
 
 <footer>
   <div class="snsFollow">
