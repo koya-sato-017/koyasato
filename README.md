@@ -21,7 +21,7 @@
     </svg>
   </h1>
 
-  <div class="globalNavi">
+  <nav class="globalNavi">
     <ul>
       <li>ナレッジ•インサイト</li>
       <li>ソリューション•サービス</li>
@@ -42,7 +42,7 @@
         </div>
       </li>
     </ul>
-  </div>
+  </nav>
   <p class="topicPath">NRI トップ &gt; 企業情報 &gt; NRIの強み：NRIのデジタルビジネス戦略</p>
 </header>
 
