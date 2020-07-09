@@ -8,6 +8,15 @@
 <meta name="description" content="">
 <link rel="stylesheet" href="common/css/normalize.css">
 <link rel="stylesheet" href="common/css/style.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+$(function(){
+  $('.btnTrigger').on('click', function() {
+    $(this).toggleClass('active');
+    return false;
+  });
+});
+</script>
 </head>
 <body>
 
@@ -35,7 +44,7 @@
         <li><img src="https://www.nri.com/-/media/Corporate/jp/Images/common/header/glass.svg" alt="検索"></li>
         <li><img src="https://www.nri.com/-/media/Corporate/jp/Images/common/header/earth.svg" alt="言語切り替え"></li>
         <li>
-          <div class="menu">
+          <div class="btnTrigger" id="btn01">
             <span></span>
             <span></span>
             <span></span>
