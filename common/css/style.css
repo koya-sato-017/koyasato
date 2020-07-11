@@ -88,9 +88,31 @@ header {
 header .topicPath {
     font-size: 12px;
     margin-top: 48px;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
     margin-left: 76px;
 }
 header .topicPath span {
     color: #999;
+}
+.articleTitle {
+    background-image: url(https://www.nri.com/-/media/Corporate/jp/Images/company/whats/h1_whats_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height:250px;
+}
+.articleTitle p,h1 {
+    color: #fff;
+}
+.articleTitle p {
+    font-size: 20px;
+    width: 70%;
+    padding-top: 42px;
+    margin: 24px auto;
+}
+.articleTitle h1 {
+    font-size: 28px;
+    width: 70%;
+    margin: 24px auto;
 }
