@@ -16,6 +16,9 @@ header {
     top: 20%;
     margin: 0;
 }
+.globalHeaderWrapper .logo svg {
+    vertical-align: middle;
+}
 .globalHeaderWrapper .logo svg path {
     fill: #005bac;
 }
@@ -116,10 +119,6 @@ header .topicPath span {
     width: 70%;
     margin: 24px auto;
 }
-.articleText {
-    width: 60%;
-    margin: 0 auto;
-}
 .snsShare {
     display: flex;
     width: 57%;
@@ -145,4 +144,31 @@ header .topicPath span {
 }
 .snsShare ul li a img {
     vertical-align: middle;
+}
+.articleText {
+    width: 57%;
+    margin: 0 auto;
+}
+.articleText h2 {
+    position: relative;
+    margin: 28px 0 28px 0;
+    padding: 8px 0px 8px 32px;
+    font-size: 21px;
+    letter-spacing: 0.05em;
+}
+.articleText h2::before {
+    content: "";
+    background: url(../images/bg-heading-h2.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+.articleText p {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
 }
