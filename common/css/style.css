@@ -87,7 +87,7 @@ header {
 }
 header .topicPath {
     font-size: 12px;
-    margin-top: 48px;
+    margin-top: 0;
     margin-bottom: 28px;
     margin-left: 76px;
 }
@@ -115,4 +115,34 @@ header .topicPath span {
     font-size: 28px;
     width: 70%;
     margin: 24px auto;
+}
+.articleText {
+    width: 60%;
+    margin: 0 auto;
+}
+.snsShare {
+    display: flex;
+    width: 57%;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 18px;
+    padding-right: 6px;
+}
+.snsShare p {
+    font-size: 10px;
+    font-weight: bold;
+    padding-right: 5px;
+    color: #333;
+}
+.snsShare ul {
+    display: flex;
+    padding-left: 0;
+    align-items: center;
+}
+.snsShare ul li {
+    padding-left: 22px;
+}
+.snsShare ul li a img {
+    vertical-align: middle;
 }
