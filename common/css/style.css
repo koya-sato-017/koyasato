@@ -192,13 +192,15 @@ header {
 }
 .linkPdf a::before {
     content: "";
-    display: absolute;
+    position: absolute;
     display: inline-block;
     width: 5px;
     height: 5px;
+    top: 32px;
+    left: 8px;
     border-top: 1px solid #fff;
     border-right: 1px solid #fff;
-    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 .linkPdf {
     color: #fff;
@@ -250,6 +252,7 @@ header {
 .linkNav {
     width: 56%;
     margin: 0 auto;
+    margin-bottom: 48px;
     background-color: #deecf8;
 }
 .linkNav h2 {
@@ -274,15 +277,17 @@ header {
     margin: 10px auto;
     align-items: center;
     text-align: center;
-    display: relative;
+    position: relative;
     height: 100%;
 }
 .linkNav ul li a::before {
     content: "";
-    display: absolute;
+    position: absolute;
     display: block;
     width: 4px;
     height: 4px;
+    top: 24px;
+    left: 4px;
     border-top: 1px solid #231815;
     border-right: 1px solid #231815;
     transform: rotate(45deg);
@@ -292,4 +297,62 @@ header {
     display: block;
     padding: 16px;
     align-items: center;
+}
+.localNav {
+    width: 70%;
+    margin: 112px auto 0 auto;
+
+}
+.localNavTitle {
+    font-size: 20px;
+    color: #000;
+    border-top: 2px solid #000;
+    border-bottom: 1px dotted #000000;
+    padding: 28px 0 36px 0;
+    
+}
+.localNav ul {
+    border-bottom: 1px dotted #000;
+    padding: 8px 0 24px 0;
+    margin-top: 0;
+    padding: 0;
+}
+.localNav ul li p {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 32px;
+}
+
+.localNav ul li ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 0 32px 0;
+    
+}
+.localNav ul li ul li {
+    width: 25%;
+    padding: 24px 0 0 0;
+    
+}
+.localNav ul li ul li a::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    border-top: solid 1px;
+    border-right: solid 1px;
+    transform: rotate(45deg);
+    color: #005bac;
+  }
+.localNav ul li ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    color: #005bac;
+    position: relative;
+    padding-left: 16px;
 }
