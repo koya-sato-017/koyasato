@@ -230,16 +230,14 @@ header {
     vertical-align: middle;
 }
 .linkPage {
-    margin: 93px auto 0 auto;
+    margin: 93px auto 16px auto;
     text-align: center;
-    width: 56%;
+    width: 57%;
     position: relative;
-    
+    height: 50px;
 }
 .linkPage a {
     text-decoration: none;
-    
-
 }
 .linkPage .linkLeft {
     position: absolute;
@@ -248,4 +246,50 @@ header {
 .linkPage  .linkRight {
     position: absolute;
     right: 0;
+}
+.linkNav {
+    width: 56%;
+    margin: 0 auto;
+    background-color: #deecf8;
+}
+.linkNav h2 {
+    font-size: 16px;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 24px;
+}
+.linkNav ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 100%;
+    padding: 4px 8px 28px 8px;
+    margin: 0 auto;
+}
+.linkNav ul li {
+    width: 30%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 0;
+    margin: 10px auto;
+    align-items: center;
+    text-align: center;
+    display: relative;
+    height: 100%;
+}
+.linkNav ul li a::before {
+    content: "";
+    display: absolute;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-top: 1px solid #231815;
+    border-right: 1px solid #231815;
+    transform: rotate(45deg);
+}
+.linkNav ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 16px;
+    align-items: center;
 }
