@@ -356,3 +356,25 @@ header {
     position: relative;
     padding-left: 16px;
 }
+.pageBack {
+    width: 70%;
+    margin: 66px auto 0 auto;
+    position: relative;
+}
+.pageBack a::before {
+    content: "";
+    color: #005bac;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
+    transform: rotate(45deg);
+    top: 7px;
+    left: 0;
+}
+.pageBack a {
+    text-decoration: none;
+    padding-left: 16px;
+    color: #005bac;
+}
