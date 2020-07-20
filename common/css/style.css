@@ -403,3 +403,77 @@ header {
 .snsFollow ul li a {
     padding-top: 0;
 }
+.footerMain {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 24px;
+}
+.footerMain .footerMainList {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;    
+}
+.footerMain .footerMainList p {
+    font-weight: bold;
+    padding-left: 20px;
+    margin-bottom: 32px;
+}
+.footerMain .footerMainList p a::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 7px;
+    left: -16px;
+    border-top: solid 1px;
+    border-right: solid 1px;
+    transform: rotate(45deg);
+}
+
+.footerMain .footerMainList p a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+}
+.footerMain ul {
+    margin-bottom: 84px;
+}
+.footerMain ul li {
+    width: 25%;    
+}
+.footerMain ul li ul {
+    padding-left: 0;
+}
+.footerMain ul li ul li {
+    width: 100%;
+    padding-left: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.footerMain ul li ul li a::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 5px;
+    left: -16px;
+    border-top: solid 1px;
+    border-right: solid 1px;
+    transform: rotate(45deg);
+}
+.footerMain ul li ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+}
+.footerMain .footerMainList .career ul li {
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+.footerMain .footerMainList .media ul li {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
