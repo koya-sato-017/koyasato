@@ -411,7 +411,8 @@ header {
 .footerMain .footerMainList {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 0;    
+    padding-left: 0;
+    margin-bottom: 0;
 }
 .footerMain .footerMainList p {
     font-weight: bold;
@@ -430,7 +431,6 @@ header {
     border-right: solid 1px;
     transform: rotate(45deg);
 }
-
 .footerMain .footerMainList p a {
     position: relative;
     text-decoration: none;
@@ -440,7 +440,7 @@ header {
     margin-bottom: 84px;
 }
 .footerMain ul li {
-    width: 25%;    
+    width: 25%;
 }
 .footerMain ul li ul {
     padding-left: 0;
@@ -476,4 +476,32 @@ header {
     font-weight: bold;
     font-size: 16px;
     margin-bottom: 32px;
+}
+.footerSub {
+    margin: 0 auto;
+    border-top: 1px solid #999;
+    padding-top: 68px;
+    padding-bottom: 112px;
+}
+.footerSub ul {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 40px;
+}
+.footerSub li + li::before {
+    content: "|";
+    margin: 0 16px 0 16px;
+    font-size: 1px;
+}
+.footerSub ul li a {
+    color: #999;
+    font-size: 12px;
+    text-decoration: none;    
+}
+.footerSub p {
+    font-size: 8px;
+    width: 70%;
+    margin: 28px auto 0 auto;
 }
