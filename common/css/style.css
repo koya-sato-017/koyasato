@@ -22,9 +22,6 @@ header {
     padding-left: 36px;
     margin: 0;
 }
-.globalHeaderWrapper .logo svg {
-    
-}
 .globalHeaderWrapper .logo svg path {
     fill: #005bac;
 }
@@ -168,9 +165,9 @@ header {
 }
 .articleText h2::before {
     content: "";
-    background: url(../images/bg-heading-h2.png) no-repeat;
+    background: url(../../images/bg-heading-h2.png);
     background-size: contain;
-    display: inline-block;
+    display: block;
     width: 22px;
     height: 22px;
     position: absolute;
@@ -223,12 +220,12 @@ header {
 }
 .linkPdf a::after {
     content: "";
-    background: url(images/PDF_24.png) no-repeat;
-    /* background-size: contain; */
+    background: url(../../images/PDF_24.png) no-repeat;
+    background-size: contain;
     display: inline-block;
     width: 16px;
     height: 16px;
-    /* margin: 0 0 0 11px; */
+    margin: 0 0 0 12px;
     vertical-align: middle;
 }
 .linkPage {
@@ -536,7 +533,3 @@ header {
     margin: auto;
     text-align: center;
 }
-  
-  
-  
-  
