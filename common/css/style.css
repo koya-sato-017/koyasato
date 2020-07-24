@@ -105,7 +105,7 @@ header {
     color: #999;
 }
 .articleTitle {
-    background-image: url(https://www.nri.com/-/media/Corporate/jp/Images/company/whats/h1_whats_2.jpg);
+    background-image: url(../../images/article-title-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
