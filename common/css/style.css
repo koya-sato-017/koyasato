@@ -502,9 +502,10 @@ header {
     text-decoration: none;    
 }
 .footerSub p {
-    font-size: 8px;
-    width: 70%;
-    margin: 28px auto 0 auto;
+    font-size: 1px;
+    width: 72%;
+    margin: 24px auto 0 auto;
+    padding-left: 8px;
 }
 #pageTop {
     width: 60px;
