@@ -237,6 +237,7 @@ header {
 }
 .linkPage a {
     text-decoration: none;
+    color: #0c419a;
 }
 .linkPage .linkLeft {
     position: absolute;
@@ -294,6 +295,7 @@ header {
     display: block;
     padding: 16px;
     align-items: center;
+    color: #0c419a;
 }
 .localNav {
     width: 70%;
@@ -349,7 +351,7 @@ header {
     text-decoration: none;
     font-size: 14px;
     display: block;
-    color: #005bac;
+    color: #0c419a;
     position: relative;
     padding-left: 16px;
 }
@@ -373,7 +375,7 @@ header {
 .pageBack a {
     text-decoration: none;
     padding-left: 16px;
-    color: #005bac;
+    color: #0c419a;
 }
 .snsFollow {
     display: flex;
