@@ -403,9 +403,11 @@ header {
     padding-top: 0;
 }
 .footerMain {
-    width: 90%;
+    width: 91%;
     margin: 0 auto;
     padding-top: 24px;
+    padding-left: 36px;
+    padding-right: 48px;
 }
 .footerMain .footerMainList {
     display: flex;
