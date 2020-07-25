@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     height: 55px;
-    background-color: #fff;
+    background-color: #ffffff;
     align-items: center;
 }
 .globalHeaderWrapper .logo {
@@ -104,7 +104,7 @@ header {
     margin-left: 76px;
 }
 .topicPath span {
-    color: #999;
+    color: #999999;
 }
 .articleTitle {
     background-image: url(../../images/article-title-image.jpg);
@@ -115,7 +115,7 @@ header {
     height:250px;
 }
 .articleTitle p,h1 {
-    color: #fff;
+    color: #ffffff;
 }
 .articleTitle p {
     font-size: 20px;
@@ -141,7 +141,7 @@ header {
     font-size: 10px;
     font-weight: bold;
     padding-right: 4px;
-    color: #333;
+    color: #333333;
 }
 .snsShare ul {
     display: flex;
@@ -197,12 +197,12 @@ header {
     height: 5px;
     top: 32px;
     left: 8px;
-    border-top: 1px solid #fff;
-    border-right: 1px solid #fff;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
     transform: rotate(45deg);
 }
 .linkPdf {
-    color: #fff;
+    color: #ffffff;
     background: #005bac;
     border: solid 1px #005bac;
     width: 295px;
@@ -214,7 +214,7 @@ header {
 }
 .linkPdf a {
     display: table-cell;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     text-align: center;
     font-size: 15px;
@@ -271,8 +271,8 @@ header {
 }
 .linkNav ul li {
     width: 30%;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
     padding: 0;
     margin: 10px auto;
     align-items: center;
@@ -306,14 +306,14 @@ header {
 }
 .localNavTitle {
     font-size: 20px;
-    color: #000;
-    border-top: 2px solid #000;
+    color: #000000;
+    border-top: 2px solid #000000;
     border-bottom: 1px dotted #000000;
     padding: 28px 0 36px 0;
     
 }
 .localNav ul {
-    border-bottom: 1px dotted #000;
+    border-bottom: 1px dotted #000000;
     padding: 8px 0 24px 0;
     margin-top: 0;
     padding: 0;
@@ -382,8 +382,8 @@ header {
 .snsFollow {
     display: flex;
     justify-content: center;
-    border-top: 2px solid #999;
-    border-bottom: 2px solid #999;
+    border-top: 2px solid #999999;
+    border-bottom: 2px solid #999999;
     margin-top: 96px;
     justify-content: center;
     align-items: center;
@@ -392,7 +392,7 @@ header {
 .snsFollow p {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #333333;
     margin-left: 36px;
 }
 .snsFollow ul {
@@ -437,7 +437,7 @@ header {
 .footerMain .footerMainList p a {
     position: relative;
     text-decoration: none;
-    color: #333;
+    color: #333333;
 }
 .footerMain ul {
     margin-bottom: 84px;
@@ -469,7 +469,7 @@ header {
 .footerMain ul li ul li a {
     position: relative;
     text-decoration: none;
-    color: #333;
+    color: #333333;
 }
 .footerMain .footerMainList .career ul li {
     font-weight: bold;
@@ -482,7 +482,7 @@ header {
 }
 .footerSub {
     margin: 0 auto;
-    border-top: 1px solid #999;
+    border-top: 1px solid #999999;
     padding-top: 68px;
     padding-bottom: 112px;
 }
@@ -499,7 +499,7 @@ header {
     font-size: 1px;
 }
 .footerSub ul li a {
-    color: #999;
+    color: #999999;
     font-size: 12px;
     text-decoration: none;    
 }
@@ -515,7 +515,7 @@ header {
     position: fixed;
     right: 0;
     bottom: 0;
-    background-color: #333;
+    background-color: #333333;
 }
 #pageTop a {
     position: relative;
@@ -529,7 +529,7 @@ header {
     font-weight: 600;
     content: '\f106';
     font-size: 25px;
-    color: #fff;
+    color: #ffffff;
     position: absolute;
     width: 25px;
     height: 25px;
