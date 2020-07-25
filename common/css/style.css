@@ -84,17 +84,6 @@ header {
 .btnTrigger span:nth-of-type(3) {
     bottom: 0;
 }
-.btnTrigger.active span:nth-of-type(1) {
-    -webkit-transform: translateY(20px) rotate(-45deg);
-    transform: translateY(20px) rotate(-45deg);
-}
-.btnTrigger.active span:nth-of-type(2) {
-    opacity: 0;
-}
-.btnTrigger.active span:nth-of-type(3) {
-    -webkit-transform: translateY(-20px) rotate(45deg);
-    transform: translateY(-20px) rotate(45deg);
-}
 .topicPathWrapper {
     padding-top: 50px;
 }
