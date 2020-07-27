@@ -212,7 +212,7 @@ header {
 }
 .linkPdf a::after {
     content: "";
-    background: url(../../images/PDF_24.png) no-repeat;
+    background: url(../../images/icon-pdf.svg) no-repeat;
     background-size: contain;
     display: inline-block;
     width: 16px;
@@ -512,14 +512,14 @@ header {
 .footerSub li + li::before {
     content: "|";
     margin: 0 16px 0 16px;
-    font-size: 1px;
+    font-size: 8px;
 }
 .footerSub ul li a {
     color: #999999;
     font-size: 12px;
     text-decoration: none;    
 }
-.footerSub p {
+#copyright {
     font-size: 8px;
     width: 71%;
     margin: 24px auto 0 auto;
