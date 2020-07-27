@@ -233,7 +233,7 @@ header {
 }
 .linkPage .linkLeft::before {
     content: "";
-    color: #005bac;
+    color: #333333;
     position: absolute;
     width: 8px;
     height: 8px;
@@ -255,7 +255,7 @@ header {
 }
 .linkPage .linkRight::after {
     content: "";
-    color: #005bac;
+    color: #333333;
     position: absolute;
     width: 8px;
     height: 8px;
@@ -363,7 +363,7 @@ header {
     border-top: solid 1px;
     border-right: solid 1px;
     transform: rotate(45deg);
-    color: #005bac;
+    color: #4c4342;
   }
 .localNav ul li ul li a {
     text-decoration: none;
@@ -380,7 +380,7 @@ header {
 }
 .pageBack a::before {
     content: "";
-    color: #005bac;
+    color: #4b4341;
     position: absolute;
     width: 4px;
     height: 4px;
