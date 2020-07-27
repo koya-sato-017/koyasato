@@ -504,7 +504,7 @@ header {
 }
 .footerSub ul {
     display: flex;
-    width: 70%;
+    max-width: 1000px;
     margin: 0 auto;
     padding-left: 0;
 }
@@ -520,7 +520,7 @@ header {
 }
 #copyright {
     font-size: 10px;
-    width: 70%;
+    max-width: 1000px;
     margin: 24px auto 0 auto;
 }
 #pageTop {
