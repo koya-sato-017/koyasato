@@ -11,6 +11,7 @@ header {
 .globalHeaderWrapper {
     width: 100%;
     position: fixed;
+    z-index: 900;
     top: 0;
     right: 0;
     display: flex;
@@ -230,13 +231,39 @@ header {
     text-decoration: none;
     color: #0c419a;
 }
+.linkPage .linkLeft::before {
+    content: "";
+    color: #005bac;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
+    transform: rotate(45deg);
+    top: 5px;
+    left: 8px;
+}
 .linkPage .linkLeft {
     position: absolute;
     left: 0;
+    padding-left: 16px;
 }
-.linkPage  .linkRight {
+.linkPage .linkRight {
     position: absolute;
     right: 0;
+    padding-right: 16px;
+}
+.linkPage .linkRight::after {
+    content: "";
+    color: #005bac;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    transform: rotate(45deg);
+    top: 5px;
+    right: 8px;
 }
 .linkNav {
     width: 56%;
@@ -493,8 +520,8 @@ header {
     text-decoration: none;    
 }
 .footerSub p {
-    font-size: 1px;
-    width: 72%;
+    font-size: 8px;
+    width: 71%;
     margin: 24px auto 0 auto;
     padding-left: 8px;
 }
