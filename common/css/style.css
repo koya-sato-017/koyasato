@@ -504,10 +504,9 @@ header {
 }
 .footerSub ul {
     display: flex;
-    justify-content: center;
+    width: 70%;
     margin: 0 auto;
     padding-left: 0;
-    padding-right: 40px;
 }
 .footerSub li + li::before {
     content: "|";
@@ -520,10 +519,9 @@ header {
     text-decoration: none;    
 }
 #copyright {
-    font-size: 8px;
-    width: 71%;
+    font-size: 10px;
+    width: 70%;
     margin: 24px auto 0 auto;
-    padding-left: 8px;
 }
 #pageTop {
     width: 60px;
