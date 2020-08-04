@@ -91,7 +91,6 @@ a {
 }
 .headerTop a {
     background-color: #d9d9d9;
-    display: block;
     display: table-cell;
     height: 32px;
     vertical-align: middle;
@@ -151,19 +150,19 @@ a {
     object-position: 0% 100%;
 }
 .headerMainBottom ul li:nth-child(2) img {
-    width: 65px;
+    width: 60px;
     object-fit: cover;
-    object-position: 0% 100%;
+    object-position: 0% 0%;
 }
 .headerMainBottom ul li:nth-child(3) img {
-    width: 95px;
+    width: 90px;
     object-fit: cover;
-    object-position: 0% 100%;
+    object-position: 0% 0%;
 }
 .headerMainBottom ul li:nth-child(4) img {
-    width: 95px;
+    width: 90px;
     object-fit: cover;
-    object-position: 0% 100%;
+    object-position: 0% 0%;
 }
 .headerMainBottom ul li {
     border-left: 1px solid #dcdddd;
@@ -188,5 +187,46 @@ a {
     margin-right: 10px;
     font-weight: bold;
     background: url(../../images/icon_arrow01_right_blue01.png) 94% 50% no-repeat;
+}
+
+.localNav {
+    width: 100%;
+    margin: 8px auto 0 auto;
+    text-align: center;
+    background-color: #191937;
+}
+.localNav ul {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1040px;
+    text-align: center;
+    padding: 12px 12px 4px 12px;
+}
+.localNav ul li {
+    padding: 0;
+    margin: 2px;
+    display: inline-block;
+}
+.localNav a {
+    color: #ffffff;
+    display: inline-block;
+    padding: 8px 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.localNav li a::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../../images/icon_backslash01_black01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 16px;
+    vertical-align: middle;
+    padding-right: 18px;
+}
+.localNav li:first-child a::before {
+    content: none;
 }
 
