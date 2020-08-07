@@ -349,3 +349,25 @@ a {
     width: 96px;
     margin: 24px auto 0 auto;
 }
+
+.topicPath {
+    width: 100%;    
+    margin: 0 auto;
+    border-bottom: 1px solid #e1e1e1;
+}
+.topicPath ul {
+    display: flex;
+    display: table;
+    margin: 0 auto 0 0;
+    max-width: 1060px;
+    height: 64px;
+}
+.topicPath ul li {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 16px;
+    font-size: 14px;
+}
+.topicPath ul li a {
+    color: #36538d;
+}
