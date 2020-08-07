@@ -371,3 +371,36 @@ a {
 .topicPath ul li a {
     color: #36538d;
 }
+
+.articleHeading {
+    max-width: 1060px;
+    margin: 0 auto;
+
+}
+.articleHeading .articleMainTitle {
+    text-align: center;
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 8px;
+    line-height: 1.8;
+    padding-top: 64px;
+    padding-bottom: 40px;
+
+}
+.articleHeading .articleSubTitle {
+    text-align: center;
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 1.8;
+    background: url(../../images/line01_black01.png) center bottom no-repeat;
+    background-size: 200px 1px;
+    padding-bottom: 16px;
+}
+.articleHeading p {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-top: 4px;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 1.8;
+}
