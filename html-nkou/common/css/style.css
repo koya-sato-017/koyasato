@@ -50,7 +50,6 @@ a {
 }
 .headerTop {
     display: flex;
-    
     align-items: center;
     height: 32px;
     max-width: 1060px;
@@ -107,6 +106,8 @@ a {
 .headerMain {
     max-width: 1060px;
     margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 8px;
     background-color: #ffffff;
 }
 .headerMainTop {
@@ -147,6 +148,7 @@ a {
 }
 .headerMainBottom ul {
     display: flex;
+    position: relative;
     margin-right: auto;
     padding-left: 10px;
 }
@@ -176,6 +178,20 @@ a {
     border-right: 1px solid #dcdddd;
     padding: 0 32px 0 32px;
 }
+.headerMainBottom ul li:first-child::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 52px;
+    left: 88px;
+    z-index: 10;
+    width: 0;
+    height: 0;
+    margin: 0 0 0 -6px;
+    border-style: solid;
+    border-width: 0 6px 9px 6px;
+    border-color: transparent transparent #181836 transparent;
+}
 .headerMainBottom ul a {
     color: #000000;
 }
@@ -198,7 +214,7 @@ a {
 
 .localNav {
     width: 100%;
-    margin: 8px auto 0 auto;
+    margin: 0 auto;
     text-align: center;
     background-color: #191937;
 }
@@ -298,3 +314,38 @@ a {
     background-size: 5px 9px;
 }
 /* ここまでfixedHeaderWrapper -------------------- */
+
+/* ここからmain ------------------------------ */
+
+.mainTitleImage {
+    width: 100%;
+    height: 530px;
+    background-image: url(../../images/about_mainimage01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mainTitleImage .mainTitleWrapper {
+    margin: 0 auto;
+}
+.mainTitleImage .mainTitleWrapper .title {
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: normal;
+    letter-spacing: 12px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-top: 68px;
+    text-align: center;
+    /* align-items: center; */
+}
+.mainTitleImage .mainTitleWrapper .underLine {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+.mainTitleImage .mainTitleWrapper .aboutSchool {
+    display: block;
+    width: 96px;
+    margin: 24px auto 0 auto;
+}
