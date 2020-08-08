@@ -550,3 +550,135 @@ a {
     margin-bottom: 0;
 }
 
+.contents {
+    margin-top: 112px;
+    
+}
+
+.contents .basicProgram {
+    width: 100%;
+    background-color: #f7f7f7;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+.contents .basicProgram .contentsTitleArea {
+    width: 1060px;
+    margin: 0 auto;
+    text-align: center;
+}
+.contents .basicProgram .contentsTitleArea .contentsTitle {
+    font-size: 34px;
+    font-weight: normal;
+    text-align: center;
+    background: url(../../images/line01_black01.png) center bottom no-repeat;
+    background-size: 200px 1px;
+    line-height: 1.8;
+    margin-top: 72px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+}
+.contents .basicProgram .contentsTitleArea p {
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+.contents .basicProgram .contentsWrapper {
+    display: flex;
+    width: 1060px;
+    margin: 48px auto 92px auto;
+}
+.contents .basicProgram .contentsWrapper .leftImage {
+    width: 70%;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.contents .basicProgram .contentsWrapper a {
+    width: 29%;
+}
+.contents .basicProgram .contentsWrapper .rightArea .basicProgram {
+    background-color: #1c1c1c;
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 1.2rem;
+    width: 84px;
+}
+.contents .basicProgram .contentsWrapper .rightArea .basicProgram img {
+    height: 14px;
+    padding-bottom: 0;
+}
+.contents .basicProgram .contentsWrapper .rightArea h3 {
+    font-size: 22px;
+    color: #000000;
+    font-weight: normal;
+    margin-top: 0;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+.contents .basicProgram .contentsWrapper .rightArea .mainText {
+    color: #000000;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+.contents .basicProgram .contentsWrapper .rightArea .subText {
+    color: #000000;
+    font-size: 11px;
+    letter-spacing: 0.9px;
+    line-height: 1.7;
+    padding-top: 8px;
+    padding-bottom: 12px;
+}
+.contents .basicProgram .contentsWrapper .rightArea .readMore {
+    background: url(../../images/icon_arrow01_right_black01.png) 0 1px no-repeat;
+    background-size: 5px 9px;
+    padding: 0 0 0 16px;
+}
+.contents .basicProgram .contentsWrapper .rightArea .readMore img {
+    width: 70px;
+    height: 13px;
+}
+.contents .basicProgram .contentsWrapper .leftArea {
+    margin-left: 10px;
+}
+.contents .basicProgram .contentsWrapper .leftArea .basicProgram {
+    background-color: #1c1c1c;
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 1.2rem;
+    width: 84px;
+}
+.contents .basicProgram .contentsWrapper .leftArea .basicProgram img {
+    height: 14px;
+    padding-bottom: 0;
+}
+.contents .basicProgram .contentsWrapper .leftArea h3 {
+    font-size: 22px;
+    color: #000000;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+.contents .basicProgram .contentsWrapper .leftArea .subText {
+    color: #000000;
+    font-size: 14px;
+    padding-right: 6px;
+    line-height: 1.8;
+}
+.contents .basicProgram .contentsWrapper .leftArea .mainText {
+    color: #000000;
+    letter-spacing: 0.9px;
+    line-height: 1.8;
+    padding-right: 0;
+}
+.contents .basicProgram .contentsWrapper .rightImage {
+    width: 64%;
+}
+.contents .basicProgram .contentsWrapper .leftArea .readMore {
+    background: url(../../images/icon_arrow01_right_black01.png) 0 1px no-repeat;
+    background-size: 5px 9px;
+    padding: 0 0 0 16px;
+}
+.contents .basicProgram .contentsWrapper .leftArea .readMore img {
+    width: 70px;
+    height: 13px;
+}
