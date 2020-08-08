@@ -451,7 +451,7 @@ a {
     border: 1px solid #dddddd;
     max-width: 620px;
     height: 270px;
-    margin: 0 auto;
+    margin: 60px auto 84px auto;
     padding: 32px;
 }
 .credoArea .credoText {
@@ -480,3 +480,73 @@ a {
     width: 70px;
     height: 13px;
 }
+
+.characteristic {
+    font-size: 27px;
+    font-weight: normal;
+    padding-left: 8px;
+    padding-bottom: 18px;
+    background: url(../../images/line02_black01.png) center bottom no-repeat;
+    background-size: 1042px;
+}
+.characteristicArea {
+    display: flex;
+    margin: 60px auto 0 auto; 
+}
+.characteristicArea .characteristicDetails {
+    padding-left: 10px;
+    width: 47%;
+}
+.characteristicArea .characteristicDetails h3 {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.7;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 24px;
+    margin-bottom: 0;
+}
+.characteristicArea .characteristicDetails .main {
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+}
+.characteristicArea .characteristicDetails .sub {
+    font-size: 12px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+.characteristicArea figure {
+    width: 45%;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.advancedProgramArea {
+    max-width: 1060px;
+    display: flex;
+    margin-top: 56px;
+    padding-right: 0;
+}
+.advancedProgramArea .advancedProgram {
+    width: 47%
+}
+.advancedProgramArea .advancedProgram h3 {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.7;
+    border-bottom: 1px solid #000000;
+    padding-left: 8px;
+    padding-bottom: 24px;
+    margin-bottom: 8px;  
+}
+.advancedProgramArea .advancedProgram p {
+    font-size: 17px;
+    line-height: 1.7;
+    padding-left: 8px;
+}
+.advancedProgramArea figure {
+    width: 47%;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
