@@ -552,7 +552,6 @@ a {
 
 .contents {
     margin-top: 112px;
-    
 }
 
 .contents .basicProgram {
@@ -682,3 +681,143 @@ a {
     width: 70px;
     height: 13px;
 }
+
+.advancedProgram {
+    width: 1060px;
+    margin: 0 auto;
+}
+.advancedProgram .contentsTitleArea .contentsTitle {
+    font-size: 34px;
+    font-weight: normal;
+    text-align: center;
+    background: url(../../images/line01_black01.png) center bottom no-repeat;
+    background-size: 200px 1px;
+    line-height: 1.8;
+    margin-top: 72px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+}
+.advancedProgram .contentsTitleArea p {
+    line-height: 1.8;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contents .advancedProgram .contentsWrapper {
+    display: flex;
+    width: 1060px;
+    margin: 48px auto 92px auto;
+}
+.contents .advancedProgram .contentsWrapper .leftImage {
+    width: 70%;
+    padding: 0;
+    margin: 0 32px 0 12px;
+}
+.contents .advancedProgram .contentsWrapper a {
+    width: 29%;
+}
+.contents .advancedProgram .contentsWrapper .rightArea .advancedProgram {
+    background-color: #1c1c1c;
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 1.2rem;
+    width: 104px;
+}
+.contents .advancedProgram .contentsWrapper .rightArea .advancedProgram img {
+    height: 14px;
+    padding-bottom: 0;
+}
+.contents .advancedProgram .contentsWrapper .rightArea h3 {
+    font-size: 22px;
+    color: #000000;
+    font-weight: normal;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+.contents .advancedProgram .contentsWrapper .rightArea .mainText {
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    margin-bottom: 36px;
+}
+.contents .advancedProgram .contentsWrapper .rightArea .subText {
+    color: #000000;
+    font-size: 11px;
+    letter-spacing: 0.9px;
+    line-height: 1.7;
+    padding-top: 8px;
+    padding-bottom: 12px;
+}
+.contents .advancedProgram .contentsWrapper .rightArea .readMore {
+    background: url(../../images/icon_arrow01_right_black01.png) 0 1px no-repeat;
+    background-size: 5px 9px;
+    padding: 0 0 0 16px;
+}
+.contents .advancedProgram .contentsWrapper .rightArea .readMore img {
+    width: 70px;
+    height: 13px;
+}
+.contents .advancedProgram .contentsWrapper .leftArea {
+    margin-left: 10px;
+}
+.contents .advancedProgram .contentsWrapper .leftArea .advancedProgram {
+    background-color: #1c1c1c;
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 1.2rem;
+    width: 84px;
+}
+
+.contents .advancedProgram .contentsWrapper .leftArea {
+    margin-left: 10px;
+}
+.contents .advancedProgram .contentsWrapper .leftArea .advancedProgram {
+    background-color: #1c1c1c;
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 1.2rem;
+    width: 104px;
+}
+.contents .advancedProgram .contentsWrapper .leftArea .advancedProgram img {
+    height: 14px;
+    padding-bottom: 0;
+}
+.contents .advancedProgram .contentsWrapper .leftArea h3 {
+    font-size: 22px;
+    color: #000000;
+    font-weight: normal;
+    margin-top: 24px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+.contents .advancedProgram .contentsWrapper .leftArea .subText {
+    color: #000000;
+    font-size: 14px;
+    padding-right: 6px;
+    line-height: 1.8;
+}
+.contents .advancedProgram .contentsWrapper .leftArea .mainText {
+    color: #000000;
+    letter-spacing: 0.9px;
+    line-height: 1.8;
+    padding-right: 0;
+    margin-bottom: 36px;
+}
+.contents .advancedProgram .contentsWrapper .rightImage {
+    width: 64%;
+    margin: 0 0 0 24px;
+}
+.contents .advancedProgram .contentsWrapper .leftArea .readMore {
+    background: url(../../images/icon_arrow01_right_black01.png) 0 1px no-repeat;
+    background-size: 5px 9px;
+    padding: 0 0 0 16px;
+}
+.contents .advancedProgram .contentsWrapper .leftArea .readMore img {
+    width: 70px;
+    height: 13px;
+}
+
