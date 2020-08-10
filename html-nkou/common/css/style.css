@@ -1145,3 +1145,59 @@ a {
     width: 70px;
     height: 13px;
 }
+
+.cooperationSchool {
+    width: 1060px;
+    margin: 0 auto;
+}
+.cooperationSchool h2 {
+    font-size: 34px;
+    font-weight: normal;
+    text-align: center;
+    background: url(../../images/line01_black01.png) center bottom no-repeat;
+    background-size: 200px 1px;
+    line-height: 1.8;
+    margin-top: 72px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+}
+.cooperationSchool .contentsWrapper {
+    display: flex;
+    width: 1060px;
+    margin: 84px auto 92px auto;
+}
+.cooperationSchool .contentsWrapper a {
+    width: 27%;
+    padding-top: 0;
+    padding-left: 10px;
+}
+.cooperationSchool .contentsWrapper .leftArea h3 {
+    font-size: 22px;
+    color: #000000;
+    font-weight: normal;
+    margin-top: 0;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+.cooperationSchool .contentsWrapper .leftArea p {
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 1.7;
+    padding-bottom: 12px;
+}
+.cooperationSchool .contentsWrapper .leftArea .readMore {
+    background: url(../../images/icon_arrow01_right_black01.png) 0 6px no-repeat;
+    background-size: 5px 9px;
+    padding: 0 0 0 16px;
+}
+.cooperationSchool .contentsWrapper .leftArea .readMore img {
+    width: 70px;
+    height: 13px;
+}
+.cooperationSchool .contentsWrapper figure {
+    display: block;
+    width: 68%;
+    margin: 0 10px 0 auto;
+    padding-right: 0;
+}
