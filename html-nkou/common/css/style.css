@@ -860,6 +860,7 @@ a {
 .itToolCommunication .contentsWrapper .leftArea p { 
     letter-spacing: 1px;
     line-height: 1.8;
+    margin-bottom: 24px;
 }
 .itToolCommunication .contentsWrapper figure {
     width: 60%;
@@ -868,4 +869,68 @@ a {
     display: block;
     margin: 0 0 0 auto;
     padding: 0;
+}
+.itToolCommunication .contentsWrapper .leftArea .readMore {
+    background: url(../../images/icon_arrow01_right_black01.png) 0 8px no-repeat;
+    background-size: 5px 9px;
+    padding: 0 0 0 16px;
+}
+.itToolCommunication .contentsWrapper .leftArea .readMore img {
+    width: 70px;
+    height: 13px;
+}
+
+.schoolEvents {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+.schoolEvents h2 {
+    font-size: 34px;
+    font-weight: normal;
+    text-align: center;
+    background: url(../../images/line01_black01.png) center bottom no-repeat;
+    background-size: 200px 1px;
+    line-height: 1.8;
+    margin-top: 72px;
+    margin-bottom: 60px;
+    padding-bottom: 8px;
+}
+.schoolEvents .contentsWrapper {
+    display: flex;
+    max-width: 1060px;
+    margin: 48px auto 92px auto;
+}
+.schoolEvents .contentsWrapper figure {
+    width: 70%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.schoolEvents .contentsWrapper a {
+    width: 29%;
+    padding-top: 16px;
+    padding-left: 24px;
+}
+.schoolEvents .contentsWrapper a .rightArea h3 {
+    font-size: 22px;
+    color: #000000;
+    font-weight: normal;
+    margin-top: 0;
+    padding-right: 4px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+.schoolEvents .contentsWrapper a .rightArea p {
+    color: #000000;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+.schoolEvents .contentsWrapper a .rightArea .readMore {
+    background: url(../../images/icon_arrow01_right_black01.png) 0 6px no-repeat;
+    background-size: 5px 9px;
+    padding: 0 0 0 16px;
+    margin-top: 32px;
+}
+.schoolEvents .contentsWrapper a .rightArea .readMore img {
+    width: 70px;
+    height: 13px;
 }
