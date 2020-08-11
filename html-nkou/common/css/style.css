@@ -1201,3 +1201,89 @@ a {
     margin: 0 10px 0 auto;
     padding-right: 0;
 }
+
+.aboutBanner {
+    max-width: 1060px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 210px;
+    margin-bottom: 100px;
+}
+.aboutBanner a img {
+    margin: 0 auto;
+    width: 1060px;
+}
+
+.messageInfomationWrapper {
+    width: 100%;
+    background-color: #f7f7f7;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 80px;
+}
+.messageInfomation {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding-top: 52px;
+    padding-bottom: 8px;
+}
+.messageInfomation ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px 24px 10px;
+    align-items: center;
+}
+.messageInfomation ul li {
+    width: 46%;
+    display: table;
+    background: url(../../images/bg_diagonal01_black01.png) 0 0;
+    padding: 6px;
+    margin-bottom: 30px;
+}
+.messageInfomation ul li:nth-child(1) a {
+    display: table-cell;
+    background: url(../../images/icon_arrow01_right_black01.png) #ffffff 95% 50% no-repeat;
+    background-size: 5px 9px;
+    color: #272727;
+    padding: 24px 40px 20px 24px;
+    vertical-align: middle;
+}
+.messageInfomation ul li:nth-child(2) a {
+    display: table-cell;
+    background: url(../../images/icon_arrow01_right_black01.png) #ffffff 95% 50% no-repeat;
+    background-size: 5px 9px;
+    color: #272727;
+    padding: 0 40px 0 24px;
+    vertical-align: middle;
+}
+.messageInfomation ul li:nth-child(3) a {
+    display: table-cell;
+    background: url(../../images/icon_arrow01_right_black01.png) #ffffff 95% 50% no-repeat;
+    background-size: 5px 9px;
+    color: #272727;
+    padding: 12px 40px 8px 24px;
+    vertical-align: middle;
+}
+.messageInfomation ul li:nth-child(4) a {
+    display: table-cell;
+    background: url(../../images/icon_arrow01_right_black01.png) #ffffff 95% 50% no-repeat;
+    background-size: 5px 9px;
+    color: #272727;
+    padding: 0 40px 0 24px;
+    vertical-align: middle;
+}
+.messageInfomation ul li a .title {
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 8px 0 0 0;
+    line-height: 1.7;
+}
+.messageInfomation ul li a .text {
+    font-size: 13px;
+    margin-top: 0;
+    padding: 4px 0;
+    line-height: 1.7;
+    letter-spacing: 0.8px;
+}
