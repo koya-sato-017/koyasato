@@ -1381,3 +1381,89 @@ a {
     background: url(../../images/icon_arrow01_right_white01.png) 94% 50% no-repeat;
     background-size: 5px 9px;
 }
+
+.link {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    text-align: center;
+}
+.link .linkTop {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 40px 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+.link .linkTop ul {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.link .linkTop ul li {
+    position: relative;
+    display: table;
+    border: 1px solid #272727;
+    width: 256px;
+    height: 42px;
+    margin-right: 35px;
+}
+.link .linkTop ul li a {
+    display: table-cell;
+    vertical-align: middle;
+    color: #272727;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.link .linkTop ul li a::after {
+    position: absolute;
+    content: "";
+    background: url(../../images/icon_arrow01_right_black01.png) no-repeat;
+    background-size: contain;
+    width: 7px;
+    height: 10px;
+    right: 12px;
+    top: 16px;
+}
+.link p {
+    margin: 40px auto 28px auto;
+    letter-spacing: 0.6px;
+}
+.link .linkBottom {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+.link .linkBottom ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 0 4px;
+}
+.link .linkBottom ul li {
+    display: table;
+    width: 47%;
+    box-sizing: border-box;
+    background: url(../../images/bg_diagonal01_black01.png) 0 0;
+    padding: 6px;
+}
+.link .linkBottom ul li a {
+    display: table-cell;
+    padding: 12px 40px 12px 24px;
+    background: url(../../images/icon_arrow01_right_black01.png) #ffffff 95% 50% no-repeat;
+    background-size: 5px 9px;
+    vertical-align: middle;
+    text-align: center;
+}
+.link .linkBottom ul li a .njr {
+    height: 35px;
+    margin: 8px 12px auto auto;
+}
+.link .linkBottom ul li a .nlabo {
+    height: 45px;
+}
+.link .linkBottom ul li a p {
+    font-size: 13px;
+    color: #000000;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
