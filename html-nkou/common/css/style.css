@@ -1218,7 +1218,6 @@ a {
     width: 100%;
     background-color: #f7f7f7;
     border-top: 1px solid #e2e2e2;
-    border-bottom: 1px solid #e2e2e2;
     margin-bottom: 80px;
 }
 .messageInfomation {
@@ -1286,4 +1285,99 @@ a {
     padding: 4px 0;
     line-height: 1.7;
     letter-spacing: 0.8px;
+}
+/* ここまでmain ------------------------------ */
+
+/* ここからfooter ------------------------------ */
+
+.detailAboutWrapper {
+    width: 100%;
+    background: #191975 url(../../images/footer02_bg01.png) center top repeat;
+    color: #ffffff;
+
+}
+.detailAbout {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 36px 10px 12px 10px;
+}
+.detailAbout h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-top: 0;
+}
+.detailAbout .detailInfo {
+    max-width: 550px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+.detailAbout .detailInfo .leftArea ul {
+    padding: 0;
+}
+.detailAbout .detailInfo .leftArea ul li {
+    position: relative;
+    width: 260px;    
+    height: 56px;
+    margin-bottom: 10px;
+}
+.detailAbout .detailInfo .leftArea ul li a {
+    border: 1px solid #ffffff;
+    color: #1c1c1c;
+    display: block;
+    font-size: 18px;
+    padding: 16px 28px 14px 18px;
+    text-align: center;
+    background:#ffffff url(../../images/icon_arrow01_right_black01.png) 94% 50% no-repeat;
+}
+.detailAbout .detailInfo .leftArea ul li .book::before {
+    content: "";
+    display: inline-block;
+	width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+	background: url(../../images/icon_book01_black01.png) no-repeat;
+	background-size: contain;
+}
+.detailAbout .detailInfo .leftArea ul li .balloon::before {
+    content: "";
+    display: inline-block;
+	width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+	background: url(../../images/icon_balloon01_black01.png) no-repeat;
+	background-size: contain;
+}
+.detailAbout .detailInfo .rightArea {
+    margin: 8px 0 0 auto;
+}
+.detailAbout .detailInfo .rightArea .telInfo p {
+    font-size: 12px;
+    width: 200px;
+    margin: 0 auto;
+    text-align: right;
+}
+.detailAbout .detailInfo .rightArea .telInfo a img {
+    display: block;
+    width: 250px;
+    margin: 0 auto 8px;
+}
+.detailAbout .detailInfo .rightArea .contact {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    width: 192px;
+    height: 18px;
+    margin: 20px 0 0 auto;
+    padding: 10px;
+    background: url(../../images/icon_arrow01_right_white01.png) 94% 50% no-repeat;
+    background-size: 5px 9px;
 }
