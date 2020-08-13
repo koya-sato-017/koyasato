@@ -1385,7 +1385,7 @@ a {
 .link {
     max-width: 1060px;
     margin: 0 auto;
-    padding-bottom: 70px;
+    padding-bottom: 60px;
     text-align: center;
 }
 .link .linkTop {
@@ -1466,4 +1466,103 @@ a {
     color: #000000;
     margin-top: 8px;
     margin-bottom: 4px;
+}
+
+.footerNavWrapper {
+    width: 100%;
+    background-color: #f8f8f8; 
+}
+.footerNavWrapper .footerNav {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+.footerNavWrapper .footerNav .footerNavTop {
+    position: relative;
+}
+.footerNavWrapper .footerNav .footerNavTop ul {
+    display: flex;
+    padding: 60px 0 0 0;
+    margin-left: 12px;
+}
+.footerNavWrapper .footerNav .footerNavTop ul li:first-child {
+    border: none;
+}
+.footerNavWrapper .footerNav .footerNavTop ul li {
+    border-left: 1px solid #989cdd;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.footerNavWrapper .footerNav .footerNavTop ul li:first-child {
+    padding-left: 0;
+}
+.footerNavWrapper .footerNav .footerNavTop ul li a {
+    color: #000066;
+    font-weight: bold;
+}
+.footerNavWrapper .footerNav .footerNavTop .top {
+    position: absolute;
+    left: 88%;
+    top: 25%;
+    z-index: 10;
+}
+.footerNavContents {
+    max-width: 1060;
+    margin: 50px 10px 0 10px;
+    display: flex;
+}
+.footerNavContents .title {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.footerNavContents .title a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000066;
+}
+.footerNavContents .title a span {
+    font-size: 11px;
+    color: #000066;
+}
+.footerNavContents ul {
+    padding: 0;
+    margin-top: 8px;
+}
+.footerNavContents ul li a {
+    color: #272727;
+    font-size: 15px;
+    line-height: 2;
+}
+.footerNavContents .advancedProgram {
+    width: 20%;
+}
+.footerNavContents .advancedProgram .title a {
+    letter-spacing: 0.6px;
+}
+.footerNavContents .aboutNkou {
+    width: 20%;
+    margin: 20px auto 0 20px;
+}
+.footerNavContents .netCourseNetClub {
+    width: 20%;
+    margin: 20px auto 0 20px;
+}
+.footerNavContents .netCourseNetClub .netCourse {
+    border-bottom: 1px solid #c9c9c9;
+    padding-bottom: 16px;
+}
+.footerNavContents .netCourseNetClub .netClub {
+    margin-top: 20px;
+} 
+.footerNavContents .commuteCourse {
+    width: 20%;
+    margin: 20px auto 0 20px;
+}
+.footerNavContents .cooperationSchool {
+    width: 20%;
+    margin: 20px auto 0 20px;
+}
+.footerNavContents .cooperationSchool .top {
+    border-bottom: 1px solid #c9c9c9;
+    padding-bottom: 16px;
 }
