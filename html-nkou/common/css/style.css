@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,700&display=swap&subset=japanese');
+
 body {
     width: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 li {
     list-style: none;
