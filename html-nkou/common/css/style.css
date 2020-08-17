@@ -225,7 +225,7 @@ a {
     width: 10px;
     height: 16px;
     vertical-align: middle;
-    padding-right: 18px;
+    padding-right: 16px;
 }
 .localNav li:first-child a::before {
     content: none;
@@ -327,23 +327,22 @@ a {
     margin: 24px auto 0 auto;
 }
 
-.topicPath {
-    width: 100%;    
-    margin: 0 auto;
+.topicPath {  
     border-bottom: 1px solid #e1e1e1;
 }
 .topicPath ul {
     display: flex;
     display: table;
-    margin: 0 auto 0 0;
+    margin: 0 auto 0 68px;
     max-width: 1060px;
     height: 64px;
 }
 .topicPath ul li {
     display: table-cell;
     vertical-align: middle;
-    padding-left: 16px;
+    padding-left: 8px;
     font-size: 14px;
+    letter-spacing: 0.8px;
 }
 .topicPath ul li a {
     color: #36538d;
@@ -1556,7 +1555,7 @@ a {
     max-width: 1040px;
     margin: 0 auto;
     padding-top: 6px;
-    padding-bottom: 6px;
+    padding-bottom: 10px;
     border-top: 1px solid #c9c9c9;
     display: flex;
     align-items: center;
@@ -1591,7 +1590,7 @@ a {
 .footerNavWrapper .footerBottom .footerBottomRight ul li a::after {
     content: '＞';
     position: absolute;
-    font-size: 4px;
+    font-size: 10px;
     color: #aaaaaa;
     right: 7px;
     top: 16px;
