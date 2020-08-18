@@ -154,13 +154,13 @@ a {
 .headerMainBottom ul li {
     border-left: 1px solid #dcdddd;
     border-right: 1px solid #dcdddd;
-    padding: 0 32px 0 32px;
+    padding: 0 30px 0 30px;
 }
 .headerMainBottom ul li:first-child::after {
     content: "";
     display: block;
     position: absolute;
-    top: 52px;
+    top: 54px;
     left: 88px;
     z-index: 10;
     width: 0;
@@ -172,6 +172,8 @@ a {
 }
 .headerMainBottom ul a {
     color: #000000;
+    font-size: 15px;
+    letter-spacing: 2px;
 }
 .headerMainBottom .contact {
     display: table;
@@ -327,20 +329,22 @@ a {
     margin: 24px auto 0 auto;
 }
 
-.topicPath {  
+.topicPathWrapper {
+    width: 100%;
     border-bottom: 1px solid #e1e1e1;
+}
+.topicPath {
+    max-width: 1060px;
+    margin: 0 auto;
 }
 .topicPath ul {
     display: flex;
-    display: table;
-    margin: 0 auto 0 68px;
-    max-width: 1060px;
-    height: 64px;
+    align-items: center;
+    padding-left: 12px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 .topicPath ul li {
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 8px;
     font-size: 14px;
     letter-spacing: 0.8px;
 }
