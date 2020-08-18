@@ -672,7 +672,7 @@ a {
     width: 64%;
 }
 .contents .basicProgram .contentsWrapper .leftArea .readMore {
-    background: url(../../images/icon_arrow01_right_black01.png) 0 1px no-repeat;
+    background: url(../../images/icon_arrow01_right_black01.png) 0 4px no-repeat;
     background-size: 5px 9px;
     padding: 0 0 0 16px;
 }
@@ -755,7 +755,7 @@ a {
     padding-bottom: 12px;
 }
 .contents .advancedProgram .contentsWrapper .rightArea .readMore {
-    background: url(../../images/icon_arrow01_right_black01.png) 0 1px no-repeat;
+    background: url(../../images/icon_arrow01_right_black01.png) 0 4px no-repeat;
     background-size: 5px 9px;
     padding: 0 0 0 16px;
 }
@@ -815,7 +815,7 @@ a {
     margin: 0 0 0 24px;
 }
 .contents .advancedProgram .contentsWrapper .leftArea .readMore {
-    background: url(../../images/icon_arrow01_right_black01.png) 0 1px no-repeat;
+    background: url(../../images/icon_arrow01_right_black01.png) 0 4px no-repeat;
     background-size: 5px 9px;
     padding: 0 0 0 16px;
 }
@@ -934,7 +934,7 @@ a {
     line-height: 1.7;
 }
 .schoolEvents .contentsWrapper a .rightArea .readMore {
-    background: url(../../images/icon_arrow01_right_black01.png) 0 6px no-repeat;
+    background: url(../../images/icon_arrow01_right_black01.png) 0 8px no-repeat;
     background-size: 5px 9px;
     padding: 0 0 0 16px;
     margin-top: 32px;
@@ -997,7 +997,7 @@ a {
     width: 105%;
 }
 .startUp .contentsWrapper .leftArea .readMore {
-    background: url(../../images/icon_arrow01_right_black01.png) 0 8px no-repeat;
+    background: url(../../images/icon_arrow01_right_black01.png) 0 10px no-repeat;
     background-size: 5px 9px;
     padding: 0 0 0 16px;
 }
@@ -1055,7 +1055,7 @@ a {
     line-height: 1.7;
 }
 .clubActivities .contentsWrapper a .rightArea .readMore {
-    background: url(../../images/icon_arrow01_right_black01.png) 0 6px no-repeat;
+    background: url(../../images/icon_arrow01_right_black01.png) 0 8px no-repeat;
     background-size: 5px 9px;
     padding: 0 0 0 16px;
     margin-top: 32px;
@@ -1116,7 +1116,7 @@ a {
     padding-bottom: 12px;
 }
 .courseWrapper .course .contentsWrapper .leftArea .readMore {
-    background: url(../../images/icon_arrow01_right_black01.png) 0 6px no-repeat;
+    background: url(../../images/icon_arrow01_right_black01.png) 0 8px no-repeat;
     background-size: 5px 9px;
     padding: 0 0 0 16px;
 }
@@ -1156,7 +1156,7 @@ a {
     line-height: 1.8;
 }
 .courseWrapper .course .contentsWrapper .rightArea .readMore {
-    background: url(../../images/icon_arrow01_right_black01.png) 0 6px no-repeat;
+    background: url(../../images/icon_arrow01_right_black01.png) 0 8px no-repeat;
     background-size: 5px 9px;
     padding: 0 0 0 16px;
 }
@@ -1210,7 +1210,7 @@ a {
     padding-bottom: 12px;
 }
 .cooperationSchool .contentsWrapper .leftArea .readMore {
-    background: url(../../images/icon_arrow01_right_black01.png) 0 6px no-repeat;
+    background: url(../../images/icon_arrow01_right_black01.png) 0 8px no-repeat;
     background-size: 5px 9px;
     padding: 0 0 0 16px;
 }
