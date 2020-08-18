@@ -26,6 +26,8 @@ a {
     align-items: center;
     height: 32px;
     max-width: 1060px;
+    top: 0;
+    left: 0;
     margin: 0 auto;
     padding: 0 10px 0 10px;
     box-sizing: border-box;
@@ -83,6 +85,8 @@ a {
 }
 .headerMain {
     max-width: 1060px;
+    top: 0;
+    left: 0;
     margin: 0 auto;
     padding-top: 24px;
     padding-bottom: 8px;
@@ -198,13 +202,16 @@ a {
     text-align: center;
     background-color: #191937;
 }
-.localNav ul {
+.localNav .localNavList {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1040px;
+    max-width: 1060px;
+    top: 0;
+    left: 0;
     text-align: center;
-    padding: 12px 12px 4px 12px;
+    padding-top: 10px;
+    padding-bottom: 4px;
 }
 .localNav ul li {
     padding: 0;
@@ -316,7 +323,6 @@ a {
     margin-bottom: 16px;
     padding-top: 68px;
     text-align: center;
-    /* align-items: center; */
 }
 .mainTitleImage .mainTitleWrapper .underLine {
     display: block;
@@ -336,6 +342,8 @@ a {
 .topicPath {
     max-width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
 }
 .topicPath ul {
     display: flex;
@@ -355,7 +363,8 @@ a {
 .articleHeading {
     max-width: 1060px;
     margin: 0 auto;
-
+    top: 0;
+    left: 0;
 }
 .articleHeading .articleMainTitle {
     text-align: center;
@@ -388,6 +397,8 @@ a {
 .introduction {
     max-width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
     padding-top: 54px;
 }
 .introduction .educationalPolicy {
@@ -401,6 +412,8 @@ a {
 .introduction .policyDetails {
     display: flex;
     max-width: 1060px;
+    top: 0;
+    left: 0;
 }
 .introduction .policyDetails ul {
     padding-left: 10px;
@@ -504,6 +517,8 @@ a {
 .advancedProgramArea {
     max-width: 1060px;
     display: flex;
+    top: 0;
+    left: 0;
     margin-top: 56px;
     padding-right: 0;
 }
@@ -543,6 +558,8 @@ a {
 .contents .basicProgram .contentsTitleArea {
     width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
     text-align: center;
 }
 .contents .basicProgram .contentsTitleArea .contentsTitle {
@@ -563,6 +580,8 @@ a {
 .contents .basicProgram .contentsWrapper {
     display: flex;
     width: 1060px;
+    top: 0;
+    left: 0;
     margin: 48px auto 92px auto;
 }
 .contents .basicProgram .contentsWrapper .leftImage {
@@ -606,7 +625,7 @@ a {
     padding-bottom: 12px;
 }
 .contents .basicProgram .contentsWrapper .rightArea .readMore {
-    background: url(../../images/icon_arrow01_right_black01.png) 0 1px no-repeat;
+    background: url(../../images/icon_arrow01_right_black01.png) 0 4px no-repeat;
     background-size: 5px 9px;
     padding: 0 0 0 16px;
 }
@@ -665,6 +684,8 @@ a {
 .advancedProgram {
     width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
 }
 .advancedProgram .contentsTitleArea .contentsTitle {
     font-size: 34px;
@@ -687,6 +708,8 @@ a {
 .contents .advancedProgram .contentsWrapper {
     display: flex;
     width: 1060px;
+    top: 0;
+    left: 0;
     margin: 48px auto 92px auto;
 }
 .contents .advancedProgram .contentsWrapper .leftImage {
@@ -809,6 +832,8 @@ a {
 }
 .itToolCommunication {
     max-width: 1060px;
+    top: 0;
+    left: 0;
     margin: 0 auto 96px auto;
 }
 .itToolCommunication h2 {
@@ -863,6 +888,8 @@ a {
 .schoolEvents {
     max-width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
 }
 .schoolEvents h2 {
     font-size: 34px;
@@ -878,6 +905,8 @@ a {
 .schoolEvents .contentsWrapper {
     display: flex;
     max-width: 1060px;
+    top: 0;
+    left: 0;
     margin: 48px auto 92px auto;
 }
 .schoolEvents .contentsWrapper figure {
@@ -923,6 +952,8 @@ a {
 }
 .startUp {
     max-width: 1060px;
+    top: 0;
+    left: 0;
     margin: 0 auto 112px auto;
 }
 .startUp h2 {
@@ -978,6 +1009,8 @@ a {
 .clubActivities {
     max-width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
 }
 .clubActivities h2 {
     font-size: 34px;
@@ -993,6 +1026,8 @@ a {
 .clubActivities .contentsWrapper {
     display: flex;
     max-width: 1060px;
+    top: 0;
+    left: 0;
     margin: 48px auto 92px auto;
 }
 .clubActivities .contentsWrapper figure {
@@ -1039,6 +1074,8 @@ a {
 .courseWrapper .course {
     width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
 }
 .courseWrapper .course h2 {
     font-size: 34px;
@@ -1054,6 +1091,8 @@ a {
 .courseWrapper .course .contentsWrapper {
     display: flex;
     width: 1060px;
+    top: 0;
+    left: 0;
     margin: 84px auto 92px auto;
 }
 .courseWrapper .course .contentsWrapper a {
@@ -1129,6 +1168,8 @@ a {
 .cooperationSchool {
     width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
 }
 .cooperationSchool h2 {
     font-size: 34px;
@@ -1144,6 +1185,8 @@ a {
 .cooperationSchool .contentsWrapper {
     display: flex;
     width: 1060px;
+    top: 0;
+    left: 0;
     margin: 84px auto 92px auto;
 }
 .cooperationSchool .contentsWrapper a {
@@ -1185,6 +1228,8 @@ a {
 .aboutBanner {
     max-width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
     text-align: center;
     margin-top: 210px;
     margin-bottom: 100px;
@@ -1192,6 +1237,8 @@ a {
 .aboutBanner a img {
     margin: 0 auto;
     width: 1060px;
+    top: 0;
+    left: 0;
 }
 
 .messageInfomationWrapper {
@@ -1203,6 +1250,8 @@ a {
 .messageInfomation {
     max-width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
     padding-top: 52px;
     padding-bottom: 8px;
 }
@@ -1274,11 +1323,12 @@ a {
     width: 100%;
     background: #191975 url(../../images/footer02_bg01.png) center top repeat;
     color: #ffffff;
-
 }
 .detailAbout {
     max-width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
     padding: 36px 10px 12px 10px;
 }
 .detailAbout h2 {
@@ -1365,6 +1415,8 @@ a {
 .link {
     max-width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
     padding-bottom: 60px;
     text-align: center;
 }
@@ -1455,6 +1507,8 @@ a {
 .footerNavWrapper .footerNav {
     max-width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
 }
 .footerNavWrapper .footerNav .footerNavTop {
     position: relative;
@@ -1487,6 +1541,8 @@ a {
 }
 .footerNavContents {
     max-width: 1060;
+    top: 0;
+    left: 0;
     margin: 50px 10px 0 10px;
     display: flex;
 }
@@ -1552,6 +1608,8 @@ a {
 
 .footerNavWrapper .footerBottomWrapper {
     max-width: 1060px;
+    top: 0;
+    left: 0;
     margin: 24px auto 0 auto;
     align-items: center;
 }
@@ -1621,6 +1679,8 @@ a {
 .copyright .copyrightWrapper {
     max-width: 1060px;
     margin: 0 auto;
+    top: 0;
+    left: 0;
     display: flex;
     padding: 8px 0;
     letter-spacing: 0.8px;
