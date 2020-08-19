@@ -174,7 +174,7 @@ a {
     border-left: 1px solid #dcdddd;
     border-right: 1px solid #dcdddd;
     padding: 0 30px 0 30px;
-    display: block;
+    display: inline-block;
 }
 .headerMainBottom ul li:first-child::after {
     content: "";
@@ -190,10 +190,11 @@ a {
     border-width: 0 6px 9px 6px;
     border-color: transparent transparent #181836 transparent;
 }
-.headerMainBottom ul a {
+.headerMainBottom ul li a {
     color: #000000;
     font-size: 15px;
     letter-spacing: 2px;
+    display: block;
 }
 .headerMainBottom .contact {
     display: table;
@@ -371,6 +372,11 @@ a {
 .topicPath ul li {
     font-size: 14px;
     letter-spacing: 0.8px;
+}
+.topicPath ul li:nth-child(2)::before {
+    content: ">";
+    display: inline-block;
+    padding: 0 4px 0 4px;
 }
 .topicPath ul li a {
     color: #36538d;
