@@ -155,10 +155,26 @@ a {
     object-fit: cover;
     object-position: 0% 0%;
 }
+.headerMainBottom ul li:nth-child(2) a img:hover {
+    width: 60px;
+    object-fit: cover;
+    object-position: 0% 100%;
+}
+.headerMainBottom ul li:nth-child(3) a img:hover {
+    width: 90px;
+    object-fit: cover;
+    object-position: 0% 100%;
+}
+.headerMainBottom ul li:nth-child(4) a img:hover {
+    width: 90px;
+    object-fit: cover;
+    object-position: 0% 100%;
+}
 .headerMainBottom ul li {
     border-left: 1px solid #dcdddd;
     border-right: 1px solid #dcdddd;
     padding: 0 30px 0 30px;
+    display: block;
 }
 .headerMainBottom ul li:first-child::after {
     content: "";
