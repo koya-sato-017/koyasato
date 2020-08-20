@@ -124,64 +124,110 @@ a {
 
 .headerMainBottom {
     display: flex;
+    max-width: 1060px;
+    padding: 0;
+    margin: 0;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 .headerMainBottom ul {
     display: flex;
+    display: table;
+    width: 640px;
     position: relative;
     margin-right: auto;
     padding-left: 10px;
 }
-.headerMainBottom ul img {
-    width: 80px;
-    height: 10px;
-    object-fit: cover;
-    object-position: 0% 100%;
-}
-.headerMainBottom ul li:nth-child(2) img {
-    width: 60px;
-    object-fit: cover;
-    object-position: 0% 0%;
-}
-.headerMainBottom ul li:nth-child(3) img {
-    width: 90px;
-    object-fit: cover;
-    object-position: 0% 0%;
-}
-.headerMainBottom ul li:nth-child(4) img {
-    width: 90px;
-    object-fit: cover;
-    object-position: 0% 0%;
-}
-.headerMainBottom ul li:nth-child(2) a img:hover {
-    width: 60px;
-    object-fit: cover;
-    object-position: 0% 100%;
-}
-.headerMainBottom ul li:nth-child(3) a img:hover {
-    width: 90px;
-    object-fit: cover;
-    object-position: 0% 100%;
-}
-.headerMainBottom ul li:nth-child(4) a img:hover {
-    width: 90px;
-    object-fit: cover;
-    object-position: 0% 100%;
-}
 .headerMainBottom ul li {
     border-left: 1px solid #dcdddd;
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    width: 25%;
+}
+.headerMainBottom ul li:last-child {
+    border-left: 1px solid #dcdddd;
     border-right: 1px solid #dcdddd;
-    padding: 0 30px 0 30px;
-    display: inline-block;
+}
+.headerMainBottom ul li a {
+    color: #272727;
+    font-size: 15px;
+    letter-spacing: 2px;
+    display: block;
+    text-align: center;
+    height: 31px;
+}
+.headerMainBottom ul li:first-child a {
+    color: #1f286f;
+    text-decoration: none;
+}
+.headerMainBottom ul li:first-child a .image {
+    width: 76px;
+    background-image: url(../../images/global_nav_btn01_01.png);
+    background-position: 50% -10px;
+    display: block;
+    height: 10px;
+    margin: 3px auto 0;
+    text-indent: -9000px;
+}
+.headerMainBottom ul li:nth-child(2) .image {
+    width: 62px;
+    background-image: url(../../images/global_nav_btn01_02.png);
+    display: block;
+    height: 10px;
+    margin: 3px auto 0;
+    text-indent: -9000px;
+}
+.headerMainBottom ul li:nth-child(3) .image {
+    width: 96px;
+    background-image: url(../../images/global_nav_btn01_03.png);
+    display: block;
+    height: 10px;
+    margin: 3px auto 0;
+    text-indent: -9000px;
+}
+.headerMainBottom ul li:nth-child(4) .image {
+    width: 90px;
+    background-image: url(../../images/global_nav_btn01_04.png);
+    display: block;
+    height: 10px;
+    margin: 3px auto 0;
+    text-indent: -9000px;
+}
+.headerMainBottom ul li:nth-child(2) a:hover .image {
+    width: 62px;
+    background-image: url(../../images/global_nav_btn01_02.png);
+    display: block;
+    height: 10px;
+    margin: 3px auto 0;
+    background-position: 50% -10px;
+    text-indent: -9000px;
+}
+.headerMainBottom ul li:nth-child(3) a:hover .image {
+    width: 96px;
+    background-image: url(../../images/global_nav_btn01_03.png);
+    display: block;
+    height: 10px;
+    margin: 3px auto 0;
+    background-position: 50% -10px;
+    text-indent: -9000px;
+}
+.headerMainBottom ul li:nth-child(4) a:hover .image {
+    width: 90px;
+    background-image: url(../../images/global_nav_btn01_04.png);
+    display: block;
+    height: 10px;
+    margin: 3px auto 0;
+    background-position: 50% -10px;
+    text-indent: -9000px;
 }
 .headerMainBottom ul li:first-child::after {
     content: "";
     display: block;
     position: absolute;
-    top: 54px;
-    left: 88px;
+    top: 48px;
+    left: 90px;
     z-index: 10;
     width: 0;
     height: 0;
@@ -190,16 +236,11 @@ a {
     border-width: 0 6px 9px 6px;
     border-color: transparent transparent #181836 transparent;
 }
-.headerMainBottom ul li a {
-    color: #000000;
-    font-size: 15px;
-    letter-spacing: 2px;
-    display: block;
-}
 .headerMainBottom .contact {
     display: table;
     border-collapse: separate;
     border-spacing: 10px 0;
+    padding-left: 0;
 }
 .headerMainBottom .contact a {
     display: table-cell;
@@ -211,6 +252,7 @@ a {
     margin-right: 10px;
     font-weight: bold;
     background: url(../../images/icon_arrow01_right_blue01.png) 94% 50% no-repeat;
+    background-size: 5px 9px;
 }
 
 .localNav {
@@ -224,8 +266,6 @@ a {
     display: flex;
     flex-wrap: wrap;
     max-width: 1060px;
-    top: 0;
-    left: 0;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 4px;
