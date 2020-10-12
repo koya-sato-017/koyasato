@@ -67,28 +67,6 @@ function h($value) {
 function makeLink($value) {
     return mb_ereg_replace("(https?)(://[[:alnum:]\+\$\;\?\.%.!#~*/:@&=_-]+)",'<a href="\1\2">\1\2</a>' , $value);
 }
-
-// いいね！記録する
-// if (!empty($_POST)) {
-//     if ($_POST[''] != '') {
-//         $like = $db->prepare('INSERT INTO likes SET like_post_id=?, like_member_id=?, created=NOW()');
-//         $like->execute(array(
-            
-//         ));
-
-//         header('Location: index.php');
-//         exit();
-//     }
-// }
-
-// いいね！された件数を取得する
-$posts = $db->prepare('SELECT m.name, m.picture, p.* FROM members m,
-(SELECT posts.*, li_cnt FROM posts LEFT JOIN
-(SELECT like_post_id, COUNT(like_post_id) AS li_cnt FROM likes GROUP BY like_post_id) AS li ON posts.id=li.like_post_id) p
-WHERE m.id=p.member_id ORDER BY p.created DESC LIMIT ?, 5;');
-$posts->bindParam(1, $start, PDO::PARAM_INT);
-$posts->execute();
-
 ?>
 
 <!DOCTYPE html>
@@ -100,7 +78,6 @@ $posts->execute();
     <title>ひとこと掲示板</title>
 
 <link rel="stylesheet" href="style.css" />
-<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -137,11 +114,6 @@ $posts->execute();
                 <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
             <?php endif;
             ?>
-            <!-- いいね！ボタン -->
-            
-            <a href="likes.php?id=<?php echo h($post['id']); ?>" style=""><i class="far fa-heart"></i></a>
-            
-            
             <?php
             if ($_SESSION['id'] == $post['member_id']):
             ?>
@@ -149,9 +121,7 @@ $posts->execute();
             <?php
             endif;
             ?>
-
-            
-            </p>
+        </p>
         </div>
         <?php
         endforeach;
