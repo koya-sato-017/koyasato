@@ -11,11 +11,11 @@ if (isset($_SESSION['id'])) {
         ));
         $like = $likes->fetch();
 
-        // いいねしようとしている投稿に対して、すでにいいねをしていないかチェックする
-        if ($like['li_cnt'] == 0) {
-            // いいねを登録する
-            $like_ins = $db->prepare('INSERT INTO likes SET like_post_id=?, like_member_id=?, created=NOW()');
-            $like_ins->execute(array(
+        // いいねを取消しようとしている投稿が1件のみか確認する
+        if ($like['li_cnt'] == 1) {
+            // いいねを削除する
+            $like_del = $db->prepare('DELETE FROM likes WHERE like_post_id=? AND like_member_id=?');
+            $like_del->execute(array(
               $_REQUEST['id'],
               $_SESSION['id']
             ));

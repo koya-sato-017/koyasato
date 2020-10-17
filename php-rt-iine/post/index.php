@@ -45,13 +45,19 @@ $page = min($page, $maxPage);
 
 $start = ($page - 1) * 5;
 
-$posts = $db->prepare('SELECT m.name, m.picture, p. * FROM members m, posts p WHERE m.id=p.member_id ORDER BY p.created DESC LIMIT ?, 5');
+$posts = $db->prepare
+    ('SELECT m.name, m.picture, p.* FROM members m, 
+    (SELECT posts.*, li_cnt FROM posts LEFT JOIN 
+    (SELECT like_post_id, COUNT(like_post_id) AS li_cnt FROM likes GROUP BY like_post_id) 
+    AS li ON posts.id=li.like_post_id) p 
+    WHERE m.id=p.member_id ORDER BY p.created DESC LIMIT ?, 5');
 $posts->bindParam(1, $start, PDO::PARAM_INT);
 $posts->execute();
 
 // 返信の場合
 if (isset($_REQUEST['res'])) {
-    $response = $db->prepare('SELECT m.name, m.picture, p. * FROM members m, posts p WHERE m.id=p.member_id AND p.id=? ORDER BY p.created DESC');
+    $response = $db->prepare
+    ('SELECT m.name, m.picture, p.* FROM members m, posts p WHERE m.id=p.member_id AND p.id=? ORDER BY p.created DESC');
     $response->execute(array($_REQUEST['res']));
 
     $table = $response->fetch();
@@ -68,28 +74,24 @@ function makeLink($value) {
     return mb_ereg_replace("(https?)(://[[:alnum:]\+\$\;\?\.%.!#~*/:@&=_-]+)",'<a href="\1\2">\1\2</a>' , $value);
 }
 
-// いいね！記録する
-// if (!empty($_POST)) {
-//     if ($_POST[''] != '') {
-//         $like = $db->prepare('INSERT INTO likes SET like_post_id=?, like_member_id=?, created=NOW()');
-//         $like->execute(array(
-            
-//         ));
+// 自身がいいねしたメッセージIDの一覧情報を作り出す
+$likeMessages = $db->prepare('SELECT like_post_id FROM likes WHERE like_member_id=?');
+$likeMessages->bindParam(1, $_SESSION['id'], PDO::PARAM_INT);
+$likeMessages->execute();
+$likeMsg = array();
+foreach ($likeMessages as $liMsg) {
+  $likeMsg[] = $liMsg;
+}
 
-//         header('Location: index.php');
-//         exit();
-//     }
-// }
-
-// いいね！された件数を取得する
-$posts = $db->prepare('SELECT m.name, m.picture, p.* FROM members m,
-(SELECT posts.*, li_cnt FROM posts LEFT JOIN
-(SELECT like_post_id, COUNT(like_post_id) AS li_cnt FROM likes GROUP BY like_post_id) AS li ON posts.id=li.like_post_id) p
-WHERE m.id=p.member_id ORDER BY p.created DESC LIMIT ?, 5;');
-$posts->bindParam(1, $start, PDO::PARAM_INT);
-$posts->execute();
-
-?>
+// いいねがついた投稿idといいねの件数を取得
+// $li_posts = $db->prepare
+//     ('SELECT li.like_post_id, COUNT(li.id) AS li_cnt FROM likes li GROUP BY li.like_post_id;');
+//     $li_posts->bindParam(1, $_POST['id'], PDO::PARAM_INT);
+//     $li_posts->execute();
+//     $li_post = $li_posts->fetch();
+//     var_dump($li_post);
+    
+// ?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -125,7 +127,15 @@ $posts->execute();
 
         <?php
         foreach ($posts as $post):
+            $liExist = 0;
+            for ($i=0; $i<count($likeMsg); $i++) {
+                if ($likeMsg[$i]['like_post_id'] == $post['id']) {
+                    $liExist = $post['id'];
+                    break;
+                }
+            }
         ?>
+
         <div class="msg">
             <img src="member_picture/<?php echo h($post['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
             <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($post['name']); ?>）</span>
@@ -135,13 +145,24 @@ $posts->execute();
             if ($post['reply_post_id'] > 0):
             ?>           
                 <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
-            <?php endif;
+            <?php
+            endif;
             ?>
+
             <!-- いいね！ボタン -->
+            <?php
+            if ($liExist > 0):
+            ?>
+            <a href="likes_delete.php?id=<?php echo h($post['id']); ?>" style=""><i class="fas fa-heart"></i></a><span><?php echo h($post['li_cnt']); ?></span>
+            <?php
+            else:
+            ?>
+            <a href="likes.php?id=<?php echo h($post['id']); ?>" style=""><i class="far fa-heart"></i></a><span><?php echo h($post['li_cnt']); ?></span>
+            <?php
+            endif;
+            ?>
             
-            <a href="likes.php?id=<?php echo h($post['id']); ?>" style=""><i class="far fa-heart"></i></a>
-            
-            
+
             <?php
             if ($_SESSION['id'] == $post['member_id']):
             ?>
