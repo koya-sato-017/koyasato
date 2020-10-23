@@ -46,11 +46,19 @@ $page = min($page, $maxPage);
 $start = ($page - 1) * 5;
 
 $posts = $db->prepare
-    ('SELECT m.name, m.picture, p.* FROM members m, 
-    (SELECT posts.*, li_cnt FROM posts LEFT JOIN 
-    (SELECT like_post_id, COUNT(like_post_id) AS li_cnt FROM likes GROUP BY like_post_id) 
-    AS li ON posts.id=li.like_post_id) p 
-    WHERE m.id=p.member_id ORDER BY p.created DESC LIMIT ?, 5');
+    ('SELECT m.name, m.picture, p.* 
+    FROM members m, retweets r, 
+        (SELECT posts.*, li_cnt, rt.retweet_post_id, rt.retweet_member_id FROM posts 
+        LEFT JOIN 
+            (SELECT like_post_id, COUNT(like_post_id) AS li_cnt FROM likes GROUP BY like_post_id) AS li 
+        ON posts.id=li.like_post_id 
+        LEFT JOIN
+            (SELECT retweet_post_id, retweet_member_id FROM retweets r GROUP BY retweet_post_id) AS rt
+        ON posts.id=rt.retweet_post_id
+        ) p 
+    WHERE m.id=p.member_id AND m.id=r.retweet_member_id 
+    GROUP BY p.id 
+    ORDER BY p.created DESC LIMIT ?, 5');
 $posts->bindParam(1, $start, PDO::PARAM_INT);
 $posts->execute();
 
@@ -63,6 +71,30 @@ if (isset($_REQUEST['res'])) {
     $table = $response->fetch();
     $message = '@' . $table['name'] . ' ' . $table['message'];
 }
+
+// 投稿をリツイートする
+if (isset($_REQUEST['rt'])) {
+    $retweet = $db->prepare
+    ('SELECT m.name, m.picture, p.* FROM members m, posts p WHERE m.id=p.member_id AND p.id=? ORDER BY p.created DESC');
+    $retweet->execute(array($_REQUEST['rt']));
+    $rtTable = $retweet->fetch();
+
+    $rtMessage = $db->prepare('INSERT INTO retweets SET retweet_member_id=?, message=?, retweet_post_id=?, created=NOW()');
+        $rtMessage->execute(array(
+            $member['id'],
+            $rtTable['message'],
+            $rtTable['id']
+        ));      
+
+        header('Location: index.php');
+        exit();
+}
+
+// リツイートした人の情報を取り出す
+$rtMessages = $db->prepare
+('SELECT m.name, m.picture, r.* FROM members m, retweets r WHERE m.id=r.retweet_member_id ORDER BY r.created DESC');
+$rtMessages->execute(array());
+$rtMessage = $rtMessages->fetch();
 
 // htmlspecialcharsのショートカット
 function h($value) {
@@ -83,15 +115,7 @@ foreach ($likeMessages as $liMsg) {
   $likeMsg[] = $liMsg;
 }
 
-// いいねがついた投稿idといいねの件数を取得
-// $li_posts = $db->prepare
-//     ('SELECT li.like_post_id, COUNT(li.id) AS li_cnt FROM likes li GROUP BY li.like_post_id;');
-//     $li_posts->bindParam(1, $_POST['id'], PDO::PARAM_INT);
-//     $li_posts->execute();
-//     $li_post = $li_posts->fetch();
-//     var_dump($li_post);
-    
-// ?>
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -135,33 +159,36 @@ foreach ($likeMessages as $liMsg) {
                 }
             }
         ?>
-
+        
         <div class="msg">
-            <img src="member_picture/<?php echo h($post['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
-            <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($post['name']); ?>）</span>
-            [<a href="index.php?res=<?php echo h($post['id']); ?>">Re</a>]</p>
-            <p class="day"><a href="view.php?id=<?php echo h($post['id']); ?>"><?php echo h($post['created']); ?></a>
-            <?php
-            if ($post['reply_post_id'] > 0):
-            ?>           
-                <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
-            <?php
-            endif;
-            ?>
-
-            <!-- いいね！ボタン -->
-            <?php
-            if ($liExist > 0):
-            ?>
-            <a href="likes_delete.php?id=<?php echo h($post['id']); ?>" style=""><i class="fas fa-heart"></i></a><span><?php echo h($post['li_cnt']); ?></span>
-            <?php
-            else:
-            ?>
-            <a href="likes.php?id=<?php echo h($post['id']); ?>" style=""><i class="far fa-heart"></i></a><span><?php echo h($post['li_cnt']); ?></span>
-            <?php
-            endif;
-            ?>
+            <p>
+            <?php if ($post['retweet_post_id'] > 0): ?>
+                <p><?php echo h($rtMessage['name']); ?>さんがリツイート</p>
+                <img src="member_picture/<?php echo h($post['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
+                <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($post['name']); ?>）</span>
+                [<a href="index.php?res=<?php echo h($post['id']); ?>">Re</a>]</p>
+                <p class="day"><a href="view.php?id=<?php echo h($post['id']); ?>"><?php echo h($post['created']); ?></a>
+                    <?php if ($post['reply_post_id'] > 0): ?>
+                        <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
+                    <?php endif; ?>
+            <?php else: ?>
+                <img src="member_picture/<?php echo h($post['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
+                <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($post['name']); ?>）</span>
+                [<a href="index.php?res=<?php echo h($post['id']); ?>">Re</a>]</p>
+                <p class="day"><a href="view.php?id=<?php echo h($post['id']); ?>"><?php echo h($post['created']); ?></a>
+                    <?php if ($post['reply_post_id'] > 0): ?>
+                        <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
+                    <?php endif; ?>
+            <?php endif; ?>
             
+            <!-- いいね！ボタン -->
+            <?php if ($liExist > 0): ?>
+                <a href="likes_delete.php?id=<?php echo h($post['id']); ?>" style=""><i class="fas fa-heart"></i></a><span><?php echo h($post['li_cnt']); ?></span>
+            <?php else: ?>
+                <a href="likes.php?id=<?php echo h($post['id']); ?>" style=""><i class="far fa-heart"></i></a><span><?php echo h($post['li_cnt']); ?></span>
+            <?php endif; ?>
+            <!-- RTボタン -->
+            <a href="index.php?rt=<?php echo h($post['id']); ?>"><i class="fas fa-retweet"></i></a>
 
             <?php
             if ($_SESSION['id'] == $post['member_id']):
@@ -171,7 +198,6 @@ foreach ($likeMessages as $liMsg) {
             endif;
             ?>
 
-            
             </p>
         </div>
         <?php

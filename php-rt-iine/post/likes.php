@@ -10,6 +10,7 @@ if (isset($_SESSION['id'])) {
             $_SESSION['id']
         ));
         $like = $likes->fetch();
+        // var_dump($like);
 
         // いいねしようとしている投稿に対して、すでにいいねをしていないかチェックする
         if ($like['li_cnt'] == 0) {
@@ -20,6 +21,8 @@ if (isset($_SESSION['id'])) {
               $_SESSION['id']
             ));
           }
+          // var_dump($like['li_cnt']);
+          // exit();
 }
 
 header('Location: index.php');
