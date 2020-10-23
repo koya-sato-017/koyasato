@@ -48,12 +48,12 @@ $start = ($page - 1) * 5;
 $posts = $db->prepare
     ('SELECT m.name, m.picture, p.* 
     FROM members m, retweets r, 
-        (SELECT posts.*, li_cnt, rt.retweet_post_id, rt.retweet_member_id FROM posts 
+        (SELECT posts.*, li_cnt, rt.retweet_post_id, rt.retweet_member_id, rt_cnt FROM posts 
         LEFT JOIN 
             (SELECT like_post_id, COUNT(like_post_id) AS li_cnt FROM likes GROUP BY like_post_id) AS li 
         ON posts.id=li.like_post_id 
         LEFT JOIN
-            (SELECT retweet_post_id, COUNT(retweet_post_id) AS rt_cnt, retweet_member_id FROM retweets r GROUP BY retweet_post_id) AS rt
+            (SELECT retweet_post_id, retweet_member_id, COUNT(retweet_post_id) AS rt_cnt FROM retweets r GROUP BY retweet_post_id) AS rt
         ON posts.id=rt.retweet_post_id
         ) p 
     WHERE m.id=p.member_id AND m.id=r.retweet_member_id 
@@ -206,7 +206,7 @@ foreach ($rtMessages as $rtMsg) {
             <?php endif; ?>
             <!-- RTボタン -->
             <?php if ($rtExist > 0): ?>
-                <a href="retweets_delete.php?id=<?php echo h($post['id']); ?>">RT取消</a><span><?php echo h($post['rt_cnt']); ?></span>
+                <i class="fas fa-retweet"></i><a href="retweets_delete.php?id=<?php echo h($post['id']); ?>">取消</a><span><?php echo h($post['rt_cnt']); ?></span>
             <?php else: ?>
                 <a href="retweets.php?id=<?php echo h($post['id']); ?>"><i class="fas fa-retweet"></i></a><span><?php echo h($post['rt_cnt']); ?></span>
             <?php endif; ?>
