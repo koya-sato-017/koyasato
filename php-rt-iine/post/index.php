@@ -53,7 +53,7 @@ $posts = $db->prepare
             (SELECT like_post_id, COUNT(like_post_id) AS li_cnt FROM likes GROUP BY like_post_id) AS li 
         ON posts.id=li.like_post_id 
         LEFT JOIN
-            (SELECT retweet_post_id, retweet_member_id FROM retweets r GROUP BY retweet_post_id) AS rt
+            (SELECT retweet_post_id, COUNT(retweet_post_id) AS rt_cnt, retweet_member_id FROM retweets r GROUP BY retweet_post_id) AS rt
         ON posts.id=rt.retweet_post_id
         ) p 
     WHERE m.id=p.member_id AND m.id=r.retweet_member_id 
@@ -115,6 +115,15 @@ foreach ($likeMessages as $liMsg) {
   $likeMsg[] = $liMsg;
 }
 
+// 自身がRTしたメッセージIDの一覧情報を作り出す
+$rtMessages = $db->prepare('SELECT retweet_post_id FROM retweets WHERE retweet_member_id=?');
+$rtMessages->bindParam(1, $_SESSION['id'], PDO::PARAM_INT);
+$rtMessages->execute();
+$rtMsg = array();
+foreach ($rtMessages as $rtMsg) {
+  $rtMsg[] = $rtMsg;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -158,6 +167,14 @@ foreach ($likeMessages as $liMsg) {
                     break;
                 }
             }
+            $rtExist = 0;
+            for ($i=0; $i<count($rtMsg); $i++) {
+                if ($rtMsg[$i]['retweet_post_id'] == $post['id']) {
+                    $rtExist = $post['id'];
+                    break;
+                }
+            }
+
         ?>
         
         <div class="msg">
@@ -188,7 +205,11 @@ foreach ($likeMessages as $liMsg) {
                 <a href="likes.php?id=<?php echo h($post['id']); ?>" style=""><i class="far fa-heart"></i></a><span><?php echo h($post['li_cnt']); ?></span>
             <?php endif; ?>
             <!-- RTボタン -->
-            <a href="index.php?rt=<?php echo h($post['id']); ?>"><i class="fas fa-retweet"></i></a>
+            <?php if ($rtExist > 0): ?>
+                <a href="retweets_delete.php?id=<?php echo h($post['id']); ?>">RT取消</a><span><?php echo h($post['rt_cnt']); ?></span>
+            <?php else: ?>
+                <a href="retweets.php?id=<?php echo h($post['id']); ?>"><i class="fas fa-retweet"></i></a><span><?php echo h($post['rt_cnt']); ?></span>
+            <?php endif; ?>
 
             <?php
             if ($_SESSION['id'] == $post['member_id']):
