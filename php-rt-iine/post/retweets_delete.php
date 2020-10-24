@@ -14,8 +14,13 @@ if (isset($_SESSION['id'])) {
         // RTを取消しようとしている投稿が1件のみか確認する
         if ($retweet['rt_cnt'] == 1) {
             // RTを削除する
-            $retweet_del = $db->prepare('DELETE FROM retweets WHERE retweet_post_id=? AND retweet_member_id=?');
-            $retweet_del->execute(array(
+            $retweets_del = $db->prepare('DELETE FROM retweets WHERE retweet_post_id=? AND retweet_member_id=?');
+            $retweets_del->execute(array(
+              $_REQUEST['id'],
+              $_SESSION['id']
+            ));
+            $rt_message_del = $db->prepare('DELETE FROM posts WHERE rt_post_id=? AND member_id=?');
+            $rt_message_del->execute(array(
               $_REQUEST['id'],
               $_SESSION['id']
             ));

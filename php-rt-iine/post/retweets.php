@@ -21,13 +21,21 @@ if (isset($_SESSION['id'])) {
         $rt_table = $retweet->fetch();
 
         $rt_ins = $db->prepare
-        ('INSERT INTO retweets SET retweet_member_id=?, message=?, retweet_post_id=?, created=NOW()');
+        ('INSERT INTO retweets SET message=?, retweet_post_id=?, retweet_member_id=?, created=NOW()');
         $rt_ins->execute(array(
-            $_SESSION['id'],
-            $rt_table['message'],
-            $_REQUEST['id']
+            $rt_table['message'], 
+            $_REQUEST['id'], 
+            $_SESSION['id']
         ));
         }
+        $posts_ins = $db->prepare
+        ('INSERT INTO posts SET message=?, member_id=?, rt_post_id=?, rt_member_id=?, created=NOW()');
+        $posts_ins->execute(array(
+            $rt_table['message'], 
+            $_SESSION['id'], 
+            $_REQUEST['id'],
+            $rt_table['member_id']
+        ));
 }
 
 header('Location: index.php');

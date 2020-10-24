@@ -72,29 +72,23 @@ if (isset($_REQUEST['res'])) {
     $message = '@' . $table['name'] . ' ' . $table['message'];
 }
 
-// 投稿をリツイートする
-if (isset($_REQUEST['rt'])) {
-    $retweet = $db->prepare
-    ('SELECT m.name, m.picture, p.* FROM members m, posts p WHERE m.id=p.member_id AND p.id=? ORDER BY p.created DESC');
-    $retweet->execute(array($_REQUEST['rt']));
-    $rtTable = $retweet->fetch();
+// リツイート元のメンバーの情報を取り出す
+$rtMemberId = $db->prepare
+('SELECT p.*, m.id, m.name, m.picture FROM posts p LEFT JOIN members m ON p.rt_member_id=m.id');
+$rtMemberId->execute(array());
+$rtMbrId = $rtMemberId->fetch();
 
-    $rtMessage = $db->prepare('INSERT INTO retweets SET retweet_member_id=?, message=?, retweet_post_id=?, created=NOW()');
-        $rtMessage->execute(array(
-            $member['id'],
-            $rtTable['message'],
-            $rtTable['id']
-        ));      
+$rtMessageId = $db->prepare
+('SELECT p.id, p.message, r.retweet_post_id FROM posts p, retweets r WHERE p.id=r.retweet_post_id ORDER BY p.created DESC');
+$rtMessageId->execute(array());
+$rtMsgId = $rtMessageId->fetch();
 
-        header('Location: index.php');
-        exit();
-}
+('SELECT p.*, m.id, m.name, m.picture FROM posts p LEFT JOIN members m ON p.rt_member_id=m.id');
 
-// リツイートした人の情報を取り出す
-$rtMessages = $db->prepare
-('SELECT m.name, m.picture, r.* FROM members m, retweets r WHERE m.id=r.retweet_member_id ORDER BY r.created DESC');
-$rtMessages->execute(array());
-$rtMessage = $rtMessages->fetch();
+// $rtMessages = $db->prepare
+// ('SELECT m.name, m.picture, r.* FROM members m, retweets r WHERE m.id=r.retweet_member_id ORDER BY r.created DESC');
+// $rtMessages->execute(array());
+// $rtMessage = $rtMessages->fetch();
 
 // htmlspecialcharsのショートカット
 function h($value) {
@@ -179,10 +173,10 @@ foreach ($rtMessages as $rtMsg) {
         
         <div class="msg">
             <p>
-            <?php if ($post['retweet_post_id'] > 0): ?>
-                <p><?php echo h($rtMessage['name']); ?>さんがリツイート</p>
-                <img src="member_picture/<?php echo h($post['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
-                <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($post['name']); ?>）</span>
+            <?php if ($post['rt_post_id'] > 0): ?>
+                <p><?php echo h($post['name']); ?>さんがリツイート</p>
+                <img src="member_picture/<?php echo h($rtMbrId['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
+                <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($rtMbrId['name']); ?>）</span>
                 [<a href="index.php?res=<?php echo h($post['id']); ?>">Re</a>]</p>
                 <p class="day"><a href="view.php?id=<?php echo h($post['id']); ?>"><?php echo h($post['created']); ?></a>
                     <?php if ($post['reply_post_id'] > 0): ?>
