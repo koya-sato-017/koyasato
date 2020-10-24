@@ -156,7 +156,6 @@ foreach ($rtMessages as $rtMsg) {
                     break;
                 }
             }
-
         ?>
         
         <div class="msg">
