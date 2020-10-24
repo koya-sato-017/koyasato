@@ -73,22 +73,10 @@ if (isset($_REQUEST['res'])) {
 }
 
 // リツイート元のメンバーの情報を取り出す
-$rtMemberId = $db->prepare
+$rtMemberInfo = $db->prepare
 ('SELECT p.*, m.id, m.name, m.picture FROM posts p LEFT JOIN members m ON p.rt_member_id=m.id');
-$rtMemberId->execute(array());
-$rtMbrId = $rtMemberId->fetch();
-
-$rtMessageId = $db->prepare
-('SELECT p.id, p.message, r.retweet_post_id FROM posts p, retweets r WHERE p.id=r.retweet_post_id ORDER BY p.created DESC');
-$rtMessageId->execute(array());
-$rtMsgId = $rtMessageId->fetch();
-
-('SELECT p.*, m.id, m.name, m.picture FROM posts p LEFT JOIN members m ON p.rt_member_id=m.id');
-
-// $rtMessages = $db->prepare
-// ('SELECT m.name, m.picture, r.* FROM members m, retweets r WHERE m.id=r.retweet_member_id ORDER BY r.created DESC');
-// $rtMessages->execute(array());
-// $rtMessage = $rtMessages->fetch();
+$rtMemberInfo->execute(array());
+$rtInfo = $rtMemberInfo->fetch();
 
 // htmlspecialcharsのショートカット
 function h($value) {
@@ -175,8 +163,8 @@ foreach ($rtMessages as $rtMsg) {
             <p>
             <?php if ($post['rt_post_id'] > 0): ?>
                 <p><?php echo h($post['name']); ?>さんがリツイート</p>
-                <img src="member_picture/<?php echo h($rtMbrId['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
-                <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($rtMbrId['name']); ?>）</span>
+                <img src="member_picture/<?php echo h($rtInfo['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
+                <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($rtInfo['name']); ?>）</span>
                 [<a href="index.php?res=<?php echo h($post['id']); ?>">Re</a>]</p>
                 <p class="day"><a href="view.php?id=<?php echo h($post['id']); ?>"><?php echo h($post['created']); ?></a>
                     <?php if ($post['reply_post_id'] > 0): ?>
