@@ -29,7 +29,7 @@ if (!empty($_POST) && $_POST['message'] != '') {
 }
 
 // 投稿を取得する
-$page = $_REQUEST['page'];
+$page = $_GET['page'];
 if ($page == '') {
     $page = 1;
 }
@@ -61,10 +61,10 @@ $posts->bindParam(1, $start, PDO::PARAM_INT);
 $posts->execute();
 
 // 返信の場合
-if (isset($_REQUEST['res'])) {
+if (isset($_GET['res'])) {
     $response = $db->prepare
     ('SELECT m.name, m.picture, p.* FROM members m, posts p WHERE m.id=p.member_id AND p.id=? ORDER BY p.created DESC');
-    $response->execute(array($_REQUEST['res']));
+    $response->execute(array($_GET['res']));
 
     $table = $response->fetch();
     $message = '@' . $table['name'] . ' ' . $table['message'];
@@ -130,7 +130,7 @@ foreach ($rtMessages as $rtMsg) {
                 <dt><?php echo htmlspecialchars($member['name'], ENT_QUOTES); ?>さん、メッセージをどうぞ</dt>
                 <dd>
                     <textarea name="message" cols="50" rows="5"><?php echo h($message); ?></textarea>
-                    <input type="hidden" name="reply_post_id" value="<?php echo h($_REQUEST['res']); ?>" />
+                    <input type="hidden" name="reply_post_id" value="<?php echo h($_GET['res']); ?>" />
                 </dd>
             </dl>
             <div>

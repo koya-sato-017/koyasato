@@ -7,7 +7,7 @@ if (isset($_SESSION['id'])) {
         $retweets = $db->prepare
         ('SELECT COUNT(retweet_post_id) AS rt_cnt FROM retweets WHERE retweet_post_id=? AND retweet_member_id=? GROUP BY retweet_post_id');
         $retweets->execute(array(
-            $_REQUEST['id'],
+            $_GET['id'],
             $_SESSION['id']
         ));
         $retweet = $retweets->fetch();
@@ -17,14 +17,14 @@ if (isset($_SESSION['id'])) {
         // RTを登録する
         $retweet = $db->prepare
         ('SELECT m.name, m.picture, p.* FROM members m, posts p WHERE m.id=p.member_id AND p.id=? ORDER BY p.created DESC');
-        $retweet->execute(array($_REQUEST['id']));
+        $retweet->execute(array($_GET['id']));
         $rt_table = $retweet->fetch();
 
         $rt_ins = $db->prepare
         ('INSERT INTO retweets SET message=?, retweet_post_id=?, retweet_member_id=?, created=NOW()');
         $rt_ins->execute(array(
             $rt_table['message'], 
-            $_REQUEST['id'], 
+            $_GET['id'], 
             $_SESSION['id']
         ));
         }
@@ -33,7 +33,7 @@ if (isset($_SESSION['id'])) {
         $posts_ins->execute(array(
             $rt_table['message'], 
             $_SESSION['id'], 
-            $_REQUEST['id'],
+            $_GET['id'],
             $rt_table['member_id']
         ));
 }

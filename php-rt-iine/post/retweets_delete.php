@@ -6,7 +6,7 @@ require('dbconnect.php');
 if (isset($_SESSION['id'])) {
         $retweets = $db->prepare('SELECT COUNT(retweet_post_id) AS rt_cnt FROM retweets WHERE retweet_post_id=? AND retweet_member_id=? GROUP BY retweet_post_id');
         $retweets->execute(array(
-            $_REQUEST['id'],
+            $_GET['id'],
             $_SESSION['id']
         ));
         $retweet = $retweets->fetch();
@@ -16,12 +16,12 @@ if (isset($_SESSION['id'])) {
             // RTを削除する
             $retweets_del = $db->prepare('DELETE FROM retweets WHERE retweet_post_id=? AND retweet_member_id=?');
             $retweets_del->execute(array(
-              $_REQUEST['id'],
+              $_GET['id'],
               $_SESSION['id']
             ));
             $rt_message_del = $db->prepare('DELETE FROM posts WHERE rt_post_id=? AND member_id=?');
             $rt_message_del->execute(array(
-              $_REQUEST['id'],
+              $_GET['id'],
               $_SESSION['id']
             ));
           }
