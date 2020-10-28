@@ -2,14 +2,14 @@
 session_start();
 require('dbconnect.php');
 
-if (empty($_REQUEST['id'])) {
+if (empty($_GET['member_id'])) {
     header('Location: index.php');
     exit();
 }
 
 // 投稿を取得する
 $posts = $db->prepare('SELECT m.name, m.picture, p. * FROM members m, posts p WHERE m.id=p.member_id AND p.id=? ORDER BY p.created DESC');
-$posts->execute(array($_REQUEST['id']));
+$posts->execute(array($_GET['member_id']));
 ?>
 
 <!DOCTYPE html>
