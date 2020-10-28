@@ -3,11 +3,11 @@ session_start();
 require('dbconnect.php');
 
 // RTが登録済みかチェックするため情報を取得する
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['member_id'])) {
         $retweets = $db->prepare('SELECT COUNT(retweet_post_id) AS rt_cnt FROM retweets WHERE retweet_post_id=? AND retweet_member_id=? GROUP BY retweet_post_id');
         $retweets->execute(array(
-            $_GET['id'],
-            $_SESSION['id']
+            $_GET['member_id'],
+            $_SESSION['member_id']
         ));
         $retweet = $retweets->fetch();
 
@@ -16,13 +16,13 @@ if (isset($_SESSION['id'])) {
             // RTを削除する
             $retweets_del = $db->prepare('DELETE FROM retweets WHERE retweet_post_id=? AND retweet_member_id=?');
             $retweets_del->execute(array(
-              $_GET['id'],
-              $_SESSION['id']
+              $_GET['member_id'],
+              $_SESSION['member_id']
             ));
             $rt_message_del = $db->prepare('DELETE FROM posts WHERE rt_post_id=? AND member_id=?');
             $rt_message_del->execute(array(
-              $_GET['id'],
-              $_SESSION['id']
+              $_GET['member_id'],
+              $_SESSION['member_id']
             ));
           }
 }

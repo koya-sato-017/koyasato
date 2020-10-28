@@ -21,7 +21,7 @@ if (!empty($_POST)) {
 
 		if ($member) {
 			// ログイン成功
-			$_SESSION['id'] = $member['id'];
+			$_SESSION['member_id'] = $member['id'];
 			$_SESSION['time'] = time();
 
 			// ログイン情報を記録する

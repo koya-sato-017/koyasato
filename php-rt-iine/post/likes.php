@@ -3,11 +3,11 @@ session_start();
 require('dbconnect.php');
 
 // いいねが登録済みかチェックするため情報を取得する
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['member_id'])) {
         $likes = $db->prepare('SELECT COUNT(like_post_id) AS li_cnt FROM likes WHERE like_post_id=? AND like_member_id=? GROUP BY like_post_id');
         $likes->execute(array(
-            $_GET['id'],
-            $_SESSION['id']
+            $_GET['member_id'],
+            $_SESSION['member_id']
         ));
         $like = $likes->fetch();
        
@@ -16,8 +16,8 @@ if (isset($_SESSION['id'])) {
             // いいねを登録する
             $like_ins = $db->prepare('INSERT INTO likes SET like_post_id=?, like_member_id=?, created=NOW()');
             $like_ins->execute(array(
-              $_GET['id'],
-              $_SESSION['id']
+              $_GET['member_id'],
+              $_SESSION['member_id']
             ));
           }
 }

@@ -2,12 +2,12 @@
 session_start();
 require('dbconnect.php');
 
-if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
+if (isset($_SESSION['member_id']) && $_SESSION['time'] + 3600 > time()) {
     // ログインしている
     $_SESSION['time'] = time();
 
     $members = $db->prepare('SELECT * FROM members WHERE id=?');
-    $members->execute(array($_SESSION['id']));
+    $members->execute(array($_SESSION['member_id']));
     $member = $members->fetch();
 } else {
     // ログインしていない
@@ -88,7 +88,7 @@ function makeLink($value) {
 
 // 自身がいいねしたメッセージIDの一覧情報を作り出す
 $likeMessages = $db->prepare('SELECT like_post_id FROM likes WHERE like_member_id=?');
-$likeMessages->bindParam(1, $_SESSION['id'], PDO::PARAM_INT);
+$likeMessages->bindParam(1, $_SESSION['member_id'], PDO::PARAM_INT);
 $likeMessages->execute();
 $likeMsg = array();
 foreach ($likeMessages as $liMsg) {
@@ -160,10 +160,11 @@ foreach ($rtMessages as $rtMsg) {
             <p>
             <?php if ($post['rt_post_id'] > 0): ?>
                 <p><?php echo h($post['name']); ?>さんがリツイート</p>
+                <?php var_dump($rtInfo); ?>
                 <img src="member_picture/<?php echo h($rtInfo['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
                 <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($rtInfo['name']); ?>）</span>
                 [<a href="index.php?res=<?php echo ($post['id']); ?>">Re</a>]</p>
-                <p class="day"><a href="view.php?id=<?php echo ($post['id']); ?>"><?php echo h($post['created']); ?></a>
+                <p class="day"><a href="view.php?member_id=<?php echo ($post['id']); ?>"><?php echo h($post['created']); ?></a>
                     <?php if ($post['reply_post_id'] > 0): ?>
                         <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
                     <?php endif; ?>
@@ -171,29 +172,29 @@ foreach ($rtMessages as $rtMsg) {
                 <img src="member_picture/<?php echo h($post['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
                 <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($post['name']); ?>）</span>
                 [<a href="index.php?res=<?php echo ($post['id']); ?>">Re</a>]</p>
-                <p class="day"><a href="view.php?id=<?php echo ($post['id']); ?>"><?php echo h($post['created']); ?></a>
+                <p class="day"><a href="view.php?member_id=<?php echo ($post['id']); ?>"><?php echo h($post['created']); ?></a>
                     <?php if ($post['reply_post_id'] > 0): ?>
-                        <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
+                        <a href="view.php?member_id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
                     <?php endif; ?>
             <?php endif; ?>
             
             <!-- いいね！ボタン -->
             <?php if ($liExist > 0): ?>
-                <a href="likes_delete.php?id=<?php echo ($post['id']); ?>" style=""><i class="fas fa-heart"></i></a><span><?php echo h($post['li_cnt']); ?></span>
+                <a href="likes_delete.php?member_id=<?php echo ($post['id']); ?>" style=""><i class="fas fa-heart"></i></a><span><?php echo h($post['li_cnt']); ?></span>
             <?php else: ?>
-                <a href="likes.php?id=<?php echo ($post['id']); ?>" style=""><i class="far fa-heart"></i></a><span><?php echo h($post['li_cnt']); ?></span>
+                <a href="likes.php?member_id=<?php echo ($post['id']); ?>" style=""><i class="far fa-heart"></i></a><span><?php echo h($post['li_cnt']); ?></span>
             <?php endif; ?>
             <!-- RTボタン -->
             <?php if ($rtExist > 0): ?>
-                <i class="fas fa-retweet"></i><a href="retweets_delete.php?id=<?php echo ($post['id']); ?>">取消</a><span><?php echo h($post['rt_cnt']); ?></span>
+                <i class="fas fa-retweet"></i><a href="retweets_delete.php?member_id=<?php echo ($post['id']); ?>">取消</a><span><?php echo h($post['rt_cnt']); ?></span>
             <?php else: ?>
-                <a href="retweets.php?id=<?php echo ($post['id']); ?>"><i class="fas fa-retweet"></i></a><span><?php echo h($post['rt_cnt']); ?></span>
+                <a href="retweets.php?member_id=<?php echo ($post['id']); ?>"><i class="fas fa-retweet"></i></a><span><?php echo h($post['rt_cnt']); ?></span>
             <?php endif; ?>
 
             <?php
-            if ($_SESSION['id'] == $post['member_id']):
+            if ($_SESSION['member_id'] == $post['member_id']):
             ?>
-            [<a href="delete.php?id=<?php echo ($post['id']); ?>" style="color: #F33;">削除</a>]
+            [<a href="delete.php?member_id=<?php echo ($post['id']); ?>" style="color: #F33;">削除</a>]
             <?php
             endif;
             ?>
