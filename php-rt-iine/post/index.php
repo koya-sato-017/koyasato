@@ -125,7 +125,7 @@ foreach ($rtMessages as $rtMsg) {
     </div>
     <div id="content">
         <div style="text-align: right"><a href="logout.php">ログアウト</a></div>
-        <form action="" method="post">
+        <form action="index.php" method="post">
             <dl>
                 <dt><?php echo htmlspecialchars($member['name'], ENT_QUOTES); ?>さん、メッセージをどうぞ</dt>
                 <dd>
@@ -160,7 +160,6 @@ foreach ($rtMessages as $rtMsg) {
             <p>
             <?php if ($post['rt_post_id'] > 0): ?>
                 <p><?php echo h($post['name']); ?>さんがリツイート</p>
-                <?php var_dump($rtInfo); ?>
                 <img src="member_picture/<?php echo h($rtInfo['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
                 <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($rtInfo['name']); ?>）</span>
                 [<a href="index.php?res=<?php echo ($post['id']); ?>">Re</a>]</p>

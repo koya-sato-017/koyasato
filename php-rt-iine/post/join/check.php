@@ -41,7 +41,7 @@ if (!empty($_POST)) {
     </div>
     <div id="content">
         <p>記入した内容を確認して、「登録する」ボタンをクリックしてください</p>
-        <form action="" method="post">
+        <form action="check.php" method="post">
             <input type="hidden" name="action" value="submit" />
             <dl>
                 <dt>ニックネーム</dt>

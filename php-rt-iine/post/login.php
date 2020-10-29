@@ -63,7 +63,7 @@ if (!empty($_POST)) {
 			<p>入会手続きがまだの方はこちらからどうぞ</p>
 			<p>&raquo;<a href="join/">入会手続きをする</a></p>
 		</div>
-		<form action="" method="post">
+		<form action="login.php" method="post">
 			<dl>
 				<dt>メールアドレス</dt>
 				<dd>
