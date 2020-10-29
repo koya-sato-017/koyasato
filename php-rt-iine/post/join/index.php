@@ -85,6 +85,9 @@ if ($_REQUEST['action'] == 'rewrite') {
                     <?php if ($error['email'] == 'blank'): ?>
                     <p class="error">※ メールアドレスを入力してください</p>
                     <?php endif; ?>
+                    <?php if ($error['email'] == 'duplicate'): ?>
+                    <p class="error">※ 指定されたメールアドレスはすでに登録されています</p>
+                    <?php endif; ?>
                 </dd>
                 <dt>パスワード<span class="required">必須</span></dt>
                 <dd>
@@ -103,9 +106,6 @@ if ($_REQUEST['action'] == 'rewrite') {
                     <?php endif; ?>
                     <?php if (!empty($error)): ?>
                     <p class="error">恐れ入りますが、画像を改めて指定してください</p>
-                    <?php endif; ?>
-                    <?php if ($error['email'] == 'duplicate'): ?>
-                    <p class="error">※ 指定されたメールアドレスはすでに登録されています</p>
                     <?php endif; ?>
                 </dd>
             </dl>
