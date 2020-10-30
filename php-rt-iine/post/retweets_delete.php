@@ -4,7 +4,7 @@ require('dbconnect.php');
 
 // RTが登録済みかチェックするため情報を取得する
 if (isset($_SESSION['member_id'])) {
-        $retweets = $db->prepare('SELECT COUNT(retweet_post_id) AS rt_cnt FROM retweets WHERE retweet_post_id=? AND retweet_member_id=? GROUP BY retweet_post_id');
+        $retweets = $db->prepare('SELECT COUNT(rt_post_id) AS rt_cnt FROM posts WHERE rt_post_id=? AND member_id=? GROUP BY rt_post_id');
         $retweets->execute(array(
             $_GET['member_id'],
             $_SESSION['member_id']
@@ -14,13 +14,8 @@ if (isset($_SESSION['member_id'])) {
         // RTを取消しようとしている投稿が1件のみか確認する
         if ($retweet['rt_cnt'] == 1) {
             // RTを削除する
-            $retweets_del = $db->prepare('DELETE FROM retweets WHERE retweet_post_id=? AND retweet_member_id=?');
+            $retweets_del = $db->prepare('DELETE FROM posts WHERE rt_post_id=? AND member_id=?');
             $retweets_del->execute(array(
-              $_GET['member_id'],
-              $_SESSION['member_id']
-            ));
-            $rt_message_del = $db->prepare('DELETE FROM posts WHERE rt_post_id=? AND member_id=?');
-            $rt_message_del->execute(array(
               $_GET['member_id'],
               $_SESSION['member_id']
             ));
