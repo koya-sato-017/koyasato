@@ -85,21 +85,21 @@ function makeLink($value) {
 }
 
 // 自身がいいねしたメッセージIDの一覧情報を作り出す
-$likeMessages = $db->prepare('SELECT like_post_id FROM likes WHERE like_member_id=?');
-$likeMessages->bindParam(1, $_SESSION['member_id'], PDO::PARAM_INT);
-$likeMessages->execute();
-$likeMsg = array();
-foreach ($likeMessages as $liMsg) {
-  $likeMsg[] = $liMsg;
+$MyLikeMessages = $db->prepare('SELECT like_post_id FROM likes WHERE like_member_id=?');
+$MyLikeMessages->bindParam(1, $_SESSION['member_id'], PDO::PARAM_INT);
+$MyLikeMessages->execute();
+$MyLikeMassage = array();
+foreach ($MyLikeMessages as $MyLikeMassage) {
+  $MyLikeMassage[] = $MyLikeMassage;
 }
 
 // 自身がRTしたメッセージIDの一覧情報を作り出す
-$rtMessages = $db->prepare('SELECT rt_post_id FROM posts WHERE member_id=?');
-$rtMessages->bindParam(1, $_SESSION['member_id'], PDO::PARAM_INT);
-$rtMessages->execute();
-$rtMsg = array();
-foreach ($rtMessages as $rtMsg) {
-  $rtMsg[] = $rtMsg;
+$MyRtMessages = $db->prepare('SELECT rt_post_id FROM posts WHERE member_id=?');
+$MyRtMessages->bindParam(1, $_SESSION['member_id'], PDO::PARAM_INT);
+$MyRtMessages->execute();
+$MyRtMassage = array();
+foreach ($MyRtMessages as $MyRtMassage) {
+  $MyRtMassage[] = $MyRtMassage;
 }
 
 ?>
@@ -139,15 +139,15 @@ foreach ($rtMessages as $rtMsg) {
         <?php
         foreach ($posts as $post):
             $liExist = 0;
-            for ($i=0; $i<count($likeMsg); $i++) {
-                if ($likeMsg[$i]['like_post_id'] == $post['id']) {
+            for ($i=0; $i<count($MyLikeMassage); $i++) {
+                if ($MyLikeMassage[$i]['like_post_id'] == $post['id']) {
                     $liExist = $post['id'];
                     break;
                 }
             }
             $rtExist = 0;
-            for ($i=0; $i<count($rtMsg); $i++) {
-                if ($rtMsg[$i]['rt_post_id'] == $post['id']) {
+            for ($i=0; $i<count($MyRtMassage); $i++) {
+                if ($MyRtMassage[$i]['rt_post_id'] == $post['id']) {
                     $rtExist = $post['id'];
                     break;
                 }
