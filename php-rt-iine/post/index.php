@@ -44,17 +44,13 @@ $page = min($page, $maxPage);
 $start = ($page - 1) * 5;
 
 $posts = $db->prepare
-    ('SELECT m.name, m.picture, p.* 
-    FROM members m, retweets r, 
-        (SELECT posts.*, li_cnt, rt.retweet_post_id, rt.retweet_member_id, rt_cnt FROM posts 
+    ('SELECT m.name, m.picture, p.*, COUNT(p.rt_post_id) AS rt_cnt 
+    FROM members m,  
+        (SELECT posts.*, li_cnt FROM posts 
         LEFT JOIN 
             (SELECT like_post_id, COUNT(like_post_id) AS li_cnt FROM likes GROUP BY like_post_id) AS li 
-        ON posts.id=li.like_post_id 
-        LEFT JOIN
-            (SELECT retweet_post_id, retweet_member_id, COUNT(retweet_post_id) AS rt_cnt FROM retweets r GROUP BY retweet_post_id) AS rt
-        ON posts.id=rt.retweet_post_id
-        ) p 
-    WHERE m.id=p.member_id AND m.id=r.retweet_member_id 
+        ON posts.id=li.like_post_id) p 
+    WHERE m.id=p.member_id 
     GROUP BY p.id 
     ORDER BY p.created DESC LIMIT ?, 5');
 $posts->bindParam(1, $start, PDO::PARAM_INT);
@@ -71,10 +67,12 @@ if (isset($_GET['res'])) {
 }
 
 // リツイート元のメンバーの情報を取り出す
-$rtMemberInfo = $db->prepare
-('SELECT p.*, m.id, m.name, m.picture FROM posts p LEFT JOIN members m ON p.rt_member_id=m.id');
-$rtMemberInfo->execute(array());
-$rtInfo = $rtMemberInfo->fetch();
+// if (isset($_GET['rt'])) {
+    $rtMemberInfo = $db->prepare
+    ('SELECT p.*, m.id, m.name, m.picture FROM posts p LEFT JOIN members m ON p.rt_member_id=m.id ORDER BY p.created DESC');
+    $rtMemberInfo->execute(array($_GET['rt_post_id']));
+    $rtInfo = $rtMemberInfo->fetch();
+// }
 
 // htmlspecialcharsのショートカット
 function h($value) {
@@ -96,8 +94,8 @@ foreach ($likeMessages as $liMsg) {
 }
 
 // 自身がRTしたメッセージIDの一覧情報を作り出す
-$rtMessages = $db->prepare('SELECT retweet_post_id FROM retweets WHERE retweet_member_id=?');
-$rtMessages->bindParam(1, $_SESSION['id'], PDO::PARAM_INT);
+$rtMessages = $db->prepare('SELECT rt_post_id FROM posts WHERE member_id=?');
+$rtMessages->bindParam(1, $_SESSION['member_id'], PDO::PARAM_INT);
 $rtMessages->execute();
 $rtMsg = array();
 foreach ($rtMessages as $rtMsg) {
@@ -149,7 +147,7 @@ foreach ($rtMessages as $rtMsg) {
             }
             $rtExist = 0;
             for ($i=0; $i<count($rtMsg); $i++) {
-                if ($rtMsg[$i]['retweet_post_id'] == $post['id']) {
+                if ($rtMsg[$i]['rt_post_id'] == $post['id']) {
                     $rtExist = $post['id'];
                     break;
                 }
