@@ -125,7 +125,7 @@ foreach ($MyRtMessages as $MyRtMassage) {
         <div style="text-align: right"><a href="logout.php">ログアウト</a></div>
         <form action="index.php" method="post">
             <dl>
-                <dt><?php echo htmlspecialchars($member['name'], ENT_QUOTES); ?>さん、メッセージをどうぞ</dt>
+                <dt><?php echo h($member['name'], ENT_QUOTES); ?>さん、メッセージをどうぞ</dt>
                 <dd>
                     <textarea name="message" cols="50" rows="5"><?php echo h($message); ?></textarea>
                     <input type="hidden" name="reply_post_id" value="<?php echo h($_GET['res']); ?>" />
