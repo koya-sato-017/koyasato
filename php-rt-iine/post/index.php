@@ -44,7 +44,7 @@ $page = min($page, $maxPage);
 $start = ($page - 1) * 5;
 
 $posts = $db->prepare
-    ('SELECT m.name, m.picture, p.*, COUNT(p.rt_post_id) AS rt_cnt 
+    ('SELECT m.name AS membersName, m.picture AS membersPicture, p.*, COUNT(p.rt_post_id) AS rt_cnt 
     FROM members m,  
         (SELECT posts.*, li_cnt FROM posts 
         LEFT JOIN 
@@ -157,8 +157,8 @@ foreach ($MyRtMessages as $MyRtMassage) {
         <div class="msg">
             <p>
             <?php if ($post['rt_post_id'] > 0): ?>
-                <p><?php echo h($post['name']); ?>さんがリツイート</p>
-                <img src="member_picture/<?php echo h($rtInfo['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
+                <p><?php echo h($post['membersName']); ?>さんがリツイート</p>
+                <img src="member_picture/<?php echo h($rtInfo['picture']); ?>" width="48" height="48" alt="<?php echo h($post['membersName']); ?>" />
                 <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($rtInfo['name']); ?>）</span>
                 [<a href="index.php?res=<?php echo ($post['id']); ?>">Re</a>]</p>
                 <p class="day"><a href="view.php?member_id=<?php echo ($post['id']); ?>"><?php echo h($post['created']); ?></a>
@@ -166,8 +166,8 @@ foreach ($MyRtMessages as $MyRtMassage) {
                         <a href="view.php?id=<?php echo h($post['reply_post_id']); ?>">返信元のメッセージ</a>
                     <?php endif; ?>
             <?php else: ?>
-                <img src="member_picture/<?php echo h($post['picture']); ?>" width="48" height="48" alt="<?php echo h($post['name']); ?>" />
-                <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($post['name']); ?>）</span>
+                <img src="member_picture/<?php echo h($post['membersPicture']); ?>" width="48" height="48" alt="<?php echo h($post['membersName']); ?>" />
+                <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($post['membersName']); ?>）</span>
                 [<a href="index.php?res=<?php echo ($post['id']); ?>">Re</a>]</p>
                 <p class="day"><a href="view.php?member_id=<?php echo ($post['id']); ?>"><?php echo h($post['created']); ?></a>
                     <?php if ($post['reply_post_id'] > 0): ?>
