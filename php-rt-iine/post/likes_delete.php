@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('dbconnect.php');
+require_once('dbconnect.php');
 
 // いいねが登録済みかチェックするため情報を取得する
 require('likes_check.php');
