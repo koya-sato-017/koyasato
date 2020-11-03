@@ -1,6 +1,7 @@
 <?php
 session_start();
 require('dbconnect.php');
+require('htmlspecialchars.php');
 
 if (empty($_GET['member_id'])) {
     header('Location: index.php');
@@ -34,9 +35,9 @@ $posts->execute(array($_GET['member_id']));
         if ($post = $posts->fetch()):
         ?>
         <div class="msg">
-            <img src="member_picture/<?php echo htmlspecialchars($post['picture'], ENT_QUOTES); ?>" width="48" height="48" alt="<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>" />
-            <p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?><span class="name">（<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>）</span></p>
-            <p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
+            <img src="member_picture/<?php echo h($post['picture'], ENT_QUOTES); ?>" width="48" height="48" alt="<?php echo h($post['name'], ENT_QUOTES); ?>" />
+            <p><?php echo h($post['message'], ENT_QUOTES); ?><span class="name">（<?php echo h($post['name'], ENT_QUOTES); ?>）</span></p>
+            <p class="day"><?php echo h($post['created'], ENT_QUOTES); ?></p>
         </div>
         <?php
         else:

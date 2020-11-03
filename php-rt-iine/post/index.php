@@ -1,6 +1,7 @@
 <?php
 session_start();
 require('dbconnect.php');
+require('htmlspecialchars.php');
 
 if (isset($_SESSION['member_id']) && $_SESSION['time'] + 3600 > time()) {
     // ログインしている
@@ -67,17 +68,10 @@ if (isset($_GET['res'])) {
 }
 
 // リツイート元のメンバーの情報を取り出す
-// if (isset($_GET['rt'])) {
-    $rtMemberInfo = $db->prepare
-    ('SELECT p.*, m.id, m.name, m.picture FROM posts p LEFT JOIN members m ON p.rt_member_id=m.id ORDER BY p.created DESC');
-    $rtMemberInfo->execute(array($_GET['rt_post_id']));
-    $rtInfo = $rtMemberInfo->fetch();
-// }
-
-// htmlspecialcharsのショートカット
-function h($value) {
-    return htmlspecialchars($value, ENT_QUOTES);
-}
+$rtMemberInfo = $db->prepare
+('SELECT p.*, m.id, m.name, m.picture FROM posts p LEFT JOIN members m ON p.rt_member_id=m.id ORDER BY p.created DESC');
+$rtMemberInfo->execute(array($_GET['rt_post_id']));
+$rtInfo = $rtMemberInfo->fetch();
 
 // 本文内のURLにリンクを設定する
 function makeLink($value) {
@@ -89,8 +83,8 @@ $MyLikeMessages = $db->prepare('SELECT like_post_id FROM likes WHERE like_member
 $MyLikeMessages->bindParam(1, $_SESSION['member_id'], PDO::PARAM_INT);
 $MyLikeMessages->execute();
 $MyLikeMassage = array();
-foreach ($MyLikeMessages as $MyLikeMassage) {
-  $MyLikeMassage[] = $MyLikeMassage;
+foreach ($MyLikeMessages as $MyLiMassage) {
+  $MyLikeMassage[] = $MyLiMassage;
 }
 
 // 自身がRTしたメッセージIDの一覧情報を作り出す
@@ -98,8 +92,8 @@ $MyRtMessages = $db->prepare('SELECT rt_post_id FROM posts WHERE member_id=?');
 $MyRtMessages->bindParam(1, $_SESSION['member_id'], PDO::PARAM_INT);
 $MyRtMessages->execute();
 $MyRtMassage = array();
-foreach ($MyRtMessages as $MyRtMassage) {
-  $MyRtMassage[] = $MyRtMassage;
+foreach ($MyRtMessages as $MyRt) {
+  $MyRtMassage[] = $MyRt;
 }
 
 ?>
@@ -157,6 +151,7 @@ foreach ($MyRtMessages as $MyRtMassage) {
         <div class="msg">
             <p>
             <?php if ($post['rt_post_id'] > 0): ?>
+            <?php var_dump($rtInfo); ?>
                 <p><?php echo h($post['membersName']); ?>さんがリツイート</p>
                 <img src="member_picture/<?php echo h($rtInfo['picture']); ?>" width="48" height="48" alt="<?php echo h($post['membersName']); ?>" />
                 <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($rtInfo['name']); ?>）</span>

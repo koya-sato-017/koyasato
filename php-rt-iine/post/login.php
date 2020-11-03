@@ -1,5 +1,6 @@
 <?php
 require('dbconnect.php');
+require('htmlspecialchars.php');
 
 session_start();
 
@@ -67,7 +68,7 @@ if (!empty($_POST)) {
 			<dl>
 				<dt>メールアドレス</dt>
 				<dd>
-					<input type="text" name="email" size="35" maxlength="255" value="<?php echo htmlspecialchars($_POST['email'], ENT_QUOTES); ?>" />
+					<input type="text" name="email" size="35" maxlength="255" value="<?php echo h($_POST['email'], ENT_QUOTES); ?>" />
 					<?php if ($error['login'] == 'blank'): ?>
 					<p class="error">※ メールアドレスとパスワードをご記入ください。</p>
 					<?php endif; ?>
@@ -77,7 +78,7 @@ if (!empty($_POST)) {
 				</dd>
 				<dt>パスワード</dt>
 				<dd>
-					<input type="password" name="password" size="35" maxlength="255" value="<?php echo htmlspecialchars($_POST['password'], ENT_QUOTES); ?>" />
+					<input type="password" name="password" size="35" maxlength="255" value="<?php echo h($_POST['password'], ENT_QUOTES); ?>" />
 				</dd>
 				<dt>ログイン情報の記録</dt>
 				<dd>
