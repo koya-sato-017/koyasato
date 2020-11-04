@@ -1,9 +1,10 @@
 <?php
 session_start();
-require_once('dbconnect.php');
+require('dbconnect.php');
 
 // いいねが登録済みかチェックするため情報を取得する
 require('likes_check.php');
+$like = likeCheck();
 
 // いいねを取消しようとしている投稿が1件のみか確認する
 if ($like['li_cnt'] == 1) {
