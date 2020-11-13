@@ -46,14 +46,23 @@ $start = ($page - 1) * 5;
 
 $posts = $db->prepare
     ('SELECT m.name AS membersName, m.picture AS membersPicture, p.*, COUNT(p.rt_post_id) AS rt_cnt 
-    FROM members m,  
-        (SELECT posts.*, li_cnt FROM posts 
+    FROM members m, 
+        (SELECT posts.*, li_cnt, rt.name AS rtName, rt.picture AS rtPicture 
+        FROM posts 
         LEFT JOIN 
-            (SELECT like_post_id, COUNT(like_post_id) AS li_cnt FROM likes GROUP BY like_post_id) AS li 
-        ON posts.id=li.like_post_id) p 
+            (SELECT like_post_id, COUNT(like_post_id) AS li_cnt 
+            FROM likes 
+            GROUP BY like_post_id) AS li 
+        ON posts.id=li.like_post_id 
+        LEFT JOIN 
+            (SELECT m.id, m.name, m.picture 
+            FROM members m) AS rt 
+        ON posts.rt_member_id=rt.id) p 
     WHERE m.id=p.member_id 
     GROUP BY p.id 
-    ORDER BY p.created DESC LIMIT ?, 5');
+    ORDER BY p.created 
+    DESC 
+    LIMIT ?, 5');
 $posts->bindParam(1, $start, PDO::PARAM_INT);
 $posts->execute();
 
@@ -66,12 +75,6 @@ if (isset($_GET['res'])) {
     $table = $response->fetch();
     $message = '@' . $table['name'] . ' ' . $table['message'];
 }
-
-// リツイート元のメンバーの情報を取り出す
-$rtMemberInfo = $db->prepare
-('SELECT p.*, m.id, m.name, m.picture FROM posts p LEFT JOIN members m ON p.rt_member_id=m.id ORDER BY p.created DESC');
-$rtMemberInfo->execute(array($_GET['rt_post_id']));
-$rtInfo = $rtMemberInfo->fetch();
 
 // 本文内のURLにリンクを設定する
 function makeLink($value) {
@@ -151,10 +154,9 @@ foreach ($MyRtMessages as $MyRt) {
         <div class="msg">
             <p>
             <?php if ($post['rt_post_id'] > 0): ?>
-            <?php var_dump($rtInfo); ?>
                 <p><?php echo h($post['membersName']); ?>さんがリツイート</p>
-                <img src="member_picture/<?php echo h($rtInfo['picture']); ?>" width="48" height="48" alt="<?php echo h($post['membersName']); ?>" />
-                <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($rtInfo['name']); ?>）</span>
+                <img src="member_picture/<?php echo ($post['rtPicture']); ?>" width="48" height="48" alt="<?php echo h($post['rtName']); ?>" />
+                <p><?php echo makeLink(h($post['message'])); ?><span class="name">（<?php echo h($post['rtName']); ?>）</span>
                 [<a href="index.php?res=<?php echo ($post['id']); ?>">Re</a>]</p>
                 <p class="day"><a href="view.php?member_id=<?php echo ($post['id']); ?>"><?php echo h($post['created']); ?></a>
                     <?php if ($post['reply_post_id'] > 0): ?>
