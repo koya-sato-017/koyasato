@@ -61,6 +61,10 @@ h2 {
 	height: 490px;
 }
 
+textarea {
+	padding: 5px;
+}
+
 p {
 	line-height: 1.2em;
 	margin-bottom: 0.5em;
