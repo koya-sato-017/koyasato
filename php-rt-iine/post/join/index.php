@@ -1,6 +1,6 @@
 <?php
 require('../dbconnect.php');
-require('htmlspecialchars.php');
+require('../htmlspecialchars.php');
 session_start();
 
 if (!empty($_POST)) {

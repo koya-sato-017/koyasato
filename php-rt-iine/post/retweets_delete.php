@@ -4,7 +4,8 @@ require('dbconnect.php');
 
 // RTが登録済みかチェックするため情報を取得する
 if (isset($_SESSION['member_id'])) {
-        $retweets = $db->prepare('SELECT COUNT(rt_post_id) AS rt_cnt FROM posts WHERE rt_post_id=? AND member_id=? GROUP BY rt_post_id');
+        $retweets = $db->prepare
+        ('SELECT COUNT(rt_post_id) AS rt_cnt FROM posts WHERE rt_post_id=? AND member_id=? GROUP BY rt_post_id');
         $retweets->execute(array(
             $_GET['member_id'],
             $_SESSION['member_id']
