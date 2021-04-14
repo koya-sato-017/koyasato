@@ -66,7 +66,7 @@ header .header_top .global_nav ul li a {
 
 header .header_title {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 72px;
 }
 
 header .header_title .main_title {
@@ -83,7 +83,7 @@ header .header_title .sub_title {
 
 header .link {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 56px;
 }
 
 header .link .btn {
@@ -94,7 +94,9 @@ header .link .btn {
   border-radius: 50px;
   padding: 24px;
   text-transform: uppercase;
+  font-size: 14px;
   font-weight: bold;
+  letter-spacing: 0.1rem;
   line-height: 0.8;
 }
 
@@ -127,8 +129,8 @@ main .news .title {
 
 main .news .title .main_title {
   text-transform: uppercase;
-  font-size: 2.4rem;
-  letter-spacing: 4px;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
 }
 
 main .news .title .sub_title {
@@ -153,6 +155,10 @@ main .news .news_list ul li {
   margin-bottom: 20px;
 }
 
+main .news .news_list ul li .news_list_time {
+  font-size: 0.9rem;
+}
+
 main .news .news_list ul li .news_list_label {
   width: 80px;
   height: 28px;
@@ -167,8 +173,109 @@ main .news .news_list ul li .news_list_label {
 }
 
 main .news .news_list ul li .news_list_body {
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   line-height: 1.5rem;
   font-size: 0.9rem;
+}
+
+main .service .container {
+  max-width: 1140px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+main .service .container .title {
+  color: #391e88;
+  font-weight: bold;
+}
+
+main .service .container .title .main_title {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+main .service .container .title .sub_title {
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+main .service .container .contents .wrapper {
+  margin-top: 12px;
+  padding: 16px;
+}
+
+main .service .container .contents .wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .service .container .contents .wrapper ul li {
+  width: 31.5%;
+}
+
+main .service .container .contents .wrapper ul li figure img {
+  width: 100%;
+  height: auto;
+}
+
+main .service .container .contents .wrapper ul li h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin: 16px 0;
+}
+
+main .service .container .contents .wrapper ul li p {
+  font-size: 0.9rem;
+  letter-spacing: 0.6px;
+  line-height: 1.7rem;
+  text-align: start;
+}
+
+main .service .container .contents .link {
+  text-align: center;
+  margin-top: 12px;
+}
+
+main .service .container .contents .link .btn {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  border: 1px solid #FFF;
+  border-radius: 50px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7633a4), color-stop(51%, #250d65), to(#7633a4));
+  background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+  padding: 24px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  line-height: 0.8;
+}
+
+main .service .container .contents .link .btn::after {
+  content: '';
+  position: absolute;
+  left: 170px;
+  width: 4px;
+  height: 4px;
+  border: 5px solid transparent;
+  border-left: 5px solid #FFF;
+}
+
+main .works .container {
+  max-width: 1340px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 /*# sourceMappingURL=style.css.map */
