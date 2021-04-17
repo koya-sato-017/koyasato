@@ -270,12 +270,104 @@ main .service .container .contents .link .btn::after {
   border-left: 5px solid #FFF;
 }
 
+main .works {
+  margin-top: 40px;
+}
+
 main .works .container {
-  max-width: 1340px;
+  max-width: 1300px;
   margin: 0 auto;
+  padding: 60px 20px 30px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .works .container::after {
+  position: absolute;
+  top: 5%;
+  right: 0;
+  z-index: -1;
+  width: 60%;
+  height: 100%;
+  content: "";
+  background-color: #f0f0f0;
+}
+
+main .works .container .swiper-container {
+  max-width: 750px;
+  width: 60%;
+  margin: 30px 0;
+}
+
+main .works .container .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+main .works .container .contents {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+main .works .container .contents .title {
+  color: #391e88;
+  font-weight: bold;
+}
+
+main .works .container .contents .title .main_title {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+main .works .container .contents .title .sub_title {
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+main .works .container .contents .works_text {
+  margin: 30px 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  line-height: 1.7rem;
+}
+
+main .works .container .contents .link {
+  text-align: center;
+  margin-top: 12px;
+}
+
+main .works .container .contents .link .btn {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  border: 1px solid #FFF;
+  border-radius: 50px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7633a4), color-stop(51%, #250d65), to(#7633a4));
+  background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+  padding: 24px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  line-height: 0.8;
+}
+
+main .works .container .contents .link .btn::after {
+  content: '';
+  position: absolute;
+  left: 170px;
+  width: 4px;
+  height: 4px;
+  border: 5px solid transparent;
+  border-left: 5px solid #FFF;
 }
 /*# sourceMappingURL=style.css.map */
