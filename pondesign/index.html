@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -101,8 +101,24 @@
         </section>
         <section class="works">
             <div class="container">
-                <div class="slider">
-
+                <!-- スライダーのメインコンテナの div 要素 -->
+                <div class="swiper-container"> 
+                    <!-- ラッパーの（スライドを囲む） div 要素 -->
+                    <div class="swiper-wrapper"> 
+                        <!-- それぞれのスライドの div 要素 -->
+                        <div class="swiper-slide"><img src="images/smoothiesta.jpeg" alt=""></div>
+                        <div class="swiper-slide"><img src="images/web-conference.jpeg" alt=""></div>
+                        <div class="swiper-slide"><img src="images/lamina.jpeg" alt=""></div>
+                    </div>
+                    <!-- ページネーションの div 要素 -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- ナビゲーションボタンの div 要素-->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                    <!-- スクロールバーの div 要素 -->
+                    <div class="swiper-scrollbar"></div>
                 </div>
                 <div class="contents">
                     <div class="title">
@@ -183,6 +199,39 @@
         <p class="copyright">&copy; PON DESIGN</p>
     </footer>
 
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        // 以下にオプションを設定
+        // direction: 'vertical',
+        loop: true, //最後に達したら先頭に戻る
+        
+        //ページネーション表示の設定
+        pagination: { 
+            el: '.swiper-pagination', //ページネーションの要素
+            type: 'bullets', //ページネーションの種類
+            clickable: true, //クリックに反応させる
+        },
+        
+        //ナビゲーションボタン（矢印）表示の設定
+        navigation: { 
+            nextEl: '.swiper-button-next', //「次へボタン」要素の指定
+            prevEl: '.swiper-button-prev', //「前へボタン」要素の指定
+        },
+
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+
+    });
+    mySwiper.on('slideChange', function () {
+        console.log('1： ' + (mySwiper.realIndex + 1));
+    });
+    </script>
+    
 </body>
 </html>
