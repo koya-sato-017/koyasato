@@ -310,4 +310,71 @@ main {
         }
         
     }
+    .company {
+        width: 100%;
+        height: 680px;
+        margin: 60px 0;
+        padding: 140px 0 120px 0;
+        background-image: url(images/bg-circle.png), url(images/bg-face.png);
+        background-position: center center, center center;
+        background-repeat: no-repeat;
+        text-align: center;
+        .wrapper {
+            .title {
+                color: #391e88;
+                font-weight: bold;
+                .main_title {
+                    text-transform: uppercase;
+                    font-size: 2.2rem;
+                    letter-spacing: 2px;
+                }
+                .sub_title {
+                    font-size: 0.8rem;
+                    margin-top: 8px;
+                }
+            }
+            .message_heading {
+                display: inline-block;
+                padding: 32px 0 0 0;
+                font-weight: bold;
+                font-size: 2.5rem;
+                line-height: 1;
+                background: linear-gradient(transparent 80%, #f5f534 0%);
+            }
+            .message_text {
+                padding: 40px 0 20px 0;
+                font-size: 0.9rem;
+                line-height: 1.9;
+                letter-spacing: 0.7px;
+            }
+            .link {
+                text-align: center;
+                margin-top: 12px;
+                .btn {
+                    position: relative;
+                    display: inline-block;
+                    width: 200px;
+                    border: 1px solid #FFF;
+                    border-radius: 50px;
+                    background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+                    padding: 24px;
+                    color: #FFF;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 0.1rem;
+                    line-height: 0.8;
+                }
+                .btn::after {
+                    content: '';
+                    position: absolute;
+                    left: 170px;
+                    width: 4px;
+                    height: 4px;
+                    border: 5px solid transparent;
+                    border-left: 5px solid #FFF;
+                }
+            }
+        }
+    }
 }
