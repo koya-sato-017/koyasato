@@ -374,7 +374,7 @@ main .works .container .contents .link .btn::after {
 main .company {
   width: 100%;
   height: 680px;
-  margin: 60px 0;
+  margin: 60px 0 40px 0;
   padding: 140px 0 120px 0;
   background-image: url(images/bg-circle.png), url(images/bg-face.png);
   background-position: center center, center center;
@@ -445,5 +445,105 @@ main .company .wrapper .link .btn::after {
   height: 4px;
   border: 5px solid transparent;
   border-left: 5px solid #FFF;
+}
+
+main .recruit {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+main .recruit .wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f0f0f0;
+}
+
+main .recruit .wrapper .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .recruit .wrapper .contents .title {
+  color: #391e88;
+  font-weight: bold;
+}
+
+main .recruit .wrapper .contents .title .main_title {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+main .recruit .wrapper .contents .title .sub_title {
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+main .recruit .wrapper .contents .message_text {
+  margin: 36px 0 20px 0;
+  font-size: 0.9rem;
+}
+
+main .recruit .wrapper .contents .link {
+  text-align: center;
+  margin-top: 12px;
+}
+
+main .recruit .wrapper .contents .link .btn {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  border: 1px solid #FFF;
+  border-radius: 50px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7633a4), color-stop(51%, #250d65), to(#7633a4));
+  background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+  padding: 24px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  line-height: 0.8;
+}
+
+main .recruit .wrapper .contents .link .btn::after {
+  content: '';
+  position: absolute;
+  left: 170px;
+  width: 4px;
+  height: 4px;
+  border: 5px solid transparent;
+  border-left: 5px solid #FFF;
+}
+
+main .recruit .wrapper .recruit_img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+}
+
+main .recruit .wrapper .recruit_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
