@@ -499,7 +499,7 @@ main .recruit .wrapper .contents .title .sub_title {
 
 main .recruit .wrapper .contents .message_text {
   margin: 36px 0 20px 0;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 main .recruit .wrapper .contents .link {
@@ -545,5 +545,68 @@ main .recruit .wrapper .recruit_img img {
      object-fit: cover;
   max-width: 100%;
   height: 100%;
+}
+
+main .contact {
+  width: 100%;
+}
+
+main .contact .wrapper {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 84px 16px;
+}
+
+main .contact .wrapper .title {
+  color: #391e88;
+  font-weight: bold;
+}
+
+main .contact .wrapper .title .main_title {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+main .contact .wrapper .title .sub_title {
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+main .contact .wrapper .contact_text {
+  font-size: 0.95rem;
+  margin: 32px auto 24px auto;
+}
+
+main .contact .wrapper .link {
+  text-align: center;
+  margin-top: 12px;
+}
+
+main .contact .wrapper .link .btn {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  border: 1px solid #FFF;
+  border-radius: 50px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7633a4), color-stop(51%, #250d65), to(#7633a4));
+  background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+  padding: 24px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  line-height: 0.8;
+}
+
+main .contact .wrapper .link .btn::after {
+  content: '';
+  position: absolute;
+  left: 170px;
+  width: 4px;
+  height: 4px;
+  border: 5px solid transparent;
+  border-left: 5px solid #FFF;
 }
 /*# sourceMappingURL=style.css.map */
