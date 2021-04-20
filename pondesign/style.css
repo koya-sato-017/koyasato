@@ -549,6 +549,7 @@ main .recruit .wrapper .recruit_img img {
 
 main .contact {
   width: 100%;
+  margin-top: 94px;
 }
 
 main .contact .wrapper {
@@ -608,5 +609,45 @@ main .contact .wrapper .link .btn::after {
   height: 4px;
   border: 5px solid transparent;
   border-left: 5px solid #FFF;
+}
+
+footer {
+  background-color: #120e19;
+  padding: 60px 30px 20px;
+}
+
+footer .footer_nav {
+  margin: 0 auto;
+  color: #fff;
+}
+
+footer .footer_nav .link_list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer_nav .link_list ul li:not(:last-child) {
+  margin-right: 10px;
+}
+
+footer .footer_nav .link_list ul li a {
+  display: block;
+  padding: 4px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+footer .footer_nav .copyright {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 10px;
+  color: #a798b7;
 }
 /*# sourceMappingURL=style.css.map */
