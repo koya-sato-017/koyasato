@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
 </head>
 <body>
     <header id="header">
@@ -211,7 +212,12 @@
         </nav>
     </footer>
 
+    <div id="page_top">
+        <a href=""></a>
+    </div>
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
     var mySwiper = new Swiper ('.swiper-container', {
         // 以下にオプションを設定
@@ -243,6 +249,42 @@
     mySwiper.on('slideChange', function () {
         console.log('1： ' + (mySwiper.realIndex + 1));
     });
+
+    // ヘッダーを途中から固定する
+    var _window = $(window),
+        _header = $('.header_top'),
+        headerTop;
+
+    _window.on('scroll', function() {
+        headerTop = $('.header_top').height();
+        if(_window.scrollTop() > headerTop) {
+            _header.addClass('active');
+        } else {
+            _header.removeClass('active');
+        }
+    });
+        
+    _window.trigger('scroll');
+
+    // トップへ戻るボタン
+    jQuery(function() {
+        var pagetop = $('#page_top');   
+        pagetop.hide();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
+                pagetop.fadeIn();
+            } else {
+                pagetop.fadeOut();
+            }
+        });
+        pagetop.click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500); //0.5秒かけてトップへ移動
+            return false;
+        });
+    });
+
     </script>
     
 </body>
