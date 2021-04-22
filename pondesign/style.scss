@@ -14,11 +14,17 @@ header {
     .header_top {
         display: flex;
         position: fixed;
+        z-index: 10;
         justify-content: space-between;
         align-items: center;
         top: 0;
         width: 100%;
         padding: 30px;
+        transition: all .3s;
+        &.active {
+            background-color: #21054d;
+            padding: 24px 30px;
+        }
         .header_logo {
             a {
                 img {
@@ -536,5 +542,39 @@ footer {
             font-size: 10px;
             color: #a798b7;
         }
+    }
+}
+
+#page_top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #391E88;
+    opacity: 0.9;
+    border-radius: 50%;
+    & a {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+    }
+    & a::before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: '\f062';
+        font-size: 25px;
+        color: #fff;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
     }
 }
