@@ -4,12 +4,13 @@ body {
 }
 
 header {
+  position: relative;
   background-image: url(images/hero.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   color: #FFF;
-  height: 560px;
+  height: 736px;
   padding-top: 80px;
 }
 
@@ -74,7 +75,7 @@ header .header_top .global_nav ul li a {
 
 header .header_title {
   text-align: center;
-  margin-top: 72px;
+  margin-top: 160px;
 }
 
 header .header_title .main_title {
@@ -92,6 +93,7 @@ header .header_title .sub_title {
 header .link {
   text-align: center;
   margin-top: 56px;
+  margin-bottom: 240px;
 }
 
 header .link .btn {
@@ -116,6 +118,88 @@ header .link .btn::after {
   height: 4px;
   border: 5px solid transparent;
   border-left: 5px solid #FFF;
+}
+
+header .scroll {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  line-height: 1;
+  display: inline-block;
+  overflow: hidden;
+  padding: 10px 10px 90px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+header .scroll::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 80px;
+  bottom: 0;
+  left: 50%;
+  background: #fff;
+  -webkit-animation: scrollDownLine 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: scrollDownLine 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+@-webkit-keyframes scrollDownLine {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50.1% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+}
+
+@keyframes scrollDownLine {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  50.1% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
 }
 
 main .news {
