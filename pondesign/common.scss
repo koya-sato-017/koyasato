@@ -213,7 +213,37 @@ main {
     }
     .service {
         .service__inner {
-            // padding: 80px 0 8px 8px;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 72px 16px 20px 16px;
+            .service__content {
+                display: flex;
+                &:not(:last-child) {
+                    margin-bottom: 60px;
+                }
+                .service__img {
+                    flex: 0 0 40%;
+                    margin-right: 50px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .service__content_card {
+                    .service__content_title {
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        padding: 8px 0 8px 0;
+                    }
+                    .service__content_text {
+                        margin-top: 20px;
+                        font-size: 0.95rem;
+                        letter-spacing: -0.2px;
+                        line-height: 1.8;
+
+                    }
+                }
+            }
         }
     }
 }

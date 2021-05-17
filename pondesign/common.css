@@ -268,4 +268,45 @@ main .news .pagenation ul li .pagenation__link {
   border-radius: 50%;
   margin-left: 10px;
 }
+
+main .service .service__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 72px 16px 20px 16px;
+}
+
+main .service .service__inner .service__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .service .service__inner .service__content:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+main .service .service__inner .service__content .service__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  margin-right: 50px;
+}
+
+main .service .service__inner .service__content .service__img img {
+  width: 100%;
+  height: auto;
+}
+
+main .service .service__inner .service__content .service__content_card .service__content_title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 8px 0 8px 0;
+}
+
+main .service .service__inner .service__content .service__content_card .service__content_text {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  letter-spacing: -0.2px;
+  line-height: 1.8;
+}
 /*# sourceMappingURL=common.css.map */
