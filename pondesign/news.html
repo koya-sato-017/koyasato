@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
 </head>
 <body>
     <div class="wrapper">
-        <header id="header">
-            <div class="header_top">
-                <div class="header_logo">
+        <header id="sub-header">
+            <div class="header__top">
+                <div class="header__logo">
                     <a href="index.html"><img src="images/logo.svg" alt="PON DESIGN"></a>
                 </div>
-                <nav class="global_nav">
+                <nav class="global-nav">
                     <ul>
                         <li><a href="news.html">news</a></li>
                         <li><a href="service.html">service</a></li>
@@ -34,156 +35,124 @@
                     <span></span>
                 </div>
             </div>
-            <div class="header_title">
-                <h1 class="main_title">NEWS</h1>
-                <p class="sub_title">お知らせ</p>
+            <div class="header-title">
+                <h1 class="main-title">NEWS</h1>
+                <p class="sub-title">お知らせ</p>
             </div>
         </header>
+        <section class="breadcrumb">
+            <div class="breadcrumb__inner">
+                <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumb__link" itemprop="item" href="https://example.com/dresses"><span itemprop="name">home</span></a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumb__link" itemprop="item" href="https://example.com/dresses/real"><span itemprop="name">news</span></a>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ol>
+            </div>
+        </section>
         <main>
             <section class="news">
-                <div class="title">
-                    <h2 class="main_title">news</h2>
-                    <p class="sub_title">お知らせ</p>
-                </div>
-                <div class="news_list">
+                <div class="news__list">
                     <ul>
                         <li>
-                            <div class="news_heading">
-                                <time class="news_list_time" datetime="2030-02-01">2030.02.01</time>
-                                <p class="news_list_label">お知らせ</p>
+                            <div class="news__list_heading">
+                                <time class="news__list_time" datetime="2030-02-01">2030.02.01</time>
+                                <p class="news__list_label">お知らせ</p>
                             </div>
-                            <p class="news_list_body"><a href="">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</a></p>
+                            <p class="news__list_body"><a class="news__list_link" href="">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</a></p>
                         </li>
                         <li>
-                            <div class="news_heading">
-                                <time class="news_list_time" datetime="2030-01-25">2030.01.25</time>
-                                <p class="news_list_label">採用実績</p>
+                            <div class="news__list_heading">
+                                <time class="news__list_time" datetime="2030-01-25">2030.01.25</time>
+                                <p class="news__list_label">採用実績</p>
                             </div>
-                            <p class="news_list_body"><a href="">Smoothiesta様のWebサイトを制作いたしました</a></p>
+                            <p class="news__list_body"><a class="news__list_link" href="">Smoothiesta様のWebサイトを制作いたしました</a></p>
                         </li>
                         <li>
-                            <div class="news_heading">
-                                <time class="news_list_time" datetime="2030-01-20">2030.01.20</time>
-                                <p class="news_list_label">採用</p>
+                            <div class="news__list_heading">
+                                <time class="news__list_time" datetime="2030-01-20">2030.01.20</time>
+                                <p class="news__list_label">採用</p>
                             </div>
-                            <p class="news_list_body"><a href="">Webデザイナーを１名募集中です！</a></p>
+                            <p class="news__list_body"><a class="news__list_link" href="">Webデザイナーを１名募集中です！</a></p>
+                        </li>
+                        <li>
+                            <div class="news__list_heading">
+                                <time class="news__list_time" datetime="2030-01-15">2030.01.15</time>
+                                <p class="news__list_label">お知らせ</p>
+                            </div>
+                            <p class="news__list_body"><a class="news__list_link" href="">（２行のテキストの場合）テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</a></p>
+                        </li>
+                        <li>
+                            <div class="news__list_heading">
+                                <time class="news__list_time" datetime="2030-01-14">2030.01.14</time>
+                                <p class="news__list_label">お知らせ</p>
+                            </div>
+                            <p class="news__list_body"><a class="news__list_link" href="">テキストが入りますテキストが入りますテキストが入りますテキストが入ります</a></p>
+                        </li>
+                        <li>
+                            <div class="news__list_heading">
+                                <time class="news__list_time" datetime="2030-01-14">2030.01.14</time>
+                                <p class="news__list_label">お知らせ</p>
+                            </div>
+                            <p class="news__list_body"><a class="news__list_link" href="">テキストが入りますテキストが入りますテキストが入りますテキストが入ります</a></p>
+                        </li>
+                        <li>
+                            <div class="news__list_heading">
+                                <time class="news__list_time" datetime="2030-01-14">2030.01.14</time>
+                                <p class="news__list_label">お知らせ</p>
+                            </div>
+                            <p class="news__list_body"><a class="news__list_link" href="">テキストが入りますテキストが入りますテキストが入りますテキストが入ります</a></p>
+                        </li>
+                        <li>
+                            <div class="news__list_heading">
+                                <time class="news__list_time" datetime="2030-01-14">2030.01.14</time>
+                                <p class="news__list_label">お知らせ</p>
+                            </div>
+                            <p class="news__list_body"><a class="news__list_link" href="">テキストが入りますテキストが入りますテキストが入りますテキストが入ります</a></p>
+                        </li>
+                        <li>
+                            <div class="news__list_heading">
+                                <time class="news__list_time" datetime="2030-01-14">2030.01.14</time>
+                                <p class="news__list_label">お知らせ</p>
+                            </div>
+                            <p class="news__list_body"><a class="news__list_link" href="">テキストが入りますテキストが入りますテキストが入りますテキストが入ります</a></p>
+                        </li>
+                        <li>
+                            <div class="news__list_heading">
+                                <time class="news__list_time" datetime="2030-01-14">2030.01.14</time>
+                                <p class="news__list_label">お知らせ</p>
+                            </div>
+                            <p class="news__list_body"><a class="news__list_link" href="">テキストが入りますテキストが入りますテキストが入りますテキストが入ります</a></p>
+                        </li>
+                        <li>
+                            <div class="news__list_heading">
+                                <time class="news__list_time" datetime="2030-01-14">2030.01.14</time>
+                                <p class="news__list_label">お知らせ</p>
+                            </div>
+                            <p class="news__list_body"><a class="news__list_link" href="">テキストが入りますテキストが入りますテキストが入りますテキストが入ります</a></p>
                         </li>
                     </ul>
                 </div>
-            </section>
-            <section class="service">
-                <div class="container">
-                    <div class="title">
-                        <h2 class="main_title">service</h2>
-                        <p class="sub_title">事業内容</p>
-                    </div>
-                    <div class="contents">
-                        <div class="wrapper">
-                            <ul>
-                                <li>
-                                    <figure>
-                                        <img src="images/service01.jpg" alt="Webサイト制作の作業風景">
-                                    </figure>
-                                    <h3>Webサイト制作</h3>
-                                    <p>新規サイトの制作はもちろんサイトリニューアルや<br>ランディングページの制作も可能です。</p>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="images/service02.jpg" alt="Webサイト運用のパソコン画面">
-                                    </figure>
-                                    <h3>Webサイト運用</h3>
-                                    <p>サイトの更新作業や独自のアクセス解析に基づいた<br>サイト改善のご提案をいたします。</p>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="images/service03.jpg" alt="スマホを操作している画像">
-                                    </figure>
-                                    <h3>アプリ開発</h3>
-                                    <p>スマートフォンアプリ開発の他、Vue.jsやReactに<br>よるWebアプリの開発が可能です。</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="link">
-                            <a class="btn" href="">MORE</a>
-                        </div>
-                    </div>
+                <div class="pagenation">
+                    <ul>
+                        <li><a href="#" class="pagenation__link_current">1</a></li>
+                        <li><a href="#" class="pagenation__link">2</a></li>
+                        <li><a href="#" class="pagenation__link">3</a></li>
+                    </ul>
                 </div>
             </section>
-            <section class="works">
-                <div class="container">
-                    <!-- スライダーのメインコンテナの div 要素 -->
-                    <div class="swiper-container"> 
-                        <!-- ラッパーの（スライドを囲む） div 要素 -->
-                        <div class="swiper-wrapper"> 
-                            <!-- それぞれのスライドの div 要素 -->
-                            <div class="swiper-slide"><img src="images/smoothiesta.jpeg" alt=""></div>
-                            <div class="swiper-slide"><img src="images/web-conference.jpeg" alt=""></div>
-                            <div class="swiper-slide"><img src="images/lamina.jpeg" alt=""></div>
-                        </div>
-                        <!-- ページネーションの div 要素 -->
-                        <div class="swiper-pagination"></div>
-                    
-                        <!-- ナビゲーションボタンの div 要素-->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    
-                        <!-- スクロールバーの div 要素 -->
-                        <div class="swiper-scrollbar"></div>
-                    </div>
-                    <div class="contents">
-                        <div class="title">
-                            <h2 class="main_title">WORKS</h2>
-                            <p class="sub_title">制作実績</p>
-                        </div>
-                        <p class="works_text">様々なジャンルのWebサイト制作が可能です。<br>
-                            ご購入やお申込み数の増加などを実現します！</p>
-                        <div class="link">
-                            <a class="btn" href="">MORE</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="company">
-                <div class="wrapper">
-                    <div class="title">
-                        <h2 class="main_title">COMPANY</h2>
-                        <p class="sub_title">私たちについて</p>
-                    </div>
-                    <p class="message_heading">サイトのゴール = <br class="br_sp">夢を叶えること</p>
-                    <p class="message_text">お客様の夢を叶えること。<br>
-                        それがWebサイトのゴールであり、<br class="br_sp">私たちが目指すことです。<br>
-                        だからこそちゃんと成果を出すサイトを<br class="br_sp">全力でお作りします。<br>
-                        お客様の笑顔を見たい。<br>
-                        夢を実現する手助けをさせてください。</p>
-                    <div class="link">
-                        <a class="btn" href="">MORE</a>
-                    </div>
-                </div>
-            </section>
-            <section class="recruit">
-                <div class="wrapper">
-                    <div class="contents">
-                        <div class="title">
-                            <h2 class="main_title">RECRUIT</h2>
-                            <p class="sub_title">採用情報</p>
-                        </div>
-                        <p class="message_text">私たちと一緒に働きませんか？</p>
-                        <div class="link">
-                            <a class="btn" href="">MORE</a>
-                        </div>
-                    </div>
-                    <div class="recruit_img">
-                        <img src="images/recruit.jpeg" alt="">
-                    </div>  
-                </div>
-            </section>
+            
             <section class="contact">
                 <div class="wrapper">
                     <div class="title">
-                        <h2 class="main_title">CONTACT</h2>
-                        <p class="sub_title">お問い合わせ</p>
+                        <h2 class="main-title">CONTACT</h2>
+                        <p class="sub-title">お問い合わせ</p>
                     </div>
-                    <p class="contact_text">Webサイトの制作のご依頼やお見積りなど、<br class="br_sp">お気軽にご相談ください。</p>
+                    <p class="contact__text">Webサイトの制作のご依頼やお見積りなど、<br class="br_sp">お気軽にご相談ください。</p>
                     <div class="link">
                         <a class="btn" href="">MORE</a>
                     </div>
@@ -191,8 +160,8 @@
             </section>
         </main>
         <footer id="footer">
-            <nav class="footer_nav">
-                <div class="link_list">
+            <nav class="footer__nav">
+                <div class="link-list">
                     <ul>
                         <li>
                             <a href="">home</a>
@@ -261,11 +230,11 @@
     
         // ヘッダーを途中から固定する
         var _window = $(window),
-            _header = $('.header_top'),
+            _header = $('.header__top'),
             headerTop;
     
         _window.on('scroll', function() {
-            headerTop = $('.header_top').height();
+            headerTop = $('.header__top').height();
             if(_window.scrollTop() > headerTop) {
                 _header.addClass('active');
             } else {
