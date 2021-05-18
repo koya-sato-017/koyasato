@@ -309,4 +309,43 @@ main .service .service__inner .service__content .service__content_card .service_
   letter-spacing: -0.2px;
   line-height: 1.8;
 }
+
+main .works .works__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 30px 15px 0 15px;
+}
+
+main .works .works__inner .works__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 31.5%;
+          flex: 0 1 31.5%;
+  margin-right: 30px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+main .works .works__inner .works__card .works__card_link:hover {
+  text-decoration: underline;
+}
+
+main .works .works__inner .works__card .works__card_link .works__card_img img {
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0 0 15px;
+          box-shadow: 0 0 15px;
+}
+
+main .works .works__inner .works__card .works__card_link .works__card_title {
+  margin-top: 20px;
+}
+
+main .works .works__inner .col3 {
+  margin-right: 0;
+}
 /*# sourceMappingURL=common.css.map */
