@@ -348,4 +348,110 @@ main .works .works__inner .works__card .works__card_link .works__card_title {
 main .works .works__inner .col3 {
   margin-right: 0;
 }
+
+main .company {
+  height: auto;
+  margin: 0;
+  background-position: center -20px, center 40px;
+}
+
+main .company .wrapper {
+  margin-top: -40px;
+}
+
+main .company .wrapper .message-title {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #391e88;
+}
+
+main .greeting .greeting__wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 15px;
+}
+
+main .greeting .greeting__wrapper .greeting__ceo-img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  margin-right: 50px;
+}
+
+main .greeting .greeting__wrapper .greeting__ceo-img img {
+  width: 100%;
+  height: auto;
+}
+
+main .greeting .greeting__wrapper .greeting__text {
+  font-size: 0.94rem;
+  line-height: 1.8;
+}
+
+main .info {
+  margin-top: 120px;
+  padding: 0 15px;
+}
+
+main .info .info__wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px 0 15px;
+}
+
+main .info .info__wrapper .info__heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #391e88;
+}
+
+main .info .info__wrapper .info__table {
+  width: 100%;
+  margin-top: 28px;
+}
+
+main .info .info__wrapper .info__table tbody tr {
+  border-bottom: 1px solid #ddd;
+  font-size: 0.93rem;
+}
+
+main .info .info__wrapper .info__table tbody tr th {
+  width: 20%;
+  padding: 36px 0 36px 12px;
+}
+
+main .info .info__wrapper .info__table tbody tr td {
+  padding: 36px 0 36px 12px;
+}
+
+main .access {
+  margin-top: 60px;
+}
+
+main .access .access__wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px 20px 15px;
+}
+
+main .access .access__wrapper .access__map iframe {
+  width: 100%;
+}
+
+main .access .access__wrapper .access__link {
+  padding: 8px 0 8px 0;
+}
+
+main .access .access__wrapper .access__link a {
+  display: block;
+  font-size: 0.9rem;
+}
+
+main .access .access__wrapper .access__link a:hover {
+  text-decoration: underline;
+}
 /*# sourceMappingURL=common.css.map */

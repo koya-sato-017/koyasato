@@ -279,4 +279,94 @@ main {
             }
         }
     }
+    .company {
+        height: auto;
+        margin: 0;
+        background-position: center -20px, center 40px;
+        .wrapper {
+            margin-top: -40px;
+            .message-title {
+                font-weight: bold;
+                font-size: 2rem;
+                color: #391e88;
+            }
+        }
+    }
+    .greeting {
+        .greeting__wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            padding: 15px 15px;
+            .greeting__ceo-img {
+                flex: 0 0 40%;
+                margin-right: 50px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .greeting__text {
+                font-size: 0.94rem;
+                line-height: 1.8;
+            }
+        }
+    }
+    .info {
+        margin-top: 120px;
+        padding: 0 15px;
+        .info__wrapper {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px 0 15px;
+            .info__heading {
+                text-align: center;
+                font-weight: bold;
+                font-size: 2rem;
+                color: #391e88;
+            }
+            .info__table {
+                width: 100%;
+                margin-top: 28px;
+                tbody {
+                    
+                    tr {
+                        border-bottom: 1px solid #ddd;
+                        font-size: 0.93rem;
+                        th {
+                            width: 20%;
+                            padding: 36px 0 36px 12px;
+                        }
+                        td {
+                            padding: 36px 0 36px 12px;
+                        }
+                    }
+                    
+                }  
+            }
+        }
+    }
+    .access {
+        margin-top: 60px;
+        .access__wrapper {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px 20px 15px;
+            .access__map {
+                iframe {
+                    width: 100%;
+                }
+            }
+            .access__link {
+                padding: 8px 0 8px 0;
+                a {
+                    display: block;
+                    font-size: 0.9rem;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }       
+        }
+    }
 }
