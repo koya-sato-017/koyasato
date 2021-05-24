@@ -369,4 +369,160 @@ main {
             }       
         }
     }
+    .recruit {
+        background-image: url(images/bg-geometry.png);
+        background-repeat: repeat;
+        .recruit__wrapper {
+            width: 100%;
+            padding: 94px 0 60px 0;
+            .recruit__message {
+                text-align: center;
+                .recruit__message_heading {
+                    font-weight: bold;
+                    font-size: 4.5rem;
+                    color: #391e88;
+                }
+                .recruit__message_heading-sub {
+                    font-size: 2rem;
+                    color: #391e88;
+                    margin-top: 16px;
+                }
+                .recruit__message_text {
+                    margin-top: 30px;
+                    line-height: 1.8;
+                }
+            }
+            .recruit__image_wrapper {
+                background-image: url(images/recruit01.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center 80%;
+                clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+                height: 780px;
+                margin-top: 40px;
+            }
+            .recruit__details {
+                max-width: 1140px;
+                margin: 0 auto;
+                padding: 0 15px;
+                .recruit__details_heading {
+                    margin-top: 68px;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 2rem;
+                    color: #391e88;
+                }
+                .recruit__details_table {
+                    background-color: #fff;
+                    border: 1px solid #b067cf;
+                    border-radius: 6px;
+                    margin: 28px auto 0 auto;
+                    padding: 70px 100px;
+                    .recruit__details_table-heading {
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                    }
+                    .recruit__details_table-list {
+                        display: table;
+                        width: 100%;
+                        margin-top: 40px;
+                        font-size: 0.95rem;
+                        tbody {
+                            tr {
+                                border-bottom: 1px solid #ddd;
+                                th {
+                                    width: 20%;
+                                    padding: 36px 8px;
+                                    vertical-align: middle;
+                                }
+                                td {
+                                    padding: 36px 8px;
+                                    
+                                }
+                                &:last-child {
+                                    line-height: 1.8;
+                                    td {
+                                        ul {
+                                            margin-top: 8px;
+                                            margin-left: 20px;
+                                            li {
+                                                list-style: disc;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .link {
+                        text-align: center;
+                        margin-top: 52px;
+                        padding-right: 8px;
+                        .btn {
+                            position: relative;
+                            display: inline-block;
+                            width: 200px;
+                            border: 1px solid #FFF;
+                            border-radius: 50px;
+                            background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+                            padding: 24px;
+                            color: #FFF;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            font-weight: bold;
+                            letter-spacing: 0.1rem;
+                            line-height: 0.8;
+                        }
+                        .btn::after {
+                            content: '';
+                            position: absolute;
+                            left: 170px;
+                            width: 4px;
+                            height: 4px;
+                            border: 5px solid transparent;
+                            border-left: 5px solid #FFF;
+                        }
+                        .link-note {
+                            display: block;
+                            margin-top: 8px;
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+            .recruit__company-movie {
+                .recruit__company-movie_wrapper {
+                    max-width: 1140px;
+                    margin: 0 auto;
+                    padding: 0 15px 100px 15px;
+                    .recruit__company-movie_heading {
+                        text-align: center;
+                        margin-top: 140px;
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: 2rem;
+                        color: #391e88;
+                    }
+                    .recruit__company-movie_youtube {
+                        position: relative;
+                        height: 0;
+                        margin-top: 40px;
+                        padding: 0 0 56.25%;
+                        overflow: hidden;
+                        iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }    
+            }
+        }
+    }
+    .contact {
+        margin-top: 0;
+    }
 }

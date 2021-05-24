@@ -582,18 +582,13 @@ main .company .wrapper .link .btn::after {
   border-left: 5px solid #FFF;
 }
 
-main .recruit {
+main .recruit .wrapper {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 16px;
-}
-
-main .recruit .wrapper {
-  width: 100%;
+  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #f0f0f0;
 }
 
 main .recruit .wrapper .contents {
@@ -604,9 +599,9 @@ main .recruit .wrapper .contents {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -614,6 +609,7 @@ main .recruit .wrapper .contents {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #f0f0f0;
 }
 
 main .recruit .wrapper .contents .title {
@@ -640,6 +636,7 @@ main .recruit .wrapper .contents .message-text {
 main .recruit .wrapper .contents .link {
   text-align: center;
   margin-top: 12px;
+  padding-right: 8px;
 }
 
 main .recruit .wrapper .contents .link .btn {

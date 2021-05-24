@@ -461,20 +461,19 @@ main {
         }
     }
     .recruit {
-        max-width: 1140px;
-        margin: 0 auto;
-        padding: 16px;
         .wrapper {
-            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
             display: flex;
-            background-color: #f0f0f0;
             .contents {
                 display: flex;
                 text-align: center;
                 align-items: center;
-                flex: 0 0 40%;
+                flex: 1;
                 flex-flow: column;
                 justify-content: center;
+                background-color: #f0f0f0;
                 .title {
                     color: #391e88;
                     font-weight: bold;
@@ -495,6 +494,7 @@ main {
                 .link {
                     text-align: center;
                     margin-top: 12px;
+                    padding-right: 8px;
                     .btn {
                         position: relative;
                         display: inline-block;
