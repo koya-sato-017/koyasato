@@ -632,4 +632,115 @@ main .recruit .recruit__wrapper .recruit__company-movie .recruit__company-movie_
 main .contact {
   margin-top: 0;
 }
+
+main .contact .contact__wrapper {
+  max-width: 950px;
+  margin: 76px auto 0 auto;
+  padding: 0 15px;
+}
+
+main .contact .contact__wrapper .contact__wrapper_lead {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body {
+  background-color: #f7f7f7;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form {
+  margin: 44px 0 70px 0;
+  padding: 90px;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding: 4px 0;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__title .form__require {
+  margin-left: 10px;
+  color: #391e88;
+  font-size: 0.75rem;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__title .form__note {
+  font-weight: normal;
+  margin-left: 5px;
+  font-size: 0.75rem;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__radio {
+  font-size: 0.9rem;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__radio:not(:last-child) {
+  margin-right: 35px;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__input {
+  width: 300px;
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__input[type="tel"] {
+  width: 200px;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__textarea {
+  min-width: 600px;
+  min-height: 200px;
+  padding: 8px;
+  border: solid 1px #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__select {
+  width: 300px;
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__btn {
+  text-align: center;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__btn .btn {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  border: 1px solid #FFF;
+  border-radius: 50px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7633a4), color-stop(51%, #250d65), to(#7633a4));
+  background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+  padding: 24px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  line-height: 0.8;
+}
+
+main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__btn .btn::after {
+  content: '';
+  position: absolute;
+  left: 170px;
+  width: 4px;
+  height: 4px;
+  border: 5px solid transparent;
+  border-left: 5px solid #FFF;
+}
 /*# sourceMappingURL=common.css.map */
