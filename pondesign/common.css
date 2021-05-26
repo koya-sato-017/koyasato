@@ -933,6 +933,17 @@ main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__btn
     font-size: 0.9rem;
     letter-spacing: -0.4px;
   }
+  main .works .works__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 15px 40px 15px;
+  }
+  main .works .works__inner .works__card {
+    margin-right: 0;
+    margin-bottom: 48px;
+  }
   #page_top {
     right: 20px;
     bottom: 20px;

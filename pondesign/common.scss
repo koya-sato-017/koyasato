@@ -818,6 +818,16 @@ main {
                 }
             }
         }
+        .works {
+            .works__inner {
+                flex-direction: column;
+                padding: 0 15px 40px 15px;
+                .works__card {
+                    margin-right: 0;
+                    margin-bottom: 48px;
+                }
+            }
+        }
     }
 
     #page_top {
