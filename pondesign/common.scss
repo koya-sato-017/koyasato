@@ -791,6 +791,33 @@ main {
                 }
             }
         }
+        .service {
+            .service__inner {
+                width: 100%;
+                padding: 40px 15px;
+                .service__content {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 40px;
+                    .service__img {
+                        margin-right: 0;
+                    }
+                    .service__content_card {
+                        .service__content_title {
+                            font-size: 1.1rem;
+                            text-align: center;
+                            margin: 20px 0 0 0;
+                            padding: 0;
+                        }
+                        .service__content_text {
+                            margin-top: 16px;
+                            font-size: 0.9rem;
+                            letter-spacing: -0.4px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     #page_top {
