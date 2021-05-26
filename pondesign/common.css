@@ -146,7 +146,6 @@ body {
 }
 
 .breadcrumb {
-  height: 44px;
   margin: 0 auto;
   background-color: #F0F0F0;
 }
@@ -742,5 +741,169 @@ main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__btn
   height: 4px;
   border: 5px solid transparent;
   border-left: 5px solid #FFF;
+}
+
+@media screen and (max-width: 768px) {
+  #sub-header {
+    height: 180px;
+  }
+  #sub-header .header__top {
+    padding: 20px 15px;
+  }
+  #sub-header .header__top .header__logo a img {
+    width: 120px;
+  }
+  #sub-header .header__top .global-nav {
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-image: linear-gradient(135deg, #7633a4, #250d65);
+  }
+  #sub-header .header__top .global-nav.active {
+    opacity: 1;
+    z-index: 999;
+  }
+  #sub-header .header__top .global-nav.active ul {
+    display: block;
+    width: 100%;
+  }
+  #sub-header .header__top .global-nav ul {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 80%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #sub-header .header__top .global-nav ul li {
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+  }
+  #sub-header .header__top .global-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+  }
+  #sub-header .header__top .openbtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    top: 6px;
+    right: 12px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+  #sub-header .header__top .openbtn span {
+    display: inline-block;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 45%;
+  }
+  #sub-header .header__top .openbtn span:nth-of-type(1) {
+    top: 15px;
+  }
+  #sub-header .header__top .openbtn span:nth-of-type(2) {
+    top: 23px;
+  }
+  #sub-header .header__top .openbtn span:nth-of-type(3) {
+    top: 31px;
+  }
+  #sub-header .header__top .openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+  #sub-header .header__top .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  #sub-header .header__top .openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    -webkit-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+  #sub-header .header-title {
+    width: 80%;
+    margin: 8px auto;
+    text-align: center;
+  }
+  #sub-header .header-title .main-title {
+    font-size: 1.9rem;
+    line-height: 1;
+  }
+  #sub-header .header-title .sub-title {
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+  #sub-header .header-title .sub-title .br_sp {
+    display: block;
+  }
+  #sub-header .link {
+    width: 80%;
+    margin: 56px auto 240px auto;
+    text-align: left;
+  }
+  #sub-header .link .btn {
+    text-align: center;
+  }
+  #sub-header .scroll {
+    bottom: -24px;
+  }
+  .breadcrumb .breadcrumb__inner {
+    height: 35px;
+  }
+  .breadcrumb .breadcrumb__inner .breadcrumb__list {
+    height: 35px;
+  }
+  .breadcrumb .breadcrumb__inner .breadcrumb__list .breadcrumb__item .breadcrumb__link {
+    font-size: 0.65rem;
+  }
+  main .news {
+    padding: 40px 0 80px 0;
+    width: 100%;
+  }
+  main .news .news__list {
+    padding: 0 16px;
+  }
+  main .news .news__list ul li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .news .news__list ul li .news__list_heading .news__list_time {
+    font-size: 0.85rem;
+  }
+  main .news .news__list ul li .news__list_body {
+    line-height: 1.6;
+  }
+  #page_top {
+    right: 20px;
+    bottom: 20px;
+  }
 }
 /*# sourceMappingURL=common.css.map */
