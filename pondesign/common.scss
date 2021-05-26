@@ -626,6 +626,10 @@ main {
         height: 180px;
         .header__top {
             padding: 20px 15px;
+            &.active {
+                background-color: #21054d;
+                padding: 20px 15px;
+            }
             .header__logo {
                 a {
                     img {

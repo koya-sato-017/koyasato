@@ -750,6 +750,10 @@ main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__btn
   #sub-header .header__top {
     padding: 20px 15px;
   }
+  #sub-header .header__top.active {
+    background-color: #21054d;
+    padding: 20px 15px;
+  }
   #sub-header .header__top .header__logo a img {
     width: 120px;
   }
