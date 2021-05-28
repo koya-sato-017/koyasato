@@ -278,93 +278,123 @@ main {
         }
     }
     .company {
-        height: auto;
-        margin: 0;
-        background-position: center -20px, center 40px;
-        .wrapper {
-            margin-top: -40px;
-            .message-title {
-                font-weight: bold;
-                font-size: 2rem;
-                color: #391e88;
-            }
-        }
-    }
-    .greeting {
-        .greeting__wrapper {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: flex;
-            padding: 15px 15px;
-            .greeting__ceo-img {
-                flex: 0 0 40%;
-                margin-right: 50px;
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            }
-            .greeting__text {
-                font-size: 0.94rem;
-                line-height: 1.8;
-            }
-        }
-    }
-    .info {
-        margin-top: 120px;
-        padding: 0 15px;
-        .info__wrapper {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 15px 0 15px;
-            .info__heading {
-                text-align: center;
-                font-weight: bold;
-                font-size: 2rem;
-                color: #391e88;
-            }
-            .info__table {
-                width: 100%;
-                margin-top: 28px;
-                tbody {
-                    
-                    tr {
-                        border-bottom: 1px solid #ddd;
-                        font-size: 0.93rem;
-                        th {
-                            width: 20%;
-                            padding: 36px 0 36px 12px;
+        .introduction {
+            background-image: url(images/bg-circle.png), url(images/bg-face.png);
+            background-position: center -20px, center 40px;
+            background-repeat: no-repeat;
+            padding: 100px 0 20px;
+            .message {
+                height: auto;
+                margin: 0;
+                .message__wrapper {
+                    text-align: center;
+                    .message-title {
+                        font-weight: bold;
+                        font-size: 2rem;
+                        color: #391e88;
+                    }
+                    .message-heading {
+                        display: inline-block;
+                        padding: 28px 0 0 0;
+                        font-weight: bold;
+                        font-size: 2.5rem;
+                        line-height: 1;
+                        .br_sp {
+                            display: none;
                         }
-                        td {
-                            padding: 36px 0 36px 12px;
+                        .message-underline {
+                            background: linear-gradient(transparent 70%, #f5f534 0%);
                         }
                     }
-                    
-                }  
-            }
-        }
-    }
-    .access {
-        margin-top: 60px;
-        .access__wrapper {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 15px 20px 15px;
-            .access__map {
-                iframe {
-                    width: 100%;
-                }
-            }
-            .access__link {
-                padding: 8px 0 8px 0;
-                a {
-                    display: block;
-                    font-size: 0.9rem;
-                    &:hover {
-                        text-decoration: underline;
+                    .message-text {
+                        padding: 40px 0 20px 0;
+                        font-size: 0.9rem;
+                        line-height: 1.9;
+                        letter-spacing: 0.7px;
+                        .br_sp {
+                            display: none;
+                        }
                     }
                 }
-            }       
+            }
+            .greeting {
+                .greeting__wrapper {
+                    max-width: 1300px;
+                    margin: 0 auto;
+                    display: flex;
+                    padding: 140px 15px 0 15px;
+                    .greeting__ceo-img {
+                        flex: 0 0 40%;
+                        margin-right: 50px;
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    .greeting__text {
+                        font-size: 0.94rem;
+                        line-height: 1.8;
+                    }
+                }
+            }
+        } 
+        .info {
+            margin-top: 120px;
+            padding: 0 15px;
+            .info__wrapper {
+                max-width: 1140px;
+                margin: 0 auto;
+                padding: 0 15px 0 15px;
+                .info__heading {
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 2rem;
+                    color: #391e88;
+                }
+                .info__table {
+                    width: 100%;
+                    margin-top: 28px;
+                    tbody {
+                        
+                        tr {
+                            border-bottom: 1px solid #ddd;
+                            font-size: 0.93rem;
+                            th {
+                                width: 20%;
+                                padding: 36px 0 36px 12px;
+                            }
+                            td {
+                                padding: 36px 0 36px 12px;
+                            }
+                        }
+                        
+                    }  
+                }
+            }
+        }
+        .access {
+            margin-top: 60px;
+            margin-bottom: 84px;
+            .access__wrapper {
+                max-width: 1140px;
+                margin: 0 auto;
+                padding: 0 15px 20px 15px;
+                .access__map {
+                    iframe {
+                        width: 100%;
+                    }
+                }
+                .access__link {
+                    padding: 8px 0 8px 0;
+                    a {
+                        display: block;
+                        font-size: 0.9rem;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }       
+            }
         }
     }
     .recruit {
@@ -825,6 +855,89 @@ main {
                 .works__card {
                     margin-right: 0;
                     margin-bottom: 48px;
+                }
+            }
+        }
+        .company {
+            .introduction {
+                padding: 60px 0 20px;
+                .message {
+                    .message__wrapper {
+                        padding: 0 15px;
+                        text-align: center;
+                        .message-title {
+                            font-size: 1.5rem;
+                            margin-bottom: 28px;
+                        }
+                        .message-heading {
+                            padding: 0;
+                            font-size: 2rem;
+                            line-height: 1.5;
+                            .br_sp {
+                                display: block;
+                            }
+                        }
+                        .message-text {
+                            font-size: 0.875rem;
+                            line-height: 1.8;
+                            letter-spacing: 0;
+                            .br_sp {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .greeting {
+                    .greeting__wrapper {
+                        flex-direction: column;
+                        padding: 40px 15px 0 15px;
+                        .greeting__ceo-img {
+                            margin-right: 0;
+                        }
+                        .greeting__text {
+                            margin-top: 20px;
+                            font-size: 0.875rem;
+                            letter-spacing: 0;
+                            
+                        }
+                    }
+                }
+            }
+            .info {
+                margin-top: 80px;
+                .info__wrapper {
+                    padding: 0;
+                    .info__heading {
+                        font-size: 1.5rem;
+                    }
+                    .info__table {
+                        tbody {
+                            tr {
+                                font-size: 0.875rem;
+                                th, td {
+                                    display: block;
+                                    width: 100%;
+                                    margin: 30px 0 15px 0;
+                                    padding: 0;
+                                }
+                                td {
+                                    display: block;
+                                    width: 100%;
+                                    margin: 0 0 28px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .access {
+                margin-bottom: 60px;
+                .access__wrapper {
+                    .access__map {
+                        iframe {
+                            height: 240px;
+                        }
+                    }
                 }
             }
         }
