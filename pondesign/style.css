@@ -498,7 +498,7 @@ main .works .container .contents .link .btn::after {
   border-left: 5px solid #FFF;
 }
 
-main .company {
+main .company .container {
   width: 100%;
   height: 680px;
   margin: 60px 0 40px 0;
@@ -509,23 +509,23 @@ main .company {
   text-align: center;
 }
 
-main .company .wrapper .title {
+main .company .container .title {
   color: #391e88;
   font-weight: bold;
 }
 
-main .company .wrapper .title .main-title {
+main .company .container .title .main-title {
   text-transform: uppercase;
   font-size: 2.2rem;
   letter-spacing: 2px;
 }
 
-main .company .wrapper .title .sub-title {
+main .company .container .title .sub-title {
   font-size: 0.8rem;
   margin-top: 8px;
 }
 
-main .company .wrapper .message-heading {
+main .company .container .message-heading {
   display: inline-block;
   padding: 32px 0 0 0;
   font-weight: bold;
@@ -535,27 +535,27 @@ main .company .wrapper .message-heading {
   background: linear-gradient(transparent 80%, #f5f534 0%);
 }
 
-main .company .wrapper .message-heading .br_sp {
+main .company .container .message-heading .br_sp {
   display: none;
 }
 
-main .company .wrapper .message-text {
+main .company .container .message-text {
   padding: 40px 0 20px 0;
   font-size: 0.9rem;
   line-height: 1.9;
   letter-spacing: 0.7px;
 }
 
-main .company .wrapper .message-text .br_sp {
+main .company .container .message-text .br_sp {
   display: none;
 }
 
-main .company .wrapper .link {
+main .company .container .link {
   text-align: center;
   margin-top: 12px;
 }
 
-main .company .wrapper .link .btn {
+main .company .container .link .btn {
   position: relative;
   display: inline-block;
   width: 200px;
@@ -572,7 +572,7 @@ main .company .wrapper .link .btn {
   line-height: 0.8;
 }
 
-main .company .wrapper .link .btn::after {
+main .company .container .link .btn::after {
   content: '';
   position: absolute;
   left: 170px;
@@ -1058,34 +1058,35 @@ footer .footer__nav .copyright {
     top: 40%;
     height: 64%;
   }
-  main .company {
-    margin: 0 0 10px 0;
-    padding: 120px 0 120px 0;
+  main .company .container {
+    margin: 0 0 30px 0;
+    padding: 120px 0 10px 0;
     background-image: url(images/bg-circle.png);
     background-position: center center;
     background-size: 375px;
+    background-repeat: repeat;
   }
-  main .company .wrapper .title {
+  main .company .container .title {
     margin-bottom: 32px;
   }
-  main .company .wrapper .title .main-title {
+  main .company .container .title .main-title {
     font-size: 1.8rem;
   }
-  main .company .wrapper .message-heading {
+  main .company .container .message-heading {
     display: inline;
     padding: 0;
     font-size: 2rem;
     line-height: 1.5;
   }
-  main .company .wrapper .message-heading .br_sp {
+  main .company .container .message-heading .br_sp {
     display: block;
   }
-  main .company .wrapper .message-text {
+  main .company .container .message-text {
     font-size: 0.9rem;
     line-height: 1.8;
     letter-spacing: 0;
   }
-  main .company .wrapper .message-text .br_sp {
+  main .company .container .message-text .br_sp {
     display: block;
   }
   main .recruit .wrapper {
@@ -1093,6 +1094,7 @@ footer .footer__nav .copyright {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    margin: 0 0 80px 0;
   }
   main .recruit .wrapper .contents {
     padding: 60px 0 60px 0;
@@ -1139,6 +1141,8 @@ footer .footer__nav .copyright {
   #page_top {
     display: block;
     z-index: 9999;
+    right: 20px;
+    bottom: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
