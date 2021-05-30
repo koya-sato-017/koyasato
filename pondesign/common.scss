@@ -941,6 +941,77 @@ main {
                 }
             }
         }
+        .recruit {
+            .recruit__wrapper {
+                padding: 60px 0 60px 0;
+                .recruit__message {
+                    .recruit__message_heading {
+                        padding: 0 15px;
+                        font-size: 3rem;
+                        line-height: 1.2;
+                    }
+                    .recruit__message_heading-sub {
+                        font-size: 1.15rem;
+                    }
+                    .recruit__message_text {
+                        margin-top: 24px;
+                        font-size: 0.95rem;
+                    }
+                }
+                .recruit__image_wrapper {
+                    height: 400px;
+                    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+                }
+                .recruit__details {
+                    .recruit__details_heading {
+                        margin-top: 40px;
+                        font-size: 1.5rem;
+                    }
+                    .recruit__details_table {
+                        margin: 30px auto 0 auto;
+                        padding: 36px 20px;
+                        .recruit__details_table-heading {
+                            font-size: 1rem;
+                        }
+                        .recruit__details_table-list {
+                            margin-top: 20px;
+                            tbody {
+                                tr {
+                                    line-height: 1.8;
+                                    font-size: 0.875rem;
+                                    th, td {
+                                        display: block;
+                                        width: 100%;
+                                        margin: 20px 0 8px 0;
+                                        padding: 0;
+                                    }
+                                    td {
+                                        display: block;
+                                        width: 100%;
+                                        margin: 0 0 16px 0;
+                                    }
+                                }
+                            }
+                        }
+                        .link {
+                            margin-top: 40px;
+                        }
+                    }
+                }
+                .recruit__company-movie {
+                    .recruit__company-movie_wrapper {
+                        margin: -64px auto 0 auto;
+                        padding: 0 15px 70px 15px;
+                        .recruit__company-movie_heading {
+                            font-size: 1.5rem;
+                        }
+                        .recruit__company-movie_youtube {
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     #page_top {

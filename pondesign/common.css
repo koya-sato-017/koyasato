@@ -1050,6 +1050,68 @@ main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__btn
   main .company .access .access__wrapper .access__map iframe {
     height: 240px;
   }
+  main .recruit .recruit__wrapper {
+    padding: 60px 0 60px 0;
+  }
+  main .recruit .recruit__wrapper .recruit__message .recruit__message_heading {
+    padding: 0 15px;
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  main .recruit .recruit__wrapper .recruit__message .recruit__message_heading-sub {
+    font-size: 1.15rem;
+  }
+  main .recruit .recruit__wrapper .recruit__message .recruit__message_text {
+    margin-top: 24px;
+    font-size: 0.95rem;
+  }
+  main .recruit .recruit__wrapper .recruit__image_wrapper {
+    height: 400px;
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+  }
+  main .recruit .recruit__wrapper .recruit__details .recruit__details_heading {
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
+  main .recruit .recruit__wrapper .recruit__details .recruit__details_table {
+    margin: 30px auto 0 auto;
+    padding: 36px 20px;
+  }
+  main .recruit .recruit__wrapper .recruit__details .recruit__details_table .recruit__details_table-heading {
+    font-size: 1rem;
+  }
+  main .recruit .recruit__wrapper .recruit__details .recruit__details_table .recruit__details_table-list {
+    margin-top: 20px;
+  }
+  main .recruit .recruit__wrapper .recruit__details .recruit__details_table .recruit__details_table-list tbody tr {
+    line-height: 1.8;
+    font-size: 0.875rem;
+  }
+  main .recruit .recruit__wrapper .recruit__details .recruit__details_table .recruit__details_table-list tbody tr th, main .recruit .recruit__wrapper .recruit__details .recruit__details_table .recruit__details_table-list tbody tr td {
+    display: block;
+    width: 100%;
+    margin: 20px 0 8px 0;
+    padding: 0;
+  }
+  main .recruit .recruit__wrapper .recruit__details .recruit__details_table .recruit__details_table-list tbody tr td {
+    display: block;
+    width: 100%;
+    margin: 0 0 16px 0;
+  }
+  main .recruit .recruit__wrapper .recruit__details .recruit__details_table .link {
+    margin-top: 40px;
+  }
+  main .recruit .recruit__wrapper .recruit__company-movie .recruit__company-movie_wrapper {
+    margin: -64px auto 0 auto;
+    padding: 0 15px 70px 15px;
+  }
+  main .recruit .recruit__wrapper .recruit__company-movie .recruit__company-movie_wrapper .recruit__company-movie_heading {
+    font-size: 1.5rem;
+  }
+  main .recruit .recruit__wrapper .recruit__company-movie .recruit__company-movie_wrapper .recruit__company-movie_youtube {
+    margin-top: 30px;
+  }
   #page_top {
     right: 20px;
     bottom: 20px;
