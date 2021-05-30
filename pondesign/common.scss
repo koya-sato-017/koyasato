@@ -556,10 +556,12 @@ main {
             max-width: 950px;
             margin: 76px auto 0 auto;
             padding: 0 15px;
-
             .contact__wrapper_lead {
                 text-align: center;
                 font-size: 0.95rem;
+                .br_sp {
+                    display: none;
+                }
             }
             .contact__wrapper_body {
                 background-color: #f7f7f7;
@@ -643,6 +645,22 @@ main {
                                 border: 5px solid transparent;
                                 border-left: 5px solid #FFF;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #sub-header {
+        .header__top {
+            .global-nav {
+                ul {
+                    li {
+                        a {
+                            font-size: 0.75rem;
                         }
                     }
                 }
@@ -1007,6 +1025,65 @@ main {
                         }
                         .recruit__company-movie_youtube {
                             margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        .contact {
+            .contact__wrapper {
+                margin: 40px auto 0 auto;
+                .contact__wrapper_lead {
+                    font-size: 0.875rem;
+                    line-height: 1.8;
+                    .br_sp {
+                        display: block;
+                    }
+                }
+                .contact__wrapper_body {
+                    .contact__form {
+
+                        margin: 30px 0 40px 0;
+                        padding: 30px;
+                        .form__item {
+                            display: block;
+                            width: 100%;
+                            &:not(:last-child) {
+                                margin-bottom: 32px;
+                            }
+                            .form__title {
+                                font-size: 0.875rem;
+                                margin-bottom: 6px;
+                                .form__require {
+                                    font-size: 0.75rem;
+                                    margin-left: 6px;
+                                }
+                            }
+                            .form__radio {
+                                display: block;
+                                font-size: 0.875rem;
+                                &:not(:last-child) {
+                                    margin-bottom: 14px;
+                                }
+                            }
+                            .form__input {
+                                width: 100%;
+                                &[type="tel"] {
+                                    width: 100%;
+                                }
+                            }
+                            .form__textarea {
+                                min-width: 100%;
+                                font-size: 0.85rem;
+                                letter-spacing: 0.4px;
+                                line-height: 1.8;
+                            }
+                            .form__select {
+                                width: 100%;
+                            }
+                        }
+                        .form__btn {
+                            margin-top: 50px;
                         }
                     }
                 }

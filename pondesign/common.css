@@ -678,6 +678,10 @@ main .contact .contact__wrapper .contact__wrapper_lead {
   font-size: 0.95rem;
 }
 
+main .contact .contact__wrapper .contact__wrapper_lead .br_sp {
+  display: none;
+}
+
 main .contact .contact__wrapper .contact__wrapper_body {
   background-color: #f7f7f7;
 }
@@ -776,6 +780,12 @@ main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__btn
   height: 4px;
   border: 5px solid transparent;
   border-left: 5px solid #FFF;
+}
+
+@media screen and (max-width: 960px) {
+  #sub-header .header__top .global-nav ul li a {
+    font-size: 0.75rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1111,6 +1121,60 @@ main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__btn
   }
   main .recruit .recruit__wrapper .recruit__company-movie .recruit__company-movie_wrapper .recruit__company-movie_youtube {
     margin-top: 30px;
+  }
+  main .contact .contact__wrapper {
+    margin: 40px auto 0 auto;
+  }
+  main .contact .contact__wrapper .contact__wrapper_lead {
+    font-size: 0.875rem;
+    line-height: 1.8;
+  }
+  main .contact .contact__wrapper .contact__wrapper_lead .br_sp {
+    display: block;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form {
+    margin: 30px 0 40px 0;
+    padding: 30px;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item {
+    display: block;
+    width: 100%;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__title {
+    font-size: 0.875rem;
+    margin-bottom: 6px;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__title .form__require {
+    font-size: 0.75rem;
+    margin-left: 6px;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__radio {
+    display: block;
+    font-size: 0.875rem;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__radio:not(:last-child) {
+    margin-bottom: 14px;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__input {
+    width: 100%;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__input[type="tel"] {
+    width: 100%;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__textarea {
+    min-width: 100%;
+    font-size: 0.85rem;
+    letter-spacing: 0.4px;
+    line-height: 1.8;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__item .form__select {
+    width: 100%;
+  }
+  main .contact .contact__wrapper .contact__wrapper_body .contact__form .form__btn {
+    margin-top: 50px;
   }
   #page_top {
     right: 20px;
