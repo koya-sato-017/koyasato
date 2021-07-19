@@ -33,6 +33,40 @@
   right: 8rem;
 }
 
+.cta_middle {
+  position: absolute;
+  display: block;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  left: 28%;
+  width: 360px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 1rem 4rem;
+  background-color: #004bb1;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  letter-spacing: 0.1rem;
+  border-bottom: 5px solid #00bff8;
+}
+
+.cta_middle:hover {
+  margin-top: 3px;
+  border-bottom: 2px solid #00bff8;
+}
+
+.cta_middle .fa-cloud-download-alt {
+  position: absolute;
+  top: calc(50% - .5em);
+  right: 8rem;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -42,8 +76,9 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-body .header {
-  height: 600px;
+body .section_inner {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 body .header .fv {
@@ -133,5 +168,123 @@ body .header .fv .scrolldown::after {
     top: 50px;
     opacity: 0;
   }
+}
+
+body main .feature {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+body main .feature .section_inner {
+  position: relative;
+  padding: 100px 0 120px 0;
+}
+
+body main .feature .section_inner .section-top .section-top_sub-title {
+  text-transform: uppercase;
+  color: #FFCE00;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+body main .feature .section_inner .section-top .section-top_title {
+  color: #004bb1;
+  font-size: 3.6rem;
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  line-height: 5rem;
+  margin-top: 0;
+}
+
+body main .feature .section_inner .section-top .section-top_title span {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(0%, #ffff00));
+  background: linear-gradient(transparent 60%, #ffff00 0%);
+}
+
+body main .feature .section_inner .feature_card-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .feature .section_inner .feature_card-area .card {
+  width: 30%;
+  height: 300px;
+  background-color: #e0e0e0;
+}
+
+body main .feature .section_inner .feature_card-area .card .img {
+  text-align: center;
+  font-size: 2rem;
+  margin: 12px;
+}
+
+body main .feature .section_inner .feature_card-area .card .text {
+  padding: 20px;
+  color: #004bb1;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  line-height: 2rem;
+}
+
+body main .feature .section_inner .feature_recommend {
+  text-align: center;
+  color: #004bb1;
+  font-size: 1.6rem;
+  margin: 40px auto;
+}
+
+body main .feature .section_inner .cta_middle a {
+  color: #fff;
+}
+
+body main .worry {
+  color: #004bb1;
+}
+
+body main .worry .section_inner {
+  padding: 120px 0;
+}
+
+body main .worry .section_inner .worry_title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+body main .worry .section_inner .card_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .worry .section_inner .card_wrapper .card {
+  width: 30%;
+  text-align: center;
+}
+
+body main .worry .section_inner .card_wrapper .card .img {
+  font-size: 4rem;
+  color: #000;
+}
+
+body main .worry .section_inner .card_wrapper .card .title {
+  padding: 0 12px;
+  font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+  text-align: left;
+}
+
+body main .worry .section_inner .card_wrapper .card .text {
+  padding: 0 12px;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  text-align: left;
 }
 /*# sourceMappingURL=style.css.map */
