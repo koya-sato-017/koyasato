@@ -250,6 +250,57 @@ body {
                 }
             }
         }
+        .voice {
+            .section_inner {
+                padding: 120px 0;
+                color: $base_color;
+                .section-top {
+                    margin-bottom: 60px;
+                    .section-top_sub-title {
+                        text-transform: uppercase;
+                        color: #FFCE00;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                    .section-top_title {
+                        color: $base_color;
+                        font-size: 3.6rem;
+                        font-weight: bold;
+                        letter-spacing: 0.4rem;
+                        line-height: 5rem;
+                        margin-top: 0;
+                    }
+                }
+                .voice-area {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 40px;
+                    .voice-area_face {
+                        width: 20%;
+                        .voice-area_face-image {
+                            img {
+                                width: 100%;
+                                vertical-align: bottom;
+                            }
+                        }
+                    }
+                    .voice-area_comment {
+                        width: 100%;
+                        padding: 20px;
+                        letter-spacing: .1rem;
+                        line-height: 1.6rem;
+                        .voice-area_comment_name {
+                            font-size: 1.6rem;
+                            font-weight: bold;
+                        }
+                        .voice-area_comment_text {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+        }
     }
 
 }

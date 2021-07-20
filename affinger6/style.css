@@ -369,4 +369,64 @@ body main .about .card_area .card {
   letter-spacing: 0.3rem;
   line-height: 2rem;
 }
+
+body main .voice .section_inner {
+  padding: 120px 0;
+  color: #004bb1;
+}
+
+body main .voice .section_inner .section-top {
+  margin-bottom: 60px;
+}
+
+body main .voice .section_inner .section-top .section-top_sub-title {
+  text-transform: uppercase;
+  color: #FFCE00;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+body main .voice .section_inner .section-top .section-top_title {
+  color: #004bb1;
+  font-size: 3.6rem;
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  line-height: 5rem;
+  margin-top: 0;
+}
+
+body main .voice .section_inner .voice-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+}
+
+body main .voice .section_inner .voice-area .voice-area_face {
+  width: 20%;
+}
+
+body main .voice .section_inner .voice-area .voice-area_face .voice-area_face-image img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+body main .voice .section_inner .voice-area .voice-area_comment {
+  width: 100%;
+  padding: 20px;
+  letter-spacing: .1rem;
+  line-height: 1.6rem;
+}
+
+body main .voice .section_inner .voice-area .voice-area_comment .voice-area_comment_name {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+body main .voice .section_inner .voice-area .voice-area_comment .voice-area_comment_text {
+  font-size: 1.2rem;
+}
 /*# sourceMappingURL=style.css.map */
