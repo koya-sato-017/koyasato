@@ -270,7 +270,8 @@ body main .worry .section_inner .card_wrapper .card {
 }
 
 body main .worry .section_inner .card_wrapper .card .img {
-  font-size: 4rem;
+  margin: 40px auto 0 auto;
+  font-size: 8rem;
   color: #000;
 }
 
@@ -286,5 +287,86 @@ body main .worry .section_inner .card_wrapper .card .text {
   font-size: 1.2rem;
   letter-spacing: 0.3rem;
   text-align: left;
+}
+
+body main .about {
+  padding: 120px 0;
+  background-color: #f8f8f8;
+  color: #004bb1;
+}
+
+body main .about .about_title {
+  text-align: center;
+  margin-top: 0;
+  font-size: 4rem;
+}
+
+body main .about .about_upper-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 80px;
+}
+
+body main .about .about_upper-area .left-area {
+  width: 50%;
+}
+
+body main .about .about_upper-area .left-area .section-top_sub-title {
+  text-transform: uppercase;
+  color: #FFCE00;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+body main .about .about_upper-area .left-area .section-top_title {
+  color: #004bb1;
+  font-size: 3.2rem;
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  line-height: 5rem;
+  margin-top: 0;
+}
+
+body main .about .about_upper-area .left-area .section-top_title span {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(0%, #ffff00));
+  background: linear-gradient(transparent 60%, #ffff00 0%);
+}
+
+body main .about .about_upper-area .left-area .section-top_text {
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+
+body main .about .about_upper-area .right-area {
+  width: 50%;
+}
+
+body main .about .about_upper-area .right-area .right-area_image .affinger6 {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+body main .about .cta_middle a {
+  color: #fff;
+}
+
+body main .about .card_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 120px;
+}
+
+body main .about .card_area .card {
+  width: 25%;
+  background-color: #e0e0e0;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  line-height: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

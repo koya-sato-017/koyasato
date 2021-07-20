@@ -3,6 +3,7 @@
 @import "cta_middle";
 
 $base_color: #004bb1;
+$background_color: #f8f8f8;
 $white: #fff;
 
 html {
@@ -88,7 +89,7 @@ body {
     main {
         .feature {
             width: 100%;
-            background-color: #f8f8f8;
+            background-color: $background_color;
             .section_inner {
                 position: relative;
                 // max-width: 1000px;
@@ -164,7 +165,8 @@ body {
                         width: 30%;
                         text-align: center;
                         .img {
-                            font-size: 4rem;
+                            margin: 40px auto 0 auto;
+                            font-size: 8rem;
                             color: #000;
                         }
                         .title {
@@ -180,6 +182,71 @@ body {
                             text-align: left;
                         }
                     }
+                }
+            }
+        }
+        .about {
+            padding: 120px 0;
+            background-color: $background_color;
+            color: $base_color;
+            .about_title {
+                text-align: center;
+                margin-top: 0;
+                font-size: 4rem;
+            }
+            .about_upper-area {
+                display: flex;
+                margin-top: 80px;
+                .left-area {
+                    width: 50%;
+                    .section-top_sub-title {
+                        text-transform: uppercase;
+                        color: #FFCE00;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                    .section-top_title {
+                        color: $base_color;
+                        font-size: 3.2rem;
+                        font-weight: bold;
+                        letter-spacing: 0.4rem;
+                        line-height: 5rem;
+                        margin-top: 0;
+                        span {
+                            background: linear-gradient(transparent 60%, #ffff00 0%);
+                        }
+                    }
+                    .section-top_text {
+                        font-size: 1.4rem;
+                        line-height: 3rem;
+                    }
+                }
+                .right-area {
+                    width: 50%;
+                    .right-area_image {
+                        .affinger6 {
+                            width: 100%;
+                            vertical-align: bottom;
+                        }
+                    }
+                }
+            }
+            .cta_middle {
+                a {
+                    color: #fff;
+                }
+            }
+            .card_area {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 120px;
+                .card {
+                    width: 25%;
+                    background-color: #e0e0e0;
+                    padding: 12px 24px;
+                    font-size: 1.2rem;
+                    letter-spacing: 0.3rem;
+                    line-height: 2rem;
                 }
             }
         }
