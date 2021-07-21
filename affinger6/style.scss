@@ -352,6 +352,62 @@ body {
                 }
             }
         }
+        .comparison {
+            .section_inner {
+                padding: 120px 0;
+                .section-top {
+                    .section-top_sub-title {
+                        margin-bottom: 0;
+                        text-transform: uppercase;
+                        color: #FFCE00;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                    .section-top_title {
+                        color: $base_color;
+                        font-size: 3.6rem;
+                        font-weight: bold;
+                        letter-spacing: 0.4rem;
+                        line-height: 5rem;
+                        margin-top: 0;
+                        span {
+                            background: linear-gradient(transparent 60%, #ffff00 0%);
+                        }
+                    }
+                }
+                .comparison_boxes {
+                    display: flex;
+                    justify-content: space-between;
+                    .comparison_box {
+                        width: 28%;
+                        padding: 8px;
+                        border: 1px solid #e0e0e0;
+                        img {
+                            width: 100%;
+                            height: 200px;
+                            object-fit: cover;
+                            object-position: 0 0;
+                        }
+                        .theme-name {
+                            text-align: center;
+                            font-size: 1.6rem;
+                        }
+                        ul {
+                            padding-left: 20px;
+                            height: 80px;
+                            line-height: 1.6rem;
+                        }
+                        .theme_price {
+                            text-align: center;
+                            margin-top: 20px;
+                        }
+                    }
+                    .affinger6 {
+                        border: 2px solid $base_color;
+                    }
+                }
+            }
+        }
     }
 
 }

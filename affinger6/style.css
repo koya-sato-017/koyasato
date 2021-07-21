@@ -490,4 +490,74 @@ body main .faq .section_inner .faq_wrapper .faq_wrapper_lists .faq_wrapper_list 
   text-indent: -1em;
   line-height: 1.6rem;
 }
+
+body main .comparison .section_inner {
+  padding: 120px 0;
+}
+
+body main .comparison .section_inner .section-top .section-top_sub-title {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #FFCE00;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+body main .comparison .section_inner .section-top .section-top_title {
+  color: #004bb1;
+  font-size: 3.6rem;
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  line-height: 5rem;
+  margin-top: 0;
+}
+
+body main .comparison .section_inner .section-top .section-top_title span {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(0%, #ffff00));
+  background: linear-gradient(transparent 60%, #ffff00 0%);
+}
+
+body main .comparison .section_inner .comparison_boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .comparison .section_inner .comparison_boxes .comparison_box {
+  width: 28%;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+body main .comparison .section_inner .comparison_boxes .comparison_box img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
+}
+
+body main .comparison .section_inner .comparison_boxes .comparison_box .theme-name {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+body main .comparison .section_inner .comparison_boxes .comparison_box ul {
+  padding-left: 20px;
+  height: 80px;
+  line-height: 1.6rem;
+}
+
+body main .comparison .section_inner .comparison_boxes .comparison_box .theme_price {
+  text-align: center;
+  margin-top: 20px;
+}
+
+body main .comparison .section_inner .comparison_boxes .affinger6 {
+  border: 2px solid #004bb1;
+}
 /*# sourceMappingURL=style.css.map */
