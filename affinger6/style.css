@@ -181,6 +181,7 @@ body main .feature .section_inner {
 }
 
 body main .feature .section_inner .section-top .section-top_sub-title {
+  margin-bottom: 0;
   text-transform: uppercase;
   color: #FFCE00;
   font-size: 1.2rem;
@@ -313,6 +314,7 @@ body main .about .about_upper-area .left-area {
 }
 
 body main .about .about_upper-area .left-area .section-top_sub-title {
+  margin-bottom: 0;
   text-transform: uppercase;
   color: #FFCE00;
   font-size: 1.2rem;
@@ -380,6 +382,7 @@ body main .voice .section_inner .section-top {
 }
 
 body main .voice .section_inner .section-top .section-top_sub-title {
+  margin-bottom: 0;
   text-transform: uppercase;
   color: #FFCE00;
   font-size: 1.2rem;
@@ -428,5 +431,63 @@ body main .voice .section_inner .voice-area .voice-area_comment .voice-area_comm
 
 body main .voice .section_inner .voice-area .voice-area_comment .voice-area_comment_text {
   font-size: 1.2rem;
+}
+
+body main .faq {
+  background-color: #f8f8f8;
+}
+
+body main .faq .section_inner {
+  padding: 120px 0 100px 0;
+}
+
+body main .faq .section_inner .section-top .section-top_sub-title {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #FFCE00;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+body main .faq .section_inner .section-top .section-top_title {
+  color: #004bb1;
+  font-size: 3.6rem;
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  line-height: 5rem;
+  margin-top: 0;
+}
+
+body main .faq .section_inner .section-top .section-top_title span {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(0%, #ffff00));
+  background: linear-gradient(transparent 60%, #ffff00 0%);
+}
+
+body main .faq .section_inner .faq_wrapper {
+  color: #004bb1;
+}
+
+body main .faq .section_inner .faq_wrapper .faq_wrapper_lists {
+  padding: 0;
+}
+
+body main .faq .section_inner .faq_wrapper .faq_wrapper_lists .faq_wrapper_list {
+  list-style: none;
+  border: 1px solid #707070;
+  margin-bottom: 20px;
+  padding: 1em 2em;
+  font-size: 1.2rem;
+}
+
+body main .faq .section_inner .faq_wrapper .faq_wrapper_lists .faq_wrapper_list span {
+  margin-right: 8px;
+  font-size: 1.6rem;
+  color: #FFCE00;
+}
+
+body main .faq .section_inner .faq_wrapper .faq_wrapper_lists .faq_wrapper_list .answer {
+  padding-left: 1em;
+  text-indent: -1em;
+  line-height: 1.6rem;
 }
 /*# sourceMappingURL=style.css.map */

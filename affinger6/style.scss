@@ -97,6 +97,7 @@ body {
                 padding: 100px 0 120px 0;
                 .section-top {
                     .section-top_sub-title {
+                        margin-bottom: 0;
                         text-transform: uppercase;
                         color: #FFCE00;
                         font-size: 1.2rem;
@@ -200,6 +201,7 @@ body {
                 .left-area {
                     width: 50%;
                     .section-top_sub-title {
+                        margin-bottom: 0;
                         text-transform: uppercase;
                         color: #FFCE00;
                         font-size: 1.2rem;
@@ -257,6 +259,7 @@ body {
                 .section-top {
                     margin-bottom: 60px;
                     .section-top_sub-title {
+                        margin-bottom: 0;
                         text-transform: uppercase;
                         color: #FFCE00;
                         font-size: 1.2rem;
@@ -299,7 +302,55 @@ body {
                     }
                 }
             }
-
+        }
+        .faq {
+            background-color: #f8f8f8;
+            .section_inner {
+                padding: 120px 0 100px 0;
+                .section-top {
+                    .section-top_sub-title {
+                        margin-bottom: 0;
+                        text-transform: uppercase;
+                        color: #FFCE00;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                    .section-top_title {
+                        color: $base_color;
+                        font-size: 3.6rem;
+                        font-weight: bold;
+                        letter-spacing: 0.4rem;
+                        line-height: 5rem;
+                        margin-top: 0;
+                        span {
+                            background: linear-gradient(transparent 60%, #ffff00 0%);
+                        }
+                    }
+                }
+                .faq_wrapper {
+                    color: $base_color;
+                    .faq_wrapper_lists {
+                        padding: 0;
+                        .faq_wrapper_list {
+                            list-style: none;
+                            border: 1px solid #707070;
+                            margin-bottom: 20px;
+                            padding: 1em 2em;
+                            font-size: 1.2rem;
+                            span {
+                                margin-right: 8px;
+                                font-size: 1.6rem;
+                                color: #FFCE00;
+                            }
+                            .answer {
+                                padding-left: 1em;
+                                text-indent: -1em;
+                                line-height: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
