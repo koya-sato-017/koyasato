@@ -560,4 +560,93 @@ body main .comparison .section_inner .comparison_boxes .comparison_box .theme_pr
 body main .comparison .section_inner .comparison_boxes .affinger6 {
   border: 2px solid #004bb1;
 }
+
+body main .downroad {
+  background-color: #f8f8f8;
+}
+
+body main .downroad .section_inner {
+  padding: 120px 0 280px 0;
+}
+
+body main .downroad .section_inner .section-top .section-top_sub-title {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #FFCE00;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+body main .downroad .section_inner .section-top .section-top_title {
+  color: #004bb1;
+  font-size: 3.6rem;
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  line-height: 5rem;
+  margin-top: 0;
+}
+
+body main .downroad .section_inner .section-top .section-top_title span {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(0%, #ffff00));
+  background: linear-gradient(transparent 60%, #ffff00 0%);
+}
+
+body main .downroad .section_inner .downroad_benefit-area .downroad-benefit-area_image {
+  margin: 0 auto;
+}
+
+body main .downroad .section_inner .downroad_benefit-area .downroad-benefit-area_image .downroad-benefit-area_image_sugoimokuji {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+body main .downroad .section_inner .downroad_benefit-area p {
+  font-size: 1.2rem;
+  color: #004bb1;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+body main .downroad .section_inner .downroad_benefit-area .caution {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+body main .downroad .section_inner table, body main .downroad .section_inner th, body main .downroad .section_inner td {
+  border: 1px solid #333;
+  border-collapse: collapse;
+}
+
+body main .downroad .section_inner .downroad_desctiption {
+  width: 100%;
+  margin-top: 40px;
+  color: #004bb1;
+  font-size: 1.6rem;
+}
+
+body main .downroad .section_inner .downroad_desctiption tbody tr th {
+  background-color: #e0e0e0;
+  padding: 8px;
+  text-align: right;
+}
+
+body main .downroad .section_inner .downroad_desctiption tbody tr td {
+  padding: 8px;
+}
+
+body main .downroad .section_inner .downroad_desctiption tbody tr td ul {
+  padding-left: 0;
+}
+
+body main .downroad .section_inner .downroad_desctiption tbody tr td ul li {
+  list-style: none;
+}
+
+body main .downroad .section_inner .cta_middle {
+  margin-top: 80px;
+}
+
+body main .downroad .section_inner .cta_middle a {
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */

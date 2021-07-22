@@ -408,6 +408,85 @@ body {
                 }
             }
         }
+        .downroad {
+            background-color: $background_color;
+            .section_inner {
+                padding: 120px 0 280px 0;
+                .section-top {
+                    .section-top_sub-title {
+                        margin-bottom: 0;
+                        text-transform: uppercase;
+                        color: #FFCE00;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                    .section-top_title {
+                        color: $base_color;
+                        font-size: 3.6rem;
+                        font-weight: bold;
+                        letter-spacing: 0.4rem;
+                        line-height: 5rem;
+                        margin-top: 0;
+                        span {
+                            background: linear-gradient(transparent 60%, #ffff00 0%);
+                        }
+                    }
+                }
+                .downroad_benefit-area {
+                    .downroad-benefit-area_image {
+                        margin: 0 auto;
+                        .downroad-benefit-area_image_sugoimokuji {
+                            width: 100%;
+                            vertical-align: bottom;
+                        }
+                    }
+                    p {
+                        font-size: 1.2rem;
+                        color: $base_color;
+                        font-weight: bold;
+                        margin-bottom: 8px;
+                    }
+                    .caution {
+                        font-size: 1rem;
+                        margin-top: 0;
+                    }
+                }
+                table, th, td, {
+                    border: 1px solid #333;
+                    border-collapse: collapse;
+                }
+                .downroad_desctiption {
+                    width: 100%;
+                    margin-top: 40px;
+                    color: $base_color;
+                    font-size: 1.6rem;
+                    tbody {
+                        tr {
+                            th {
+                                background-color: #e0e0e0;
+                                padding: 8px;
+                                text-align: right;
+                            }
+                            td {
+                                padding: 8px;
+                                ul {
+                                    padding-left: 0;
+                                    li {
+                                        list-style: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .cta_middle {
+                    margin-top: 80px;
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+        }
     }
 
 }
