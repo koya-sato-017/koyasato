@@ -120,7 +120,7 @@ body {
                     justify-content: space-between;
                     .card {
                         width: 30%;
-                        height: 300px;
+                        height: auto;
                         background-color: #e0e0e0;
                         .img {
                             text-align: center;
@@ -501,6 +501,35 @@ body {
         small {
             font-size: 1.2rem;
             
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        .header {
+            .fv {
+                .fv_main-message {
+                    font-size: 4rem;
+                    letter-spacing: 0.6rem;
+                }
+                .fv_sub-message {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 920px) {
+    body {
+        .header {
+            .fv {
+                .fv_main-message {
+                    top: 20px;
+                    font-size: 3.6rem;
+                    letter-spacing: 0.2rem;
+                }
+            }
         }
     }
 }

@@ -33,6 +33,16 @@
   right: 8rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .cta_big {
+    width: 240px;
+    text-align: left;
+  }
+  .cta_big .fa-cloud-download-alt {
+    right: 4rem;
+  }
+}
+
 .cta_middle {
   position: absolute;
   display: block;
@@ -40,7 +50,8 @@
   font-size: 1.6rem;
   font-weight: bold;
   text-decoration: none;
-  left: 28%;
+  left: 0;
+  right: 0;
   width: 360px;
   height: 40px;
   margin: 0 auto;
@@ -54,6 +65,10 @@
   transition: all 0.3s;
   letter-spacing: 0.1rem;
   border-bottom: 5px solid #00bff8;
+}
+
+.cta_middle a {
+  text-decoration: none;
 }
 
 .cta_middle:hover {
@@ -213,7 +228,7 @@ body main .feature .section_inner .feature_card-area {
 
 body main .feature .section_inner .feature_card-area .card {
   width: 30%;
-  height: 300px;
+  height: auto;
   background-color: #e0e0e0;
 }
 
@@ -665,5 +680,23 @@ body .footer p {
 
 body .footer small {
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  body .header .fv .fv_main-message {
+    font-size: 4rem;
+    letter-spacing: 0.6rem;
+  }
+  body .header .fv .fv_sub-message {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  body .header .fv .fv_main-message {
+    top: 20px;
+    font-size: 3.6rem;
+    letter-spacing: 0.2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
