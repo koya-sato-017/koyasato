@@ -634,7 +634,7 @@ body main .downroad .section_inner table, body main .downroad .section_inner th,
 
 body main .downroad .section_inner .downroad_desctiption {
   width: 100%;
-  margin-top: 40px;
+  margin: 40px auto 80px auto;
   color: #004bb1;
   font-size: 1.6rem;
 }
@@ -655,10 +655,6 @@ body main .downroad .section_inner .downroad_desctiption tbody tr td ul {
 
 body main .downroad .section_inner .downroad_desctiption tbody tr td ul li {
   list-style: none;
-}
-
-body main .downroad .section_inner .cta_middle {
-  margin-top: 80px;
 }
 
 body main .downroad .section_inner .cta_middle a {
