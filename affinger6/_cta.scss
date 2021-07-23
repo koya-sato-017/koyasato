@@ -29,3 +29,12 @@
         right: 8rem;
     }
 }
+@media screen and (max-width: 1200px) {
+    .cta_big {
+        width: 240px;
+        text-align: left;
+        .fa-cloud-download-alt {
+            right: 4rem;
+        }
+    }
+}
