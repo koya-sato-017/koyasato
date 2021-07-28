@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starbucks Website Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Starbucks Website Landing Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-        <div class="circle"></div>
-        <header>
-            <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
-            <div class="toggle" onclick="toggleMenu();"></div>
-            <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">What's New</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </header>
-        <div class="content">
-            <div class="textBox">
-                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta minus corporis earum. Sit nostrum, quis ad perferendis cumque autem ratione quae tempora laudantium qui distinctio repellat nobis blanditiis cupiditate.</p>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="imgBox">
-                <img src="images/img1.png" alt="" class="starbucks">
-            </div>
-        </div>
-        <!-- /.content -->
-        <ul class="thumb">
-            <li><img src="images/thumb1.png" onclick="imgSlider('images/img1.png'); changeCircleColor('#017143')" alt=""></li>
-            <li><img src="images/thumb2.png" onclick="imgSlider('images/img2.png'); changeCircleColor('#eb7495')" alt=""></li>
-            <li><img src="images/thumb3.png" onclick="imgSlider('images/img3.png'); changeCircleColor('#b752b1')" alt=""></li>
-        </ul>
-        <ul class="sci">
-            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
-            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
-            <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
-        </ul>
-    </section>
+  <section>
+    <div class="circle"></div>
+    <!-- /.circle -->
+    <header>
+      <a href="#">
+        <img src="images/logo.png" alt="Starbucksのロゴ" class="logo">
+      </a>
+      <div class="toggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda eius aut fugiat atque. Eos dolore blanditiis exercitationem magni facilis beatae molestias nulla, vero ducimus quas atque debitis dicta sapiente quaerat?</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="imgBox">
+        <img src="images/img1.png" alt="ドリンクの画像" class="starbucks">
+      </div>
+    </div>
+    <!-- /.content -->
+    <ul class="thumb">
+      <li><img src="images/thumb1.png" onclick="imgSlider('images/img1.png'); changeCircleColor('#017143')" alt="ドリンクの画像"></li>
+      <li><img src="images/thumb2.png" onclick="imgSlider('images/img2.png'); changeCircleColor('#eb7495')" alt="ドリンクの画像"></li>
+      <li><img src="images/thumb3.png" onclick="imgSlider('images/img3.png'); changeCircleColor('#d752b1')" alt="ドリンクの画像"></li>
+    </ul>
+    <!-- /.thumb -->
+    <ul class="sci">
+      <li><a href="#"><img src="images/facebook.png" alt="Facebookのロゴ"></a></li>
+      <li><a href="#"><img src="images/twitter.png" alt="Twitterのロゴ"></a></li>
+      <li><a href="#"><img src="images/instagram.png" alt="Instagramのロゴ"></a></li>
+    </ul>
+    <!-- /.sci -->
+  </section>
 
-    <script type="text/javascript">
-        function imgSlider(anything) {
-            document.querySelector('.starbucks').src = anything;
-        }
-
-        function changeCircleColor(color) {
-            const circle = document.querySelector('.circle');
-            circle.style.background = color;
-        }
-
-        function toggleMenu() {
-            var menuToggle = document.querySelector('.toggle');
-            var navigation = document.querySelector('.navigation');
-            menuToggle.classList.toggle('active')
-            navigation.classList.toggle('active')
-        }
-    </script>
+  <script type="text/javascript">
+    function imgSlider(anything) {
+      document.querySelector('.starbucks').src = anything;
+    }
+    function changeCircleColor(color) {
+      const circle = document.querySelector('.circle');
+      circle.style.background = color;
+    }
+    function toggleMenu() {
+      var menuToggle = document.querySelector('.toggle');
+      var navigation = document.querySelector('.navigation');
+      menuToggle.classList.toggle('active')
+      navigation.classList.toggle('active')
+    }
+  </script>
+    
 </body>
 </html>
